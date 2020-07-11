@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.6.1 -->
+    <title>Robotic Arm Inverse Kinematics | Virtual Expo</title>
+    <meta name="generator" content="Jekyll v3.8.7" />
+    <meta property="og:title" content="Robotic Arm Inverse Kinematics" />
+    <meta name="author" content="IEEE NITK" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description"
+        content="Team members: Nisarg Shah Rahul RL Smriti S Ashvin Prasanth Jay Mandal Introduction The solution to the inverse kinematic is of utmost importance in the robotics industry because in every application of robotics, we are known the desired position of the end effector and we must achieve this desired position through the robotic arm designed by setting the correct joint angles. It is a well-known fact that for a particular position of the end effector either the solution doesn’t exist or there can be multiple solutions for a particular position of the end effector. There have been many solutions proposed to solve the inverse kinematics problem. All the solutions can be broadly classified as: Algebraic Methods In the algebraic methods, cartesian space and the transformation between cartesian spaces are used. In the solution the system will define Denavit &amp; Hartenberg (DH) parameters for all joints of a robotic arm to describe a robotic arm about types of joint or length in each link. Then, multiply position of the end-effector (or desired position) by orthonormal matrices (4×4 matrices) to find all position of joints in Cartesian space and use inverse trigonometric functions to solve angles of robotic arm joints. Geometric Methods Geometric methods are suitable only for lesser Degree of freedom and when the number of links in the robotic arm are not more than 2. This is because the trigonometric functions that involve in larger number of links are much more complex. Iterative Methods The iterative methods use numerical method techniques for solving the problem. Now, the popular new solutions are neural network approaches that training network with data of the end-effector positions and angles of joints to create the model. However, the problem with the neural network approaches is that they are computationally expensive. The architectures involve a lot of hidden units and lots of hidden layers making it harder to compute. The reason for choosing deeper neural networks is that shallow neural networks are not able to learn the dataset accurately. The reason for it is because of the choice of activation function. The inverse kinematics problem involves the neural network learning a complex inverse sinusoidal function and hence this research paper tries to propose an activation function which involves an inverse sine term hence allowing the neural network to generalize faster. This project shows that with the introduction of the inverse sine non linearity, the neural network is able to generalize faster and hence making the inverse kinematics problem computationally less expensive. Activation Functions In artificial neural networks, the activation function of a node defines the output of that node given an input or set of inputs. They are generally introduced in neural networks so that the neural networks can learn complex non-linear functions easily. There are a lot of common activation functions used by the machine learning community. Sigmoid Activation Function is the most used activation function as it brings down the input to a value between 0 and 1. 𝑓(𝑥) = 1/(1+exp(−𝑥)) Sigmoid activation function attains the value 1 for large positive input parameter and 0 for large negative input parameters. In this project, we are trying to couple the effects of the sigmoid activation function with an inverse sinusoid activation function for predicting the values of joint angles. 𝑔(𝑥) = arc sin(𝑥) Fig 2 : Inverse Sine function The arc sin activation function takes in value between -1 and 1 and outputs an angle between -Π/2 to Π/2. Since sigmoid activation function is input to the arc sin activation function, hence the output of the activation function is 0 to Π/2. Robotic arm setup The robotic arm model that was used to test the results is the 3 link 2 DOF planar robotic arm with link lengths in the ratio 1:1:1. Specifically the link lengths are considered as 2 units. Fig 3: Robotic arm set up used for the project The forward kinematics equations for the above robotic arm setup are given by 𝑥 = 2 ∗ cos (theta1) + 2 ∗ cos (theta1 + theta2) + 2 ∗ cos (theta1 + theta2 + theta3) 𝑦 = 2 ∗ sin (theta1) + 2 ∗ sin (theta1 + theta2) + 2 ∗ sin (theta1 + theta2 + theta3) In a 2D space, we plotted the trajectory followed by our robotic arm setup by giving increments to thetas of 1 degree. Fig 4 : Trajectory followed by robotic arm in 2 D space To prepare the dataset for training the neural network model, the above forward kinematics equations were used. Computation Model The computation model used for training is a simple neural network architecture without any hidden layers to reduce the computational requirements and in turn test the new activation and loss functions. Fig 5 : Computation model used The input to the network is x and y which represents the position of the end effector. Taking a weighted average, a linear function is created for the prediction of thetas. These functions are then passed into sigmoid and arc sin activation functions to predict the thetas. Here (f, g) are sigmoid and arc sin activation functions respectively. Here we need not compare the predicted thetas with the original theta’s since we know that for a particular end effector position, there can be a lot of theta’s possible. Loss Function After the prediction of theta’s, x &amp; y are predicted using the forward kinematic equations. The predicted x, predicted y is compared with original x &amp; y respectively using the mean squared loss function. The objective of training of the neural network model involves minimizing the loss function. Optimization The weights are assigned randomly and the best weights that minimize the loss function are chosen using the gradient based optimization technique. Fig 6 : Loss vs Iterations plot Results Using the new loss &amp; activation function &amp; comparatively simpler network architecture, the thetas were accurately predicted so that the loss is minimized. We observed that even for a simple architecture as shown in the computational model, the x’s were predicted up to an average accuracy of ±0.75 whereas y’s were predicted up to an average accuracy of ±1.2. The results show that introduction of sinusoidal non linearity in the machine learning is making it predict much accurate results even with a very simple computational model hence improving the computational capabilities. Fig 7 : Predicted x vs original x Fig 8: Predicted y vs original y Conclusion This project introduces an activation and loss function for the neural network architecture to solve inverse kinematics problem which helps to largely reduce the depth of neural network architecture used. With the help of inverse sinusoidal activation function with sigmoid and mean squared loss function over the predicted x, y, we are able to significantly reduce the computational requirements and also obtain satisfactory results. Hence by the introduction of activation and loss function proposed, we can successfully handle the tradeoff between computational requirements and accuracy while solving the inverse kinematics problem using neural networks. A best fit straight line is passed through a subset of the training data for which the mean squared loss is within the acceptable range. This allows the robotic arm to move in a straight line. By further increasing the degrees of freedom for the base, the robotic arm can be made to traverse the entire 2 D Plane." />
+    <meta property="og:description"
+        content="Team members: Nisarg Shah Rahul RL Smriti S Ashvin Prasanth Jay Mandal Introduction The solution to the inverse kinematic is of utmost importance in the robotics industry because in every application of robotics, we are known the desired position of the end effector and we must achieve this desired position through the robotic arm designed by setting the correct joint angles. It is a well-known fact that for a particular position of the end effector either the solution doesn’t exist or there can be multiple solutions for a particular position of the end effector. There have been many solutions proposed to solve the inverse kinematics problem. All the solutions can be broadly classified as: Algebraic Methods In the algebraic methods, cartesian space and the transformation between cartesian spaces are used. In the solution the system will define Denavit &amp; Hartenberg (DH) parameters for all joints of a robotic arm to describe a robotic arm about types of joint or length in each link. Then, multiply position of the end-effector (or desired position) by orthonormal matrices (4×4 matrices) to find all position of joints in Cartesian space and use inverse trigonometric functions to solve angles of robotic arm joints. Geometric Methods Geometric methods are suitable only for lesser Degree of freedom and when the number of links in the robotic arm are not more than 2. This is because the trigonometric functions that involve in larger number of links are much more complex. Iterative Methods The iterative methods use numerical method techniques for solving the problem. Now, the popular new solutions are neural network approaches that training network with data of the end-effector positions and angles of joints to create the model. However, the problem with the neural network approaches is that they are computationally expensive. The architectures involve a lot of hidden units and lots of hidden layers making it harder to compute. The reason for choosing deeper neural networks is that shallow neural networks are not able to learn the dataset accurately. The reason for it is because of the choice of activation function. The inverse kinematics problem involves the neural network learning a complex inverse sinusoidal function and hence this research paper tries to propose an activation function which involves an inverse sine term hence allowing the neural network to generalize faster. This project shows that with the introduction of the inverse sine non linearity, the neural network is able to generalize faster and hence making the inverse kinematics problem computationally less expensive. Activation Functions In artificial neural networks, the activation function of a node defines the output of that node given an input or set of inputs. They are generally introduced in neural networks so that the neural networks can learn complex non-linear functions easily. There are a lot of common activation functions used by the machine learning community. Sigmoid Activation Function is the most used activation function as it brings down the input to a value between 0 and 1. 𝑓(𝑥) = 1/(1+exp(−𝑥)) Sigmoid activation function attains the value 1 for large positive input parameter and 0 for large negative input parameters. In this project, we are trying to couple the effects of the sigmoid activation function with an inverse sinusoid activation function for predicting the values of joint angles. 𝑔(𝑥) = arc sin(𝑥) Fig 2 : Inverse Sine function The arc sin activation function takes in value between -1 and 1 and outputs an angle between -Π/2 to Π/2. Since sigmoid activation function is input to the arc sin activation function, hence the output of the activation function is 0 to Π/2. Robotic arm setup The robotic arm model that was used to test the results is the 3 link 2 DOF planar robotic arm with link lengths in the ratio 1:1:1. Specifically the link lengths are considered as 2 units. Fig 3: Robotic arm set up used for the project The forward kinematics equations for the above robotic arm setup are given by 𝑥 = 2 ∗ cos (theta1) + 2 ∗ cos (theta1 + theta2) + 2 ∗ cos (theta1 + theta2 + theta3) 𝑦 = 2 ∗ sin (theta1) + 2 ∗ sin (theta1 + theta2) + 2 ∗ sin (theta1 + theta2 + theta3) In a 2D space, we plotted the trajectory followed by our robotic arm setup by giving increments to thetas of 1 degree. Fig 4 : Trajectory followed by robotic arm in 2 D space To prepare the dataset for training the neural network model, the above forward kinematics equations were used. Computation Model The computation model used for training is a simple neural network architecture without any hidden layers to reduce the computational requirements and in turn test the new activation and loss functions. Fig 5 : Computation model used The input to the network is x and y which represents the position of the end effector. Taking a weighted average, a linear function is created for the prediction of thetas. These functions are then passed into sigmoid and arc sin activation functions to predict the thetas. Here (f, g) are sigmoid and arc sin activation functions respectively. Here we need not compare the predicted thetas with the original theta’s since we know that for a particular end effector position, there can be a lot of theta’s possible. Loss Function After the prediction of theta’s, x &amp; y are predicted using the forward kinematic equations. The predicted x, predicted y is compared with original x &amp; y respectively using the mean squared loss function. The objective of training of the neural network model involves minimizing the loss function. Optimization The weights are assigned randomly and the best weights that minimize the loss function are chosen using the gradient based optimization technique. Fig 6 : Loss vs Iterations plot Results Using the new loss &amp; activation function &amp; comparatively simpler network architecture, the thetas were accurately predicted so that the loss is minimized. We observed that even for a simple architecture as shown in the computational model, the x’s were predicted up to an average accuracy of ±0.75 whereas y’s were predicted up to an average accuracy of ±1.2. The results show that introduction of sinusoidal non linearity in the machine learning is making it predict much accurate results even with a very simple computational model hence improving the computational capabilities. Fig 7 : Predicted x vs original x Fig 8: Predicted y vs original y Conclusion This project introduces an activation and loss function for the neural network architecture to solve inverse kinematics problem which helps to largely reduce the depth of neural network architecture used. With the help of inverse sinusoidal activation function with sigmoid and mean squared loss function over the predicted x, y, we are able to significantly reduce the computational requirements and also obtain satisfactory results. Hence by the introduction of activation and loss function proposed, we can successfully handle the tradeoff between computational requirements and accuracy while solving the inverse kinematics problem using neural networks. A best fit straight line is passed through a subset of the training data for which the mean squared loss is within the acceptable range. This allows the robotic arm to move in a straight line. By further increasing the degrees of freedom for the base, the robotic arm can be made to traverse the entire 2 D Plane." />
+    <link rel="canonical" href="https://ieee.nitk.ac.in//virtual-expo/robotic-arm-inverse-kinematics/" />
+    <meta property="og:url" content="https://ieee.nitk.ac.in//virtual-expo/robotic-arm-inverse-kinematics/" />
+    <meta property="og:site_name" content="IEEE NITK Virtual Expo" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-07-01T00:00:00+05:30" />
+    <script
+        type="application/ld+json"> {"url":"https://ieee.nitk.ac.in//virtual-expo/robotic-arm-inverse-kinematics/","headline":"Robotic Arm Inverse Kinematics","dateModified":"2020-07-01T00:00:00+05:30","datePublished":"2020-07-01T00:00:00+05:30","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://ieee.nitk.ac.in//virtual-expo/robotic-arm-inverse-kinematics/"},"author":{"@type":"Person","name":"IEEE NITK"},"description":"Team members: Nisarg Shah Rahul RL Smriti S Ashvin Prasanth Jay Mandal Introduction The solution to the inverse kinematic is of utmost importance in the robotics industry because in every application of robotics, we are known the desired position of the end effector and we must achieve this desired position through the robotic arm designed by setting the correct joint angles. It is a well-known fact that for a particular position of the end effector either the solution doesn’t exist or there can be multiple solutions for a particular position of the end effector. There have been many solutions proposed to solve the inverse kinematics problem. All the solutions can be broadly classified as: Algebraic Methods In the algebraic methods, cartesian space and the transformation between cartesian spaces are used. In the solution the system will define Denavit &amp; Hartenberg (DH) parameters for all joints of a robotic arm to describe a robotic arm about types of joint or length in each link. Then, multiply position of the end-effector (or desired position) by orthonormal matrices (4×4 matrices) to find all position of joints in Cartesian space and use inverse trigonometric functions to solve angles of robotic arm joints. Geometric Methods Geometric methods are suitable only for lesser Degree of freedom and when the number of links in the robotic arm are not more than 2. This is because the trigonometric functions that involve in larger number of links are much more complex. Iterative Methods The iterative methods use numerical method techniques for solving the problem. Now, the popular new solutions are neural network approaches that training network with data of the end-effector positions and angles of joints to create the model. However, the problem with the neural network approaches is that they are computationally expensive. The architectures involve a lot of hidden units and lots of hidden layers making it harder to compute. The reason for choosing deeper neural networks is that shallow neural networks are not able to learn the dataset accurately. The reason for it is because of the choice of activation function. The inverse kinematics problem involves the neural network learning a complex inverse sinusoidal function and hence this research paper tries to propose an activation function which involves an inverse sine term hence allowing the neural network to generalize faster. This project shows that with the introduction of the inverse sine non linearity, the neural network is able to generalize faster and hence making the inverse kinematics problem computationally less expensive. Activation Functions In artificial neural networks, the activation function of a node defines the output of that node given an input or set of inputs. They are generally introduced in neural networks so that the neural networks can learn complex non-linear functions easily. There are a lot of common activation functions used by the machine learning community. Sigmoid Activation Function is the most used activation function as it brings down the input to a value between 0 and 1. 𝑓(𝑥) = 1/(1+exp(−𝑥)) Sigmoid activation function attains the value 1 for large positive input parameter and 0 for large negative input parameters. In this project, we are trying to couple the effects of the sigmoid activation function with an inverse sinusoid activation function for predicting the values of joint angles. 𝑔(𝑥) = arc sin(𝑥) Fig 2 : Inverse Sine function The arc sin activation function takes in value between -1 and 1 and outputs an angle between -Π/2 to Π/2. Since sigmoid activation function is input to the arc sin activation function, hence the output of the activation function is 0 to Π/2. Robotic arm setup The robotic arm model that was used to test the results is the 3 link 2 DOF planar robotic arm with link lengths in the ratio 1:1:1. Specifically the link lengths are considered as 2 units. Fig 3: Robotic arm set up used for the project The forward kinematics equations for the above robotic arm setup are given by 𝑥 = 2 ∗ cos (theta1) + 2 ∗ cos (theta1 + theta2) + 2 ∗ cos (theta1 + theta2 + theta3) 𝑦 = 2 ∗ sin (theta1) + 2 ∗ sin (theta1 + theta2) + 2 ∗ sin (theta1 + theta2 + theta3) In a 2D space, we plotted the trajectory followed by our robotic arm setup by giving increments to thetas of 1 degree. Fig 4 : Trajectory followed by robotic arm in 2 D space To prepare the dataset for training the neural network model, the above forward kinematics equations were used. Computation Model The computation model used for training is a simple neural network architecture without any hidden layers to reduce the computational requirements and in turn test the new activation and loss functions. Fig 5 : Computation model used The input to the network is x and y which represents the position of the end effector. Taking a weighted average, a linear function is created for the prediction of thetas. These functions are then passed into sigmoid and arc sin activation functions to predict the thetas. Here (f, g) are sigmoid and arc sin activation functions respectively. Here we need not compare the predicted thetas with the original theta’s since we know that for a particular end effector position, there can be a lot of theta’s possible. Loss Function After the prediction of theta’s, x &amp; y are predicted using the forward kinematic equations. The predicted x, predicted y is compared with original x &amp; y respectively using the mean squared loss function. The objective of training of the neural network model involves minimizing the loss function. Optimization The weights are assigned randomly and the best weights that minimize the loss function are chosen using the gradient based optimization technique. Fig 6 : Loss vs Iterations plot Results Using the new loss &amp; activation function &amp; comparatively simpler network architecture, the thetas were accurately predicted so that the loss is minimized. We observed that even for a simple architecture as shown in the computational model, the x’s were predicted up to an average accuracy of ±0.75 whereas y’s were predicted up to an average accuracy of ±1.2. The results show that introduction of sinusoidal non linearity in the machine learning is making it predict much accurate results even with a very simple computational model hence improving the computational capabilities. Fig 7 : Predicted x vs original x Fig 8: Predicted y vs original y Conclusion This project introduces an activation and loss function for the neural network architecture to solve inverse kinematics problem which helps to largely reduce the depth of neural network architecture used. With the help of inverse sinusoidal activation function with sigmoid and mean squared loss function over the predicted x, y, we are able to significantly reduce the computational requirements and also obtain satisfactory results. Hence by the introduction of activation and loss function proposed, we can successfully handle the tradeoff between computational requirements and accuracy while solving the inverse kinematics problem using neural networks. A best fit straight line is passed through a subset of the training data for which the mean squared loss is within the acceptable range. This allows the robotic arm to move in a straight line. By further increasing the degrees of freedom for the base, the robotic arm can be made to traverse the entire 2 D Plane.","@context":"https://schema.org"}</script>
+    <!-- End Jekyll SEO tag -->
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="/virtual-expo/assets/img/icons/apple-touch-icon.webp">
+    <link rel="icon" type="image/png"
+        href="/virtual-expo/favicon.ico">
+    
+    <link rel="manifest" href="/virtual-expo/assets/img/icons/manifest.json">
+    <link rel="mask-icon" href="/virtual-expo/assets/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <!--[if IE]><link rel="shortcut icon" href="/assets/img/icons/favicon.ico"><![endif]-->
+    <link rel="shortcut icon" href="/virtual-expo/assets/img/icons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="IEEE NITK Virtual Expo">
+    <meta name="application-name" content="IEEE NITK Virtual Expo">
+    <meta name="msapplication-config" content="/virtual-expo/assets/img/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <style class="inlineCSS">
+        h1 {
+            color: #313237;
+            margin-top: 0;
+            margin-bottom: .5rem
+        }
+
+        .dark-bg {
+            background-color: #313237
+        }
+
+        @media only screen and (min-width:48em) {
+            .post-card {
+                width: 48.4375%;
+                margin-right: 3.125%
+            }
+
+            .post-card:last-of-type,
+            .post-card:nth-child(2n+2) {
+                margin-right: 0
+            }
+        }
+
+        html {
+            line-height: 1.15;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%
+        }
+
+        body {
+            margin: 0
+        }
+
+        header,
+        nav,
+        section {
+            display: block
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: .67em 0
+        }
+
+        figure,
+        main {
+            display: block
+        }
+
+        figure {
+            margin: 1em 40px
+        }
+
+        a {
+            background-color: transparent;
+            -webkit-text-decoration-skip: objects
+        }
+
+        img {
+            border-style: none
+        }
+
+        svg:not(:root) {
+            overflow: hidden
+        }
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit
+        }
+
+        html {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        body {
+            -webkit-overflow-scrolling: touch
+        }
+
+        *,
+        ::after,
+        ::before {
+            -webkit-box-sizing: inherit;
+            box-sizing: inherit
+        }
+
+        .site {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            min-height: 100vh;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column
+        }
+
+        .site__content {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            width: auto;
+            vertical-align: middle
+        }
+
+        figure {
+            margin: 0
+        }
+
+        body {
+            background-color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #343851;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: 100%
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1.25rem
+        }
+
+        h1,
+        h2 {
+            color: #313237;
+            margin-top: 0;
+            margin-bottom: .5rem
+        }
+
+        a {
+            color: #277cea;
+            text-decoration: none;
+            border-bottom: 1px dashed #277cea
+        }
+
+        .blur {
+            background: #fff;
+            filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="16" /></filter></svg>#filter');
+            -webkit-filter: blur(1rem);
+            filter: blur(1rem)
+        }
+
+        .container {
+            padding: 0 20px;
+            max-width: 100%;
+            margin: 0 auto
+        }
+
+        @media only screen and (min-width:36em) {
+            .container {
+                max-width: 540px;
+                margin: 0 auto
+            }
+        }
+
+        @media only screen and (min-width:48em) {
+            .container {
+                max-width: 720px;
+                margin: 0 auto
+            }
+        }
+
+        @media only screen and (min-width:62em) {
+            .container {
+                max-width: 960px;
+                margin: 0 auto
+            }
+        }
+
+        @media only screen and (min-width:75em) {
+            .container {
+                max-width: 1170px;
+                margin: 0 auto
+            }
+        }
+
+        .header {
+            background-color: #fff;
+            color: #343851;
+            position: absolute;
+            z-index: 4;
+            width: 100%;
+            top: 0;
+            left: 0;
+            will-change: transform;
+            -webkit-transform: translateY(0);
+            transform: translateY(0)
+        }
+
+        .header a {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            border-bottom: 0
+        }
+
+        .header__logo {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            height: 100%;
+            overflow: hidden;
+            padding: 19px 0;
+            margin-right: 1.25rem;
+            outline: 0;
+            border-bottom: 0;
+            color: #313237
+        }
+
+        .header__logo .header__logo--container {
+            width: 145px
+        }
+
+        .header__logo .header__logo--container .logo {
+            fill: currentColor
+        }
+
+        .header__inner {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            height: 3.75em;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between
+        }
+
+        .header__links {
+            padding-bottom: .5rem;
+            display: none;
+            position: absolute;
+            top: 3.75em;
+            left: 0;
+            width: 100%;
+            height: auto;
+            background: #fff
+        }
+
+        .header__link {
+            color: #343851;
+            padding: .938rem 0;
+            border-top: 1px solid #ededed
+        }
+
+        .header__toggle {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: 44px;
+            height: 100%;
+            background-color: transparent;
+            padding-left: 1.25rem
+        }
+
+        .header__toggle span {
+            display: block;
+            position: relative;
+            margin-top: 4px;
+            background-color: #343851;
+            width: 100%;
+            height: 2px;
+            border-radius: 1px
+        }
+
+        .header__toggle span:first-child {
+            margin-top: 0
+        }
+
+        @media (min-width:62em) {
+            .header__toggle {
+                display: none;
+                visibility: hidden
+            }
+
+            .header__links {
+                position: static;
+                padding: 0;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                visibility: visible;
+                width: auto;
+                height: 100%
+            }
+
+            .header__links-wrapper {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                height: 100%;
+                padding: 0
+            }
+
+            .header__link {
+                position: relative;
+                padding: .938rem 1rem;
+                border: 0;
+                height: 100%
+            }
+
+            .header__link::after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 3px;
+                width: 100%;
+                -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+                background: #277cea
+            }
+        }
+
+        .post-card {
+            display: block;
+            position: relative;
+            width: 100%;
+            min-height: 250px;
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #fff;
+            -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+            margin-bottom: 2.25rem;
+            border-bottom: 0
+        }
+
+        @media only screen and (min-width:48em) {
+            .post-card {
+                width: 48.4375%;
+                margin-right: 3.125%
+            }
+
+            .post-card:nth-child(2n+2) {
+                margin-right: 0
+            }
+        }
+
+        @media only screen and (min-width:75em) {
+            .post-card {
+                width: 31.25%;
+                margin-right: 3.125%
+            }
+
+            .post-card:nth-child(2n+2) {
+                margin-right: 3.125%
+            }
+        }
+
+        .post-card__label {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            z-index: 2
+        }
+
+        .post-card__inner {
+            display: block;
+            position: relative;
+            padding: 1.875rem 1.25rem .625rem;
+            width: 100%;
+            color: #838c8d;
+            border-bottom: 0
+        }
+
+        .post-card__header {
+            margin-bottom: .75rem
+        }
+
+        .post-card__meta {
+            font-size: .875rem
+        }
+
+        .post-card__thumb {
+            margin: 0;
+            background: #fff;
+            position: relative;
+            overflow: hidden
+        }
+
+        .post-card__thumb::after {
+            content: "";
+            display: block;
+            height: 0;
+            width: 100%;
+            padding-bottom: 56.25%
+        }
+
+        .post-card__thumb>* {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block
+        }
+
+        .label {
+            padding: 0 10px;
+            margin-bottom: 1rem;
+            display: inline-block;
+            line-height: 20px;
+            font-size: .75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, .8);
+            border: 2px solid rgba(255, 255, 255, .5);
+            border-radius: 100px
+        }
+
+        .hero {
+            margin: 3.75rem auto 0;
+            min-height: 16.25rem;
+            width: 100%;
+            position: relative;
+            background-color: #dde5ea;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: cover
+        }
+
+        @media only screen and (min-width:62em) {
+            .hero {
+                margin: 0 auto;
+                height: 36em
+            }
+        }
+
+        .hero::before {
+            position: absolute;
+            display: block;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(52, 56, 81, .8)
+        }
+
+        .hero__wrap {
+            position: absolute;
+            margin: auto;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: rgba(255, 255, 255, .8);
+            width: 100%;
+            max-width: 90%;
+            z-index: 1
+        }
+
+        .hero__wrap .hero__title {
+            font-size: 1.8em;
+            color: #fff
+        }
+
+        .blog {
+            background-color: #f9f9f9
+        }
+
+        .post-list {
+            padding-top: 2.5em;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-flex: 1;
+            -ms-flex: 1 0 auto;
+            flex: 1 0 auto
+        }
+
+        @media only screen and (min-width:48em) {
+            .hero__wrap {
+                max-width: 40em
+            }
+
+            .hero__wrap .hero__title {
+                padding: 1rem 0;
+                font-size: 2.625em;
+                line-height: 3.125rem
+            }
+
+            .post-list {
+                padding-top: 5em
+            }
+        }
+    </style>
+    <link rel="preload" href="/virtual-expo/assets/css/main.css" as="style" onload="this.rel='stylesheet'"> <noscript>
+        <link rel="stylesheet" href="/virtual-expo/assets/css/main.css"></noscript>
+    <script
+        type="text/javascript"> /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */ (function (w) { "use strict"; if (!w.loadCSS) { w.loadCSS = function () { } } var rp = loadCSS.relpreload = {}; rp.support = (function () { var ret; try { ret = w.document.createElement("link").relList.supports("preload") } catch (e) { ret = !1 } return function () { return ret } })(); rp.bindMediaToggle = function (link) { var finalMedia = link.media || "all"; function enableStylesheet() { link.media = finalMedia } if (link.addEventListener) { link.addEventListener("load", enableStylesheet) } else if (link.attachEvent) { link.attachEvent("onload", enableStylesheet) } setTimeout(function () { link.rel = "stylesheet"; link.media = "only x" }); setTimeout(enableStylesheet, 3000) }; rp.poly = function () { if (rp.support()) { return } var links = w.document.getElementsByTagName("link"); for (var i = 0; i < links.length; i++) { var link = links[i]; if (link.rel === "preload" && link.getAttribute("as") === "style" && !link.getAttribute("data-loadcss")) { link.setAttribute("data-loadcss", !0); rp.bindMediaToggle(link) } } }; if (!rp.support()) { rp.poly(); var run = w.setInterval(rp.poly, 500); if (w.addEventListener) { w.addEventListener("load", function () { rp.poly(); w.clearInterval(run) }) } else if (w.attachEvent) { w.attachEvent("onload", function () { rp.poly(); w.clearInterval(run) }) } } if (typeof exports !== "undefined") { exports.loadCSS = loadCSS } else { w.loadCSS = loadCSS } }(typeof global !== "undefined" ? global : this)) </script>
+</head>
+
+<body class="site">
+    <header class="header" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="Main navigation">
+        <div class="container">
+            <div class="header__inner"> <a class="header__logo" href="/virtual-expo/">
+                    <div class="header__logo--container"> <img src="../logo.png" alt="IEEE NITK Logo"></div>
+                </a>
+                <nav class="header__links">
+                    <div class="container header__links-wrapper"> <a class="header__link" href="/virtual-expo/"
+                            itemprop="url"> <span itemprop="name">All Projects</span> </a> <a class="header__link"
+                            href="https://ieee.nitk.ac.in/" itemprop="url"> <span itemprop="name">Main Website</span>
+                        </a> </a></div>
+                </nav>
+                <div class="header__toggle"> <span></span> <span></span> <span></span></div>
+            </div>
+        </div>
+    </header>
+    <div class="hero lazyload"
+        data-bg="https://ieee.nitk.ac.in//virtual-expo/assets/img/robotic-arm-inverse-kinematics/roboticarm1.webp">
+        <div class="hero__wrap">
+            <div class="hero__categories"> <a class="label" href="/virtual-expo/piston">Piston</a></div>
+            <h1 class="hero__title">Robotic Arm Inverse Kinematics</h1>
+            <p class="hero__meta"> <span> <time>01 Jul 2020</time>&nbsp;&middot; </span> <span> 7 mins read </span></p>
+        </div>
+    </div>
+    <main class="site__content">
+        <div class="container">
+            <article class="post-content" itemprop="articleBody">
+                <h2 id="team-members">Team members:</h2>
+                <ul>
+                    <li>Nisarg Shah</li>
+                    <li>Rahul RL</li>
+                    <li>Smriti S</li>
+                    <li>Ashvin Prasanth</li>
+                    <li>Jay Mandal</li>
+                </ul>
+                <h2 id="introduction">Introduction</h2>
+                <p>The solution to the inverse kinematic is of utmost importance in the robotics industry because in
+                    every application of robotics, we are known the desired position of the end effector and we must
+                    achieve this desired position through the robotic arm designed by setting the correct joint angles.
+                    It is a well-known fact that for a particular position of the end effector either the solution
+                    doesn’t exist or there can be multiple solutions for a particular position of the end effector.
+                    There have been many solutions proposed to solve the inverse kinematics problem. All the solutions
+                    can be broadly classified as:</p>
+                <ol>
+                    <li>
+                        <p>Algebraic Methods</p>
+                        <p>In the algebraic methods, cartesian space and the transformation between cartesian spaces are
+                            used. In the solution the system will define Denavit &amp; Hartenberg (DH) parameters for
+                            all joints of a robotic arm to describe a robotic arm about types of joint or length in each
+                            link. Then, multiply position of the end-effector (or desired position) by orthonormal
+                            matrices (4×4 matrices) to find all position of joints in Cartesian space and use inverse
+                            trigonometric functions to solve angles of robotic arm joints.</p>
+                    </li>
+                    <li>
+                        <p>Geometric Methods</p>
+                        <p>Geometric methods are suitable only for lesser Degree of freedom and when the number of links
+                            in the robotic arm are not more than 2. This is because the trigonometric functions that
+                            involve in larger number of links are much more complex.</p>
+                    </li>
+                    <li>
+                        <p>Iterative Methods</p>
+                        <p>The iterative methods use numerical method techniques for solving the problem. Now, the
+                            popular new solutions are neural network approaches that training network with data of the
+                            end-effector positions and angles of joints to create the model.</p>
+                    </li>
+                </ol>
+                <p>However, the problem with the neural network approaches is that they are computationally expensive.
+                    The architectures involve a lot of hidden units and lots of hidden layers making it harder to
+                    compute. The reason for choosing deeper neural networks is that shallow neural networks are not able
+                    to learn the dataset accurately. The reason for it is because of the choice of activation function.
+                    The inverse kinematics problem involves the neural network learning a complex inverse sinusoidal
+                    function and hence this research paper tries to propose an activation function which involves an
+                    inverse sine term hence allowing the neural network to generalize faster. This project shows that
+                    with the introduction of the inverse sine non linearity, the neural network is able to generalize
+                    faster and hence making the inverse kinematics problem computationally less expensive.</p>
+                <h2 id="activation-functions">Activation Functions</h2>
+                <p>In artificial neural networks, the activation function of a node defines the output of that node
+                    given an input or set of inputs. They are generally introduced in neural networks so that the neural
+                    networks can learn complex non-linear functions easily.</p>
+                <p>There are a lot of common activation functions used by the machine learning community. Sigmoid
+                    Activation Function is the most used activation function as it brings down the input to a value
+                    between 0 and 1.</p>
+                <p><strong>𝑓(𝑥) = 1/(1+exp(−𝑥))</strong></p>
+                <p><img src="../assets/img/robotic-arm-inverse-kinematics/raik1.webp" alt="1" class="center-image" /></p>
+                <p>Sigmoid activation function attains the value 1 for large positive input parameter and 0 for large
+                    negative input parameters.</p>
+                <p>In this project, we are trying to couple the effects of the sigmoid activation function with an
+                    inverse sinusoid activation function for predicting the values of joint angles.</p>
+                <p><strong>𝑔(𝑥) = arc sin(𝑥)</strong></p>
+                <p><img src="../assets/img/robotic-arm-inverse-kinematics/raik2.webp" alt="Inverse Sine function"
+                        class="center-image" /></p>
+                <p style="text-align: center;"><em>Fig 2 : Inverse Sine function</em></p>
+                <p>The arc sin activation function takes in value between -1 and 1 and outputs an angle between -Π/2 to
+                    Π/2.</p>
+                <p>Since sigmoid activation function is input to the arc sin activation function, hence the output of
+                    the activation function is 0 to Π/2.</p>
+                <h2 id="robotic-arm-setup">Robotic arm setup</h2>
+                <p>The robotic arm model that was used to test the results is the 3 link 2 DOF planar robotic arm with
+                    link lengths in the ratio 1:1:1. Specifically the link lengths are considered as 2 units.</p>
+                <p><img src="../assets/img/robotic-arm-inverse-kinematics/raik3.webp"
+                        alt="Robotic arm set up used for the project" class="center-image" /></p>
+                <p style="text-align: center;"><em>Fig 3: Robotic arm set up used for the project</em></p>
+                <p>The forward kinematics equations for the above robotic arm setup are given by</p>
+                <p><strong>𝑥 = 2 ∗ cos (theta1) + 2 ∗ cos (theta1 + theta2) + 2 ∗ cos (theta1 + theta2 +
+                        theta3)</strong> <strong>𝑦 = 2 ∗ sin (theta1) + 2 ∗ sin (theta1 + theta2) + 2 ∗ sin (theta1 +
+                        theta2 + theta3)</strong></p>
+                <p>In a 2D space, we plotted the trajectory followed by our robotic arm setup by giving increments to
+                    thetas of 1 degree.</p>
+                <p><img src="../assets/img/robotic-arm-inverse-kinematics/raik4.webp"
+                        alt="Trajectory followed by robotic arm in 2 D space" class="center-image" /></p>
+                <p style="text-align: center;"><em>Fig 4 : Trajectory followed by robotic arm in 2 D space</em></p>
+                <p>To prepare the dataset for training the neural network model, the above forward kinematics equations
+                    were used.</p>
+                <h2 id="computation-model">Computation Model</h2>
+                <p>The computation model used for training is a simple neural network architecture without any hidden
+                    layers to reduce the computational requirements and in turn test the new activation and loss
+                    functions.</p>
+                <p><img src="../assets/img/robotic-arm-inverse-kinematics/raik5.webp" alt="Computation model used"
+                        class="center-image" /></p>
+                <p style="text-align: center;"><em>Fig 5 : Computation model used</em></p>
+                <p>The input to the network is x and y which represents the position of the end effector. Taking a
+                    weighted average, a linear function is created for the prediction of thetas.</p>
+                <p><img src="../assets/img/robotic-arm-inverse-kinematics/raike1.webp" alt="e1" class="center-image" />
+                </p>
+                <p>These functions are then passed into sigmoid and arc sin activation functions to predict the thetas.
+                </p>
+                <p><img src="../assets/img/robotic-arm-inverse-kinematics/raike2.webp" alt="e2" class="center-image" />
+                </p>
+                <p>Here (f, g) are sigmoid and arc sin activation functions respectively.</p>
+                <p>Here we need not compare the predicted thetas with the original theta’s since we know that for a
+                    particular end effector position, there can be a lot of theta’s possible.</p>
+                <h2 id="loss-function">Loss Function</h2>
+                <p>After the prediction of theta’s, x &amp; y are predicted using the forward kinematic equations.</p>
+                <p><img src="../assets/img/robotic-arm-inverse-kinematics/raike3.webp" alt="e3" class="center-image" />
+                </p>
+                <p>The predicted x, predicted y is compared with original x &amp; y respectively using the mean squared
+                    loss function.</p>
+                <p><img src="../assets/img/robotic-arm-inverse-kinematics/raike4.webp" alt="e4" class="center-image" />
+                </p>
+                <p>The objective of training of the neural network model involves minimizing the loss function.</p>
+                <h2 id="optimization">Optimization</h2>
+                <p>The weights are assigned randomly and the best weights that minimize the loss function are chosen
+                    using the gradient based optimization technique.</p>
+                <p><img src="../assets/img/robotic-arm-inverse-kinematics/raik6.webp" alt="Loss vs Iterations plot"
+                        class="center-image" /></p>
+                <p style="text-align: center;"><em>Fig 6 : Loss vs Iterations plot</em></p>
+                <h2 id="results">Results</h2>
+                <p>Using the new loss &amp; activation function &amp; comparatively simpler network architecture, the
+                    thetas were accurately predicted so that the loss is minimized.</p>
+                <p>We observed that even for a simple architecture as shown in the computational model, the x’s were
+                    predicted up to an average accuracy of ±0.75 whereas y’s were predicted up to an average accuracy of
+                    ±1.2.</p>
+                <p>The results show that introduction of sinusoidal non linearity in the machine learning is making it
+                    predict much accurate results even with a very simple computational model hence improving the
+                    computational capabilities.</p>
+                <p><img src="../assets/img/robotic-arm-inverse-kinematics/raik7.webp" alt="Predicted x vs original x"
+                        class="center-image" /></p>
+                <p style="text-align: center;"><em>Fig 7 : Predicted x vs original x</em></p>
+                <p><img src="../assets/img/robotic-arm-inverse-kinematics/raik8.webp" alt="Predicted y vs original y"
+                        class="center-image" /></p>
+                <p style="text-align: center;"><em>Fig 8: Predicted y vs original y</em></p>
+                <h2 id="conclusion">Conclusion</h2>
+                <p>This project introduces an activation and loss function for the neural network architecture to solve
+                    inverse kinematics problem which helps to largely reduce the depth of neural network architecture
+                    used.</p>
+                <p>With the help of inverse sinusoidal activation function with sigmoid and mean squared loss function
+                    over the predicted x, y, we are able to significantly reduce the computational requirements and also
+                    obtain satisfactory results.</p>
+                <p>Hence by the introduction of activation and loss function proposed, we can successfully handle the
+                    tradeoff between computational requirements and accuracy while solving the inverse kinematics
+                    problem using neural networks.</p>
+                <p>A best fit straight line is passed through a subset of the training data for which the mean squared
+                    loss is within the acceptable range. This allows the robotic arm to move in a straight line. By
+                    further increasing the degrees of freedom for the base, the robotic arm can be made to traverse the
+                    entire 2 D Plane.</p>
+            </article>
+            <div class="post-content controls__inner">
+                <div class="controls__item next"> <span>Previous</span> <a
+                        href="/virtual-expo/smart-small-firearms-system/"> <span> <svg
+                                xmlns="http://www.w3.org/2000/svg" width="6" height="11">
+                                <path fill="fillColor"
+                                    d="M5.647 1.718c.37-.434.323-1.09-.106-1.465A1.016 1.016 0 0 0 4.095.36L.25 4.875a1.05 1.05 0 0 0 .017 1.378l3.95 4.407c.38.424 1.03.456 1.448.07a1.05 1.05 0 0 0 .07-1.468l-3.34-3.725 3.253-3.819z" />
+                            </svg> </span> Smart Firearms ... </a></div>
+                <div class="controls__item prev"> <span>Next</span> <a href="/virtual-expo/nano-mass-sensor/"> Nano Mass Sensor
+                        <span> <svg xmlns="http://www.w3.org/2000/svg" width="6" height="11">
+                                <path fill="#fillColor"
+                                    d="M.353 9.282c-.37.434-.323 1.09.106 1.465a1.016 1.016 0 0 0 1.446-.107L5.75 6.125a1.05 1.05 0 0 0-.017-1.378L1.784.34A1.015 1.015 0 0 0 .336.27a1.05 1.05 0 0 0-.07 1.468l3.34 3.725L.353 9.282z" />
+                            </svg> </span> </a></div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <nav class="social"> <a class="social__link" target="_blank" rel="noopener noreferrer"
+                    href="https://github.com/IEEE-NITK"> <svg class="social__icon" viewBox="0 0 20 20" width="20px"
+                        height="20px">
+                        <path
+                            d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z" />
+                        </svg> </a> <a class="social__link" target="_blank" rel="noopener noreferrer"
+                    href="https://www.instagram.com/ieee_nitk"> <svg class="social__icon" viewBox="0 0 20 20"
+                        width="20px" height="20px">
+                        <path
+                            d="M8 0C5.827 0 5.555.01 4.702.048 3.85.088 3.27.222 2.76.42a3.908 3.908 0 0 0-1.417.923c-.445.444-.72.89-.923 1.417-.198.51-.333 1.09-.372 1.942C.008 5.555 0 5.827 0 8s.01 2.445.048 3.298c.04.852.174 1.433.372 1.942.204.526.478.973.923 1.417.444.445.89.72 1.417.923.51.198 1.09.333 1.942.372.853.04 1.125.048 3.298.048s2.445-.01 3.298-.048c.852-.04 1.433-.174 1.942-.372a3.908 3.908 0 0 0 1.417-.923c.445-.444.72-.89.923-1.417.198-.51.333-1.09.372-1.942.04-.853.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.852-.174-1.433-.372-1.942a3.908 3.908 0 0 0-.923-1.417A3.886 3.886 0 0 0 13.24.42c-.51-.198-1.09-.333-1.942-.372C10.445.008 10.173 0 8 0zm0 1.44c2.136 0 2.39.01 3.233.048.78.036 1.203.166 1.485.276.374.145.64.318.92.598.28.28.453.546.598.92.11.282.24.705.276 1.485.038.844.047 1.097.047 3.233s-.01 2.39-.05 3.233c-.04.78-.17 1.203-.28 1.485-.15.374-.32.64-.6.92-.28.28-.55.453-.92.598-.28.11-.71.24-1.49.276-.85.038-1.1.047-3.24.047s-2.39-.01-3.24-.05c-.78-.04-1.21-.17-1.49-.28a2.49 2.49 0 0 1-.92-.6c-.28-.28-.46-.55-.6-.92-.11-.28-.24-.71-.28-1.49-.03-.84-.04-1.1-.04-3.23s.01-2.39.04-3.24c.04-.78.17-1.21.28-1.49.14-.38.32-.64.6-.92.28-.28.54-.46.92-.6.28-.11.7-.24 1.48-.28.85-.03 1.1-.04 3.24-.04zm0 2.452a4.108 4.108 0 1 0 0 8.215 4.108 4.108 0 0 0 0-8.215zm0 6.775a2.667 2.667 0 1 1 0-5.334 2.667 2.667 0 0 1 0 5.334zm5.23-6.937a.96.96 0 1 1-1.92 0 .96.96 0 0 1 1.92 0z">
+                        </path>
+                    </svg> </a></nav>
+        </div>
+    </footer>
+    <script async src="/virtual-expo/assets/js/bundle.js"></script>
+    <script
+        async> if ('serviceWorker' in navigator) { navigator.serviceWorker.register('/virtual-expo/sw.js').then(function (registration) { console.log('ServiceWorker registration successful with scope: ', registration.scope); }).catch(function (error) { console.log('ServiceWorker registration failed: ', error); }); } </script>
+</body>
+
+</html>

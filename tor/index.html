@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.6.1 -->
+    <title>Tor | Virtual Expo</title>
+    <meta name="generator" content="Jekyll v3.8.7" />
+    <meta property="og:title" content="Tor" />
+    <meta name="author" content="IEEE NITK" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description"
+        content="Tor which stands for The Onion Routing protocol is commonly associated with the dark web and thought of as some browser that can hide your activity and help you connect to this deeper layer of the web. Well, it’s not entirely wrong as a description but that is just a very surface-level understanding of Tor. This blog post will try to get in technical depth and try to break down Tor’s inner workings and how you too can design and implement Tor just like we did as a part of this project." />
+    <meta property="og:description"
+        content="Tor which stands for The Onion Routing protocol is commonly associated with the dark web and thought of as some browser that can hide your activity and help you connect to this deeper layer of the web. Well, it’s not entirely wrong as a description but that is just a very surface-level understanding of Tor. This blog post will try to get in technical depth and try to break down Tor’s inner workings and how you too can design and implement Tor just like we did as a part of this project." />
+    <link rel="canonical" href="https://ieee.nitk.ac.in//virtual-expo/tor/" />
+    <meta property="og:url" content="https://ieee.nitk.ac.in//virtual-expo/tor/" />
+    <meta property="og:site_name" content="IEEE NITK Virtual Expo" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-07-01T00:00:00+05:30" />
+    <script
+        type="application/ld+json"> {"url":"https://ieee.nitk.ac.in//virtual-expo/tor/","headline":"Tor","dateModified":"2020-07-01T00:00:00+05:30","datePublished":"2020-07-01T00:00:00+05:30","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://ieee.nitk.ac.in//virtual-expo/tor/"},"author":{"@type":"Person","name":"IEEE NITK"},"description":"Introduction Tor which stands for The Onion Routing protocol is commonly associated with the dark web and thought of as some browser that can hide your activity and help you connect to this deeper layer of the web. Well, it’s not entirely wrong as a description but that is just a very surface-level understanding of Tor. This blog post will try to get in technical depth and try to break down Tor’s inner workings and how you too cN design and implement Tor just like we did as a part of this project.","@context":"https://schema.org"}</script>
+    <!-- End Jekyll SEO tag -->
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="/virtual-expo/assets/img/icons/apple-touch-icon.webp">
+    <link rel="icon" type="image/png"
+        href="/virtual-expo/favicon.ico">
+    
+    <link rel="manifest" href="/virtual-expo/assets/img/icons/manifest.json">
+    <link rel="mask-icon" href="/virtual-expo/assets/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <!--[if IE]><link rel="shortcut icon" href="/assets/img/icons/favicon.ico"><![endif]-->
+    <link rel="shortcut icon" href="/virtual-expo/assets/img/icons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="IEEE NITK Virtual Expo">
+    <meta name="application-name" content="IEEE NITK Virtual Expo">
+    <meta name="msapplication-config" content="/virtual-expo/assets/img/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <style class="inlineCSS">
+        h1 {
+            color: #313237;
+            margin-top: 0;
+            margin-bottom: .5rem
+        }
+
+        .dark-bg {
+            background-color: #313237
+        }
+
+        @media only screen and (min-width:48em) {
+            .post-card {
+                width: 48.4375%;
+                margin-right: 3.125%
+            }
+
+            .post-card:last-of-type,
+            .post-card:nth-child(2n+2) {
+                margin-right: 0
+            }
+        }
+
+        html {
+            line-height: 1.15;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%
+        }
+
+        body {
+            margin: 0
+        }
+
+        header,
+        nav,
+        section {
+            display: block
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: .67em 0
+        }
+
+        figure,
+        main {
+            display: block
+        }
+
+        figure {
+            margin: 1em 40px
+        }
+
+        a {
+            background-color: transparent;
+            -webkit-text-decoration-skip: objects
+        }
+
+        img {
+            border-style: none
+        }
+
+        svg:not(:root) {
+            overflow: hidden
+        }
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit
+        }
+
+        html {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        body {
+            -webkit-overflow-scrolling: touch
+        }
+
+        *,
+        ::after,
+        ::before {
+            -webkit-box-sizing: inherit;
+            box-sizing: inherit
+        }
+
+        .site {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            min-height: 100vh;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column
+        }
+
+        .site__content {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            width: auto;
+            vertical-align: middle
+        }
+
+        figure {
+            margin: 0
+        }
+
+        body {
+            background-color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #343851;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: 100%
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1.25rem
+        }
+
+        h1,
+        h2 {
+            color: #313237;
+            margin-top: 0;
+            margin-bottom: .5rem
+        }
+
+        a {
+            color: #277cea;
+            text-decoration: none;
+            border-bottom: 1px dashed #277cea
+        }
+
+        .blur {
+            background: #fff;
+            filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="16" /></filter></svg>#filter');
+            -webkit-filter: blur(1rem);
+            filter: blur(1rem)
+        }
+
+        .container {
+            padding: 0 20px;
+            max-width: 100%;
+            margin: 0 auto
+        }
+
+        @media only screen and (min-width:36em) {
+            .container {
+                max-width: 540px;
+                margin: 0 auto
+            }
+        }
+
+        @media only screen and (min-width:48em) {
+            .container {
+                max-width: 720px;
+                margin: 0 auto
+            }
+        }
+
+        @media only screen and (min-width:62em) {
+            .container {
+                max-width: 960px;
+                margin: 0 auto
+            }
+        }
+
+        @media only screen and (min-width:75em) {
+            .container {
+                max-width: 1170px;
+                margin: 0 auto
+            }
+        }
+
+        .header {
+            background-color: #fff;
+            color: #343851;
+            position: absolute;
+            z-index: 4;
+            width: 100%;
+            top: 0;
+            left: 0;
+            will-change: transform;
+            -webkit-transform: translateY(0);
+            transform: translateY(0)
+        }
+
+        .header a {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            border-bottom: 0
+        }
+
+        .header__logo {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            height: 100%;
+            overflow: hidden;
+            padding: 19px 0;
+            margin-right: 1.25rem;
+            outline: 0;
+            border-bottom: 0;
+            color: #313237
+        }
+
+        .header__logo .header__logo--container {
+            width: 145px
+        }
+
+        .header__logo .header__logo--container .logo {
+            fill: currentColor
+        }
+
+        .header__inner {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            height: 3.75em;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between
+        }
+
+        .header__links {
+            padding-bottom: .5rem;
+            display: none;
+            position: absolute;
+            top: 3.75em;
+            left: 0;
+            width: 100%;
+            height: auto;
+            background: #fff
+        }
+
+        .header__link {
+            color: #343851;
+            padding: .938rem 0;
+            border-top: 1px solid #ededed
+        }
+
+        .header__toggle {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: 44px;
+            height: 100%;
+            background-color: transparent;
+            padding-left: 1.25rem
+        }
+
+        .header__toggle span {
+            display: block;
+            position: relative;
+            margin-top: 4px;
+            background-color: #343851;
+            width: 100%;
+            height: 2px;
+            border-radius: 1px
+        }
+
+        .header__toggle span:first-child {
+            margin-top: 0
+        }
+
+        @media (min-width:62em) {
+            .header__toggle {
+                display: none;
+                visibility: hidden
+            }
+
+            .header__links {
+                position: static;
+                padding: 0;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                visibility: visible;
+                width: auto;
+                height: 100%
+            }
+
+            .header__links-wrapper {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                height: 100%;
+                padding: 0
+            }
+
+            .header__link {
+                position: relative;
+                padding: .938rem 1rem;
+                border: 0;
+                height: 100%
+            }
+
+            .header__link::after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 3px;
+                width: 100%;
+                -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+                background: #277cea
+            }
+        }
+
+        .post-card {
+            display: block;
+            position: relative;
+            width: 100%;
+            min-height: 250px;
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #fff;
+            -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+            margin-bottom: 2.25rem;
+            border-bottom: 0
+        }
+
+        @media only screen and (min-width:48em) {
+            .post-card {
+                width: 48.4375%;
+                margin-right: 3.125%
+            }
+
+            .post-card:nth-child(2n+2) {
+                margin-right: 0
+            }
+        }
+
+        @media only screen and (min-width:75em) {
+            .post-card {
+                width: 31.25%;
+                margin-right: 3.125%
+            }
+
+            .post-card:nth-child(2n+2) {
+                margin-right: 3.125%
+            }
+        }
+
+        .post-card__label {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            z-index: 2
+        }
+
+        .post-card__inner {
+            display: block;
+            position: relative;
+            padding: 1.875rem 1.25rem .625rem;
+            width: 100%;
+            color: #838c8d;
+            border-bottom: 0
+        }
+
+        .post-card__header {
+            margin-bottom: .75rem
+        }
+
+        .post-card__meta {
+            font-size: .875rem
+        }
+
+        .post-card__thumb {
+            margin: 0;
+            background: #fff;
+            position: relative;
+            overflow: hidden
+        }
+
+        .post-card__thumb::after {
+            content: "";
+            display: block;
+            height: 0;
+            width: 100%;
+            padding-bottom: 56.25%
+        }
+
+        .post-card__thumb>* {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block
+        }
+
+        .label {
+            padding: 0 10px;
+            margin-bottom: 1rem;
+            display: inline-block;
+            line-height: 20px;
+            font-size: .75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, .8);
+            border: 2px solid rgba(255, 255, 255, .5);
+            border-radius: 100px
+        }
+
+        .hero {
+            margin: 3.75rem auto 0;
+            min-height: 16.25rem;
+            width: 100%;
+            position: relative;
+            background-color: #dde5ea;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: cover
+        }
+
+        @media only screen and (min-width:62em) {
+            .hero {
+                margin: 0 auto;
+                height: 36em
+            }
+        }
+
+        .hero::before {
+            position: absolute;
+            display: block;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(52, 56, 81, .8)
+        }
+
+        .hero__wrap {
+            position: absolute;
+            margin: auto;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: rgba(255, 255, 255, .8);
+            width: 100%;
+            max-width: 90%;
+            z-index: 1
+        }
+
+        .hero__wrap .hero__title {
+            font-size: 1.8em;
+            color: #fff
+        }
+
+        .blog {
+            background-color: #f9f9f9
+        }
+
+        .post-list {
+            padding-top: 2.5em;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-flex: 1;
+            -ms-flex: 1 0 auto;
+            flex: 1 0 auto
+        }
+
+        @media only screen and (min-width:48em) {
+            .hero__wrap {
+                max-width: 40em
+            }
+
+            .hero__wrap .hero__title {
+                padding: 1rem 0;
+                font-size: 2.625em;
+                line-height: 3.125rem
+            }
+
+            .post-list {
+                padding-top: 5em
+            }
+        }
+    </style>
+    <link rel="preload" href="/virtual-expo/assets/css/main.css" as="style" onload="this.rel='stylesheet'"> <noscript>
+        <link rel="stylesheet" href="/virtual-expo/assets/css/main.css"></noscript>
+    <script
+        type="text/javascript"> /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */ (function (w) { "use strict"; if (!w.loadCSS) { w.loadCSS = function () { } } var rp = loadCSS.relpreload = {}; rp.support = (function () { var ret; try { ret = w.document.createElement("link").relList.supports("preload") } catch (e) { ret = !1 } return function () { return ret } })(); rp.bindMediaToggle = function (link) { var finalMedia = link.media || "all"; function enableStylesheet() { link.media = finalMedia } if (link.addEventListener) { link.addEventListener("load", enableStylesheet) } else if (link.attachEvent) { link.attachEvent("onload", enableStylesheet) } setTimeout(function () { link.rel = "stylesheet"; link.media = "only x" }); setTimeout(enableStylesheet, 3000) }; rp.poly = function () { if (rp.support()) { return } var links = w.document.getElementsByTagName("link"); for (var i = 0; i < links.length; i++) { var link = links[i]; if (link.rel === "preload" && link.getAttribute("as") === "style" && !link.getAttribute("data-loadcss")) { link.setAttribute("data-loadcss", !0); rp.bindMediaToggle(link) } } }; if (!rp.support()) { rp.poly(); var run = w.setInterval(rp.poly, 500); if (w.addEventListener) { w.addEventListener("load", function () { rp.poly(); w.clearInterval(run) }) } else if (w.attachEvent) { w.attachEvent("onload", function () { rp.poly(); w.clearInterval(run) }) } } if (typeof exports !== "undefined") { exports.loadCSS = loadCSS } else { w.loadCSS = loadCSS } }(typeof global !== "undefined" ? global : this)) </script>
+</head>
+
+<body class="site">
+    <header class="header" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="Main navigation">
+        <div class="container">
+            <div class="header__inner"> <a class="header__logo" href="/virtual-expo/">
+                    <div class="header__logo--container"> <img src="../logo.png" alt="IEEE NITK Logo"></div>
+                </a>
+                <nav class="header__links">
+                    <div class="container header__links-wrapper"> <a class="header__link" href="/virtual-expo/"
+                            itemprop="url"> <span itemprop="name">All Projects</span> </a> <a class="header__link"
+                            href="https://ieee.nitk.ac.in/" itemprop="url"> <span itemprop="name">Main Website</span>
+                        </a> </a></div>
+                </nav>
+                <div class="header__toggle"> <span></span> <span></span> <span></span></div>
+            </div>
+        </div>
+    </header>
+    <div class="hero lazyload"
+        data-bg="https://ieee.nitk.ac.in//virtual-expo/assets/img/tor/Tor1.webp">
+        <div class="hero__wrap">
+            <div class="hero__categories"> <a class="label" href="/virtual-expo/compsoc">CompSoc</a></div>
+            <h1 class="hero__title">Tor</h1>
+            <p class="hero__meta"> <span> <time>01 Jul 2020</time>&nbsp;&middot; </span> <span> 13 mins read </span></p>
+        </div>
+    </div>
+    <main class="site__content">
+        <div class="container">
+            <article class="post-content" itemprop="articleBody">
+                <h2 id="introduction">Introduction</h2>
+                <p>Tor which stands for <strong>The Onion Routing</strong> protocol is commonly associated with the dark
+                    web and thought of as some browser that can <strong>hide</strong> your activity and help you connect
+                    to this deeper layer of the web. Well, it’s not entirely wrong as a description but that is just a
+                    very surface-level understanding of Tor. This blog post will try to get in technical depth and try
+                    to break down Tor’s inner workings and how you can too design and implement Tor just like we did as
+                    a part of this project.</p>
+                <p><img src="https://www.torproject.org/static/images/tor-project-logo-onions.png" alt="TOR" /></p>
+                <h2 id="team-members">Team members</h2>
+                <ul>
+                    <li>Nisarg Joshi</li>
+                    <li>Arpitha Raghunandan</li>
+                    <li>Aditya Sohoni</li>
+                    <li>Suhas K S</li>
+                    <li>Praveen</li>
+                </ul>
+                <h1 id="tor-as-a-protocol">TOR as a Protocol</h1>
+                <p>Tor, which stands for <strong>The onion router</strong> or <strong>The onion routing</strong>
+                    protocol, is simply that - a <strong>Protocol</strong>. It’s simply a network protocol just like
+                    HTTP or FTP or something similar that enables communication between hosts and has various
+                    properties.</p>
+                <p>The world of networking is full of protocols and layers and it’s easy to get lost in this. Hence we
+                    assume a basic understanding of networking and communication, knowing basics like the OSI model,
+                    TCP/IP stack and basic concepts.</p>
+                <p>So Tor being just a protocol works at the application layer like HTTP. Hence it is not part of the
+                    kernel-level network stack and can be easily implemented if we know the specification of the
+                    protocol. Every protocol is designed with certain properties in mind, in the same way, Tor is
+                    designed with following in mind:</p>
+                <ol>
+                    <li>
+                        <p>It is supposed to operate as a network overlay protocol. This means it is supposed to form an
+                            <strong>overlay</strong> network on top of existing network traffic which can use any
+                            application layer protocol underneath(like HTTP, FTP, SSH and so on)</p>
+                    </li>
+                    <li>
+                        <p>It operates over a network of nodes and creates virtual circuits through this <strong>tor
+                                network</strong> which allow routing of traffic through the virtual circuits</p>
+                    </li>
+                    <li>
+                        <p>Through its design of virtual circuits and use of cryptographic protocols, it helps in
+                            creating secure channels of information transmission that gives the tor network the
+                            lucrative <strong>anonymity</strong> that it promises. Hence it is designed for anonymous
+                            transfer of data between client and end host.</p>
+                    </li>
+                </ol>
+                <p>We will deconstruct how Tor works and achieves these properties and how all this ties to the dark web
+                    and hidden onion services.</p>
+                <h1 id="tor-components-that-make-it-work">TOR: Components that make it work</h1>
+                <p>From a design point of view, tor protocol has 3 parties involved:</p>
+                <ol>
+                    <li>The Tor Client which we call the Onion Proxy</li>
+                    <li>The Tor Router which is also called Onion Router.</li>
+                    <li>The End Host/Destination</li>
+                    <li>The Tor message which is also called the Tor Cell</li>
+                </ol>
+                <h2 id="tor-clientonion-proxy">Tor Client/Onion Proxy</h2>
+                <p>The onion proxy is the piece of Tor component that runs as a part of the Tor browser that you
+                    download. It facilitates any client to connect to the <strong>dark web</strong> and access the
+                    overlay network operated by Tor. The Proxy component takes your vanilla HTTP traffic(for example)
+                    and wraps it into <strong>Tor traffic</strong> and sends it across the Tor network for anonymous
+                    communication. For you, as a client, it still feels like any other normal browsing experience.</p>
+                <p>The reason why it is called a proxy is that it behaves as a <strong>proxy</strong> to your normal web
+                    traffic communication. It actually is a SOCKS proxy and operates at the SOCKS layer(but let’s not
+                    get into this detail).</p>
+                <p>The onion proxy is also the one that builds a virtual circuit for communication, sets up the circuit
+                    and starts the transmission of data back and forth. This virtual circuit is created on the Tor
+                    network using the next component we will talk about which are the Tor routers/onion routers.</p>
+                <h2 id="tor-routeronion-router">Tor router/Onion Router</h2>
+                <p>This part of the tor protocol is the heart of the overlay network that Tor creates for communication.
+                    When you download the Tor Browser, you have an option to configure yourself as a <strong>Tor
+                        Node</strong>, which is precisely the onion router. The onion router is the process which makes
+                    your machine/host act as a router in the tor network. If you chose to run your machine as a Tor
+                    node, then you are permitting Tor to use your machine as a part of the overlay network that Tor
+                    creates.</p>
+                <p>What routers do is participate in the virtual circuit creation which some onion proxy somewhere in
+                    the world has created. And then route the traffic through themselves in the circuits which they are
+                    a part of. An Onion router can be part of multiple circuits, it maintains a routing table sort of a
+                    thing that allows it to route the traffic through correct circuits.</p>
+                <p>Hence you can be a proxy as well as a router at any given point of time. Also, there is a special
+                    kind of node called the <strong>exit node</strong> which is the last node in the virtual circuit.
+                    This node is special in the sense that you can choose not to be the exit node because it is exposed
+                    directly to the outside internet and has some serious security implications. (For example, if some
+                    anonymous clients are buying drugs over the Tor network it will seem like the exit node is making
+                    the requests. So beware before you choose to be an exit node)</p>
+                <h2 id="end-hostdestination">End Host/Destination</h2>
+                <p>This is as the name suggests the actual host the client wants to connect to. It can be a plain
+                    internet end host or it could be a hidden service. (We will not cover hidden services for
+                    simplicity). Not much to dig here.</p>
+                <p>Now knowing the major components lets breakdown how the protocol actually operates and how it creates
+                    a secure anonymous channel/circuit using cryptography and other tools.</p>
+                <h2 id="tor-messagecell">Tor Message/Cell</h2>
+                <p>Every network protocol in the networking world has a message format, which is used for consistent
+                    communication with the clients and servers using that protocol. A message format definition is half
+                    the work done for the given protocol design. The only thing then left is designing the processing of
+                    those messages.</p>
+                <p>In the same manner, Tor has a message format that encapsulates all the traffic moving through the
+                    virtual circuits. It is called <strong>Cell</strong>. Any basic unit of message/communication is
+                    carried inside a Tor Cell. Now the Cell has multiple formats based on the type of traffic being
+                    carried which you can discover more in the spec of Tor(will link it in the resources for this post).
+                </p>
+                <p>A few points about the Tor Cell:</p>
+                <ol>
+                    <li>It is originally proposed as fixed size with 512 bytes sized messages.</li>
+                    <li>It has a header and a payload(as expected duh!)</li>
+                    <li>There are 2 major cell types: control cells and relay cells</li>
+                    <li>Control cells help in circuit creation and teardown etc.</li>
+                    <li>Relay cells carry the actual data, like HTTP data wrapped inside themselves.</li>
+                </ol>
+                <p><img src="https://www.researchgate.net/profile/Ferry_Astika/publication/313951935/figure/fig2/AS:557209840033792@1509860586098/TOR-Control-Cell-and-Relay-Cell-Structure.webp"
+                        alt="CellStructure" /></p>
+                <h1 id="tor-design-of-circuits-and-data-transmission">Tor: Design of Circuits and Data Transmission</h1>
+                <p><img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Tor-design_Tor_Circuit_building,_data_sending,_and_data_receiving_diagram.png"
+                        alt="CircuitCreation" /></p>
+                <p>Having looked at the components that build this protocol, we will look at how it actually works, step
+                    by step. Here we go:</p>
+                <ol>
+                    <li>First, the Onion Proxy process running on a client machine starts by creating a
+                        <strong>circuit</strong>. A circuit is simply a connection between a set of onion routers.</li>
+                    <li>To create a circuit, it starts by picking 3 nodes out of an open public directory listing of
+                        these routers. The routers are listed publicly and it selects 3 at random to create a single
+                        circuit. (Minor detail: It takes care of assigning exit node based on the policy set by the
+                        node)</li>
+                    <li>The circuit creation is a crucial step as we will break it down here:<ul>
+                            <li>The circuit is created <strong>incrementally</strong></li>
+                            <li>The proxy first talks to the first node in the circuit over a TCP socket connection.
+                                This connection is secured using TLS at the transport layer. (Implicit assumption: these
+                                nodes have a set of cryptographic keys that enable encryption of traffic). In this
+                                communication, the onion proxy establishes a <strong>session</strong> key that it will
+                                use in encrypting the data at Tor layer along the circuit. This crypto key is
+                                established using Diffie Hellman(DH) key exchange. The Proxy does this using a control
+                                cell called <strong>CREATE Cell</strong></li>
+                            <li>Next, it sends an <strong>EXTEND cell</strong> to the first node whose payload has DH
+                                key exchange information. The first node sends a created cell by copying the extend cell
+                                payload to the next node. The extend cell has information like the IP address to connect
+                                to the next node. The 2nd router responds with “CREATED Cell” and the 1st node sends
+                                back an <strong>EXTENDED Cell</strong>. In this transaction, the DH key is established
+                                between the second node and the proxy, the first node does not have this particular key.
+                            </li>
+                            <li>Next, similarly, the circuit is extended to the exit node. This way each node holds a
+                                separate DH session key with the onion proxy, not known to anyone else on the network.
+                                This way the traffic can be encrypted for each <strong>hop</strong> in the circuit. Part
+                                of this provides security and the coveted <strong>anonymity</strong>. All the cells
+                                mentioned in this section are called <strong>control cells</strong>.</li>
+                        </ul>
+                    </li>
+                    <li>After the circuit is created, the proxy is ready to take any data along the circuit. The circuit
+                        has a concept of <strong>streams</strong> that allow multiple TCP connections to different end
+                        hosts on the internet to be made via the same circuit. Each Relay Data Cell carries a stream ID
+                        to identify the TCP connection. We will consider without loss of generality a single stream
+                        inside a circuit. Let’s see how data is sent to the end host and also how it provides anonymity:
+                        <ul>
+                            <li>First, the client types a URL in the browser, skipping the DNS resolution, let us assume
+                                an HTTP GET request is made to the website(end-host). This HTTP GET request is wrapped
+                                inside a <strong>Relay Data Cell</strong> payload.</li>
+                            <li>This payload is encrypted in 3 layers with the 3 session keys of the nodes on the
+                                circuit. Then it is sent to the first node. We will note here that the onion proxy
+                                maintains only a single TCP connection to the first node which in turn is connected to
+                                the next node and so on.</li>
+                            <li>The first node receiving the cell will look at the circuit ID, stream ID etc to decide
+                                routing information. It will decrypt the cell and if the checksum matches the checksum
+                                of payload, that means the cell has been fully decrypted. If not, then it forwards the
+                                cell to the next hop.</li>
+                            <li>At next-hop again the same process happens and a layer of encryption is removed. So at
+                                each hop like a layer of <strong>onion</strong>, encryption is removed using the
+                                pre-established session key of that router with the proxy on that circuit. This is where
+                                the protocol gets the name <strong>onion</strong> routing.</li>
+                            <li>At the last hop, the cell is fully decrypted, the exit node takes the HTTP GET Payload
+                                and makes a TCP connection to the end host mentioned in the message and connects to it.
+                                It sends the HTTP message on behalf of the client.</li>
+                            <li>Here we can observe how anonymity is preserved. The end host does not know who the
+                                actual client is since it only sees the exit node that is connected to it. Also, the
+                                exit node does not know the actual client proxy since it got the circuit creation from
+                                the previous hop. The previous-hop also does not know the actual client. Now the first
+                                hop does know the actual client, but it does not know the end host or the exit node, so
+                                it does not know the destination. Hence this way no one except the client has full view
+                                of the communication in the circuit. All this jugglery provides the anonymity that Tor
+                                promises. Of course someone with the full view of the network can break it, but that
+                                requires serious resources to control all the nodes in the Tor network. Also a small
+                                point to note, a circuit of a single node and 2 nodes are not useful, we need 3 or more
+                                nodes. A single node is simply a proxy. Using more than 3 nodes will slow down the
+                                process of getting a response.</li>
+                        </ul>
+                    </li>
+                    <li>Now let’s move onto the response sent back from the end host:<ul>
+                            <li>The HTTP response is sent to the exit node, which rolls up the response into a relay
+                                cell and encrypts it and sends it to the previous hop.</li>
+                            <li>The previous hop simply encrypts the cell and passes it towards the proxy along the
+                                circuit. Thus each hop encrypts the response with the session key and sends it to the
+                                proxy.</li>
+                            <li>The proxy decrypts all the 3 layers sequentially and gets the original payload and
+                                passes it to the HTTP client that started the request. This completes only round trip
+                                communication over a Tor circuit. <img
+                                    src="https://cdn.arstechnica.net/wp-content/uploads/2014/01/tor-structure-640x389.jpg"
+                                    alt="DataTransmission" /></li>
+                        </ul>
+                    </li>
+                </ol>
+                <h1 id="tor-implementation-details">TOR: Implementation Details</h1>
+                <p>Designing any network protocol needs you to implement a message format creator and parser. This is
+                    50% work done. Then the rest is writing sockets that will send and receive these cells and process
+                    them. Although it’s not trivial to design a high-performance socket application since that needs the
+                    usage of good amount multithreading and non-blocking async processing prowess, a toy project does
+                    not need that.</p>
+                <p>In this project, we did something similar. We divided our work into three sections:</p>
+                <ol>
+                    <li>Cell Parsing and Processing</li>
+                    <li>Onion Proxy implementation</li>
+                    <li>Onion Router implementation</li>
+                </ol>
+                <p>For the project, we used python mainly for its amazing socket and cryptographic support. Although one
+                    shortcoming compared to C/C++ we could see was, how easily C can play with bits and bytes which
+                    makes it ideal for packet parsing. We took this trade-off for the ease of coding and higher level
+                    constructs that python provides.</p>
+                <p>We followed an object oriented approach with practices like decoupling modules and software
+                    components. For Cell we implemented python classes that represent cell types. We wrote lower level
+                    cell parsing and processing functions as a part of the Cell module itself, which will be called upon
+                    by the higher level proxy and router modules. We also created serializers and deserializers to
+                    convert the python Cell Objects back and forth to bytes which can be used to send down the sockets.
+                    We used the “struct” library from python to achieve it.</p>
+                <p>Other modules were onion proxy and router that create circuits and send and receive cells and process
+                    them using the lower-level cell processing and parsing primitives mentioned before.</p>
+                <p>The entire code is open source at: <a
+                        href="https://github.com/IEEE-NITK/tor_project">https://github.com/IEEE-NITK/tor_project</a></p>
+                <p>We followed the Tor Spec and Tor Design paper to implement the protocol. These are linked in the
+                    resources section below.</p>
+                <h1 id="resources">Resources</h1>
+                <ul>
+                    <li><a href="https://gitweb.torproject.org/torspec.git/tree/tor-spec.txt">Tor Spec</a></li>
+                    <li><a href="https://svn-archive.torproject.org/svn/projects/design-paper/tor-design.pdf">Tor
+                            Design</a></li>
+                    <li><a href="https://github.com/IEEE-NITK/tor_project">Our Code</a></li>
+                </ul>
+            </article>
+            <div class="post-content controls__inner">
+                <div class="controls__item prev"> <span>Previous</span> <a
+                    href="/virtual-expo/decentralized-social-network/"> <span> <svg
+                            xmlns="http://www.w3.org/2000/svg" width="6" height="11">
+                            <path fill="fillColor"
+                                d="M5.647 1.718c.37-.434.323-1.09-.106-1.465A1.016 1.016 0 0 0 4.095.36L.25 4.875a1.05 1.05 0 0 0 .017 1.378l3.95 4.407c.38.424 1.03.456 1.448.07a1.05 1.05 0 0 0 .07-1.468l-3.34-3.725 3.253-3.819z" />
+                        </svg> </span>  Decentralized Social Network  </a></div>
+                <div class="controls__item prev"> <span>Next</span> <a href="/virtual-expo/federated-learning/">
+                        Federated Learning <span> <svg xmlns="http://www.w3.org/2000/svg" width="6" height="11">
+                                <path fill="#fillColor"
+                                    d="M.353 9.282c-.37.434-.323 1.09.106 1.465a1.016 1.016 0 0 0 1.446-.107L5.75 6.125a1.05 1.05 0 0 0-.017-1.378L1.784.34A1.015 1.015 0 0 0 .336.27a1.05 1.05 0 0 0-.07 1.468l3.34 3.725L.353 9.282z" />
+                            </svg> </span> </a></div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <nav class="social"> <a class="social__link" target="_blank" rel="noopener noreferrer"
+                    href="https://github.com/IEEE-NITK"> <svg class="social__icon" viewBox="0 0 20 20" width="20px"
+                        height="20px">
+                        <path
+                            d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z" />
+                        </svg> </a> <a class="social__link" target="_blank" rel="noopener noreferrer"
+                    href="https://www.instagram.com/ieee_nitk"> <svg class="social__icon" viewBox="0 0 20 20"
+                        width="20px" height="20px">
+                        <path
+                            d="M8 0C5.827 0 5.555.01 4.702.048 3.85.088 3.27.222 2.76.42a3.908 3.908 0 0 0-1.417.923c-.445.444-.72.89-.923 1.417-.198.51-.333 1.09-.372 1.942C.008 5.555 0 5.827 0 8s.01 2.445.048 3.298c.04.852.174 1.433.372 1.942.204.526.478.973.923 1.417.444.445.89.72 1.417.923.51.198 1.09.333 1.942.372.853.04 1.125.048 3.298.048s2.445-.01 3.298-.048c.852-.04 1.433-.174 1.942-.372a3.908 3.908 0 0 0 1.417-.923c.445-.444.72-.89.923-1.417.198-.51.333-1.09.372-1.942.04-.853.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.852-.174-1.433-.372-1.942a3.908 3.908 0 0 0-.923-1.417A3.886 3.886 0 0 0 13.24.42c-.51-.198-1.09-.333-1.942-.372C10.445.008 10.173 0 8 0zm0 1.44c2.136 0 2.39.01 3.233.048.78.036 1.203.166 1.485.276.374.145.64.318.92.598.28.28.453.546.598.92.11.282.24.705.276 1.485.038.844.047 1.097.047 3.233s-.01 2.39-.05 3.233c-.04.78-.17 1.203-.28 1.485-.15.374-.32.64-.6.92-.28.28-.55.453-.92.598-.28.11-.71.24-1.49.276-.85.038-1.1.047-3.24.047s-2.39-.01-3.24-.05c-.78-.04-1.21-.17-1.49-.28a2.49 2.49 0 0 1-.92-.6c-.28-.28-.46-.55-.6-.92-.11-.28-.24-.71-.28-1.49-.03-.84-.04-1.1-.04-3.23s.01-2.39.04-3.24c.04-.78.17-1.21.28-1.49.14-.38.32-.64.6-.92.28-.28.54-.46.92-.6.28-.11.7-.24 1.48-.28.85-.03 1.1-.04 3.24-.04zm0 2.452a4.108 4.108 0 1 0 0 8.215 4.108 4.108 0 0 0 0-8.215zm0 6.775a2.667 2.667 0 1 1 0-5.334 2.667 2.667 0 0 1 0 5.334zm5.23-6.937a.96.96 0 1 1-1.92 0 .96.96 0 0 1 1.92 0z">
+                        </path>
+                    </svg> </a></nav>
+        </div>
+    </footer>
+    <script async src="/virtual-expo/assets/js/bundle.js"></script>
+    <script
+        async> if ('serviceWorker' in navigator) { navigator.serviceWorker.register('/virtual-expo/sw.js').then(function (registration) { console.log('ServiceWorker registration successful with scope: ', registration.scope); }).catch(function (error) { console.log('ServiceWorker registration failed: ', error); }); } </script>
+    <script
+        type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true } }); </script>
+    <script type="text/javascript" charset="utf-8"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
+    <script type="text/javascript" charset="utf-8"
+        src="https://vincenttam.github.io/javascripts/MathJaxLocal.js"> </script>
+</body>
+
+</html>
