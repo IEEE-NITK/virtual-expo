@@ -30,9 +30,9 @@
     <script type="application/ld+json">
             {"url":"https://ieee.nitk.ac.in//virtual-expo/adversarial-reinforcement-learning/","headline":"Adversarial Reinforcement Learning","dateModified":"2020-07-01T00:00:00+05:30","datePublished":"2020-07-01T00:00:00+05:30","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://ieee.nitk.ac.in//virtual-expo/adversarial-reinforcement-learning/"},"author":{"@type":"Person","name":"IEEE NITK"},"description":"Introduction and Background","@context":"https://schema.org"}</script>
     <!-- End Jekyll SEO tag -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/virtual-expo/assets/img/icons/apple-touch-icon.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="/virtual-expo/assets/img/icons/apple-touch-icon.jpg">
     <link rel="icon" type="image/png" href="/virtual-expo/favicon.ico">
-    <link rel="icon" type="image/webp" sizes="16x16" href="/virtual-expo/favicon.ico">
+    <link rel="icon" type="image/jpg" sizes="16x16" href="/virtual-expo/favicon.ico">
     <link rel="mask-icon" href="/virtual-expo/assets/img/icons/safari-pinned-tab.svg" color="#5bbad5">
     <!--[if IE]><link rel="shortcut icon" href="/assets/img/icons/favicon.ico"><![endif]-->
     <link rel="shortcut icon" href="/virtual-expo/favicon.ico">
@@ -658,7 +658,7 @@
         </div>
     </header>
     <div class="hero lazyload"
-        data-bg="https://ieee.nitk.ac.in//virtual-expo/assets/img/adversarial-reinforcement-learning/embed.webp">
+        data-bg="https://ieee.nitk.ac.in//virtual-expo/assets/img/adversarial-reinforcement-learning/embed.jpg">
         <div class="hero__wrap">
             <div class="hero__categories">
                 <a class="label" href="/virtual-expo/compsoc">CompSoc</a>
@@ -702,7 +702,7 @@
                     mathematical framework. The objective of the agent(s) is to
                     <strong>learn</strong>
                     a function(s) that exhibits desired behavior in an environment.</p>
-                <p><img src="../assets/img/adversarial-reinforcement-learning/rl_loop.webp" alt="RL loop" /></p>
+                <p><img src="../assets/img/adversarial-reinforcement-learning/rl_loop.jpg" alt="RL loop" /></p>
                 <p>This is a very simple organization of the RL framework and can become very complicated when it comes
                     to applications in real-world settings. There can be multiple issues like using function
                     approximators, multiple agents, adversaries, a poor model of the world, stability and scalability
@@ -742,7 +742,7 @@
                         they really achieve super human-level performance?</strong>
                 </p>
                 <p>Let us elucidate upon this question with an example from Supervised Learning -</p>
-                <p><img src="../assets/img/adversarial-reinforcement-learning/fgsm.webp" alt="FGSM on images" /></p>
+                <p><img src="../assets/img/adversarial-reinforcement-learning/fgsm.jpg" alt="FGSM on images" /></p>
                 <p>This is a work from
                     <a href="https://arxiv.org/abs/1412.6572">Goodfellow et al., 2015</a>
                     and shows the existence of
@@ -783,7 +783,7 @@
                     simulator. The attack is accomplished via training an Adversarial policy with Black-box access to
                     the environment. This Multi-Agent Thread model closely resembles the real-world attacks.</p>
                 <h2 id="pixel-based-attacks">Pixel-Based attacks</h2>
-                <p><img src="../assets/img/adversarial-reinforcement-learning/adv_in_loop.webp"
+                <p><img src="../assets/img/adversarial-reinforcement-learning/adv_in_loop.jpg"
                         alt="Adversary in the loop" /></p>
                 <p>This class of adversarial attacks involves the systems where the adversary can be a part of the
                     agent-environment loop. It need not have complete information about the agent/victim. The attacks
@@ -804,7 +804,7 @@
                             forcing the agent to take the wrong action.</p>
                     </li>
                 </ul>
-                <p><img src="../assets/img/adversarial-reinforcement-learning/pixel_attacks.webp"
+                <p><img src="../assets/img/adversarial-reinforcement-learning/pixel_attacks.jpg"
                         alt="Pixel attack on Pong" /></p>
                 <p>This an illustration of the
                     <a href="https://arxiv.org/abs/1412.6572">FGSM attack</a>
@@ -824,7 +824,7 @@
                 <h2 id="adversarial-policies">Adversarial Policies</h2>
                 <p>The constraint that the adversary can be a part of the agent-environment loop can be unrealistic in
                     certain cases, especially in real-world applications.</p>
-                <p><img src="../assets/img/adversarial-reinforcement-learning/threat_model.webp"
+                <p><img src="../assets/img/adversarial-reinforcement-learning/threat_model.jpg"
                         alt="Multi-agent threat model" /></p>
                 <p>Hence we have a more realistic multi-agent threat model, where the adversary influences the other
                     agent or the victim by taking certain adversarial actions, which in turn affect the victim’s
@@ -833,7 +833,7 @@
                     the adversary cannot directly manipulate the pixels from the camera on the car, or it cannot do
                     things like make a building disappear. Hence this form of attack is applicable in real-world
                     settings.</p>
-                <p><img src="../assets/img/adversarial-reinforcement-learning/embed.webp"
+                <p><img src="../assets/img/adversarial-reinforcement-learning/embed.jpg"
                         alt="Simplified environment" /></p>
                 <p>We make a simplification by making the victim agent a part of the environment itself. What this means
                     is that we fix the victim’s parameters, and by doing so, we essentially make it a part of the
@@ -842,7 +842,7 @@
                 <p>And this is not an unrealistic assumption. In common applications of reinforcement learning or
                     machine learning in general, we train a system and then freeze or seal it for deployment. Hence the
                     attack can happen in such a situation.</p>
-                <p><img src="../assets/img/adversarial-reinforcement-learning/envs.webp" alt="Environements" /></p>
+                <p><img src="../assets/img/adversarial-reinforcement-learning/envs.jpg" alt="Environements" /></p>
                 <p>These are the environments we consider. Such environments closely resemble real-world settings. All
                     three are created using MuJoCo.
                     <em>Kick-and-Defend</em>
