@@ -26,7 +26,7 @@
         type="application/ld+json"> {"url":"https://ieee.nitk.ac.in//virtual-expo/solar-inverter/","headline":"Standalone solar Inverter with MPPT","dateModified":"2020-07-01T00:00:00+05:30","datePublished":"2020-07-01T00:00:00+05:30","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://ieee.nitk.ac.in//virtual-expo/solar-inverter/"},"author":{"@type":"Person","name":"IEEE NITK"},"description":"Project guide","@context":"https://schema.org"}</script>
     <!-- End Jekyll SEO tag -->
     <link rel="apple-touch-icon" sizes="180x180"
-        href="/virtual-expo/assets/img/icons/apple-touch-icon.jpg">
+        href="/virtual-expo/assets/img/icons/apple-touch-icon.webp">
     <link rel="icon" type="image/png"
         href="/virtual-expo/favicon.ico">
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -629,7 +629,7 @@
                     <li>Both these signals are then passed through an analog switch which enables us to implement the
                         UVLO functionality.</li>
                 </ul>
-                <p><img src="../assets/img/solar-inverter/01.jpg" alt="3D render of the inverter PCB"
+                <p><img src="../assets/img/solar-inverter/01.webp" alt="3D render of the inverter PCB"
                         class="center-image" /></p>
                 <h4 style="text-align: center;" id="3d-render-of-the-inverter-pcb">3D render of the inverter PCB</h4>
                 <ul>
@@ -654,7 +654,7 @@
                     <li>The topology employed requires complementary square pulses of an appropriate duty cycle to be
                         supplied to the IR2110 to control the gain of the buck converter.</li>
                 </ul>
-                <p><img src="../assets/img/solar-inverter/02.jpg" alt="3D render of the battery charger PCB"
+                <p><img src="../assets/img/solar-inverter/02.webp" alt="3D render of the battery charger PCB"
                         class="center-image" /></p>
                 <h4 style="text-align: center;" id="3d-render-of-the-mppt-battery-charger-pcb">3D render of the MPPT
                     battery charger PCB</h4>
@@ -675,32 +675,32 @@
                 </ul>
                 <p>The MPPT algorithm employed is Perturb and Observe (P&amp;O) with a momentum term to speed up
                     convergence. The flow diagram of the algorithm is:</p>
-                <p><img src="../assets/img/solar-inverter/03.jpg" alt="The MPPT algorithm" class="center-image" /></p>
+                <p><img src="../assets/img/solar-inverter/03.webp" alt="The MPPT algorithm" class="center-image" /></p>
                 <p>The circuit was tested using a solar panel simulator and the ability of the algorithm to accurately
                     track the PV curve to the point of maximum power was observed.</p>
                 <h2 id="results">Results</h2>
-                <p><img src="../assets/img/solar-inverter/04.jpg" alt="Result - 1" class="center-image" /></p>
+                <p><img src="../assets/img/solar-inverter/04.webp" alt="Result - 1" class="center-image" /></p>
                 <p>The image above shows our battery charger PCB cascaded with the inverter PCB at 50Hz. The buck
                     converter provides a regulated DC supply as the output with the help of the MPPT algorithm on the
                     PIC16F684.</p>
-                <p><img src="../assets/img/solar-inverter/05.jpg" alt="Result - 2" class="center-image" /></p>
+                <p><img src="../assets/img/solar-inverter/05.webp" alt="Result - 2" class="center-image" /></p>
                 <p style="text-align: center;">The working of the DC-AC inverter connected to the battery, in full flow
                     with a load is highlighted here.</p>
-                <p><img src="../assets/img/solar-inverter/06.jpg" alt="Result - 3" class="center-image" /></p>
+                <p><img src="../assets/img/solar-inverter/06.webp" alt="Result - 3" class="center-image" /></p>
                 <p>The MPPT based buck converter is shown here charging the battery from a DC box. The controlled
                     testing here showed that our board can charge the 12V/40Ah battery in around 5hours from a 45W,
                     17.6V Vmp and 2.6A Imp panel. Charge current of up to 2Amps were obtained.</p>
-                <p><img src="../assets/img/solar-inverter/07.jpg" alt="Result - 4" class="center-image" /></p>
+                <p><img src="../assets/img/solar-inverter/07.webp" alt="Result - 4" class="center-image" /></p>
                 <p>The oscilloscope shows the MOSFET gate pulse (yellow) for the buck regulator, which has been
                     controlled by the MPPT code implemented on the PIC microcontroller. The blue waveform indicates the
                     current fed into the battery during its charging cycle.</p>
-                <p><img src="../assets/img/solar-inverter/08.jpg" alt="Result - 5" class="center-image" /></p>
+                <p><img src="../assets/img/solar-inverter/08.webp" alt="Result - 5" class="center-image" /></p>
                 <p style="text-align: center;">The MPPT algorithm tracking the PV curve to attain the maximum
                     PowerPoint.</p>
-                <p><img src="../assets/img/solar-inverter/09.jpg" alt="Result - 6" class="center-image" /></p>
+                <p><img src="../assets/img/solar-inverter/09.webp" alt="Result - 6" class="center-image" /></p>
                 <p style="text-align: center;">555 timer complementary pulses which eventually drives the MOSFET on the
                     inverter circuit.</p>
-                <p><img src="../assets/img/solar-inverter/10.jpg" alt="Result - 7" class="center-image" /></p>
+                <p><img src="../assets/img/solar-inverter/10.webp" alt="Result - 7" class="center-image" /></p>
                 <p style="text-align: center;">An image of the designed and populated inverter PCB.</p>
                 <p>Due to the Covid-19 pandemic and enforced lockdown, the testing of the solar inverter with multiple
                     and different loads could not be done. The system can be used with multiple batteries and solar

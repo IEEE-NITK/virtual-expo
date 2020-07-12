@@ -126,14 +126,14 @@ gulp.task( "sw", () => {
   const distDir = "./_site";
 
   return sw.write( `${rootDir}/sw.js`, {
-    staticFileGlobs: [ distDir + "/**/*.{js,html,css,jpg,jpg,svg}" ],
+    staticFileGlobs: [ distDir + "/**/*.{js,html,css,webp,webp,svg}" ],
     stripPrefix: distDir
   } );
 } );
 
 // Images
 gulp.task( "img", () => {
-  return gulp.src( "_img/posts/*.{jpg,jpg}" )
+  return gulp.src( "_img/posts/*.{webp,webp}" )
     .pipe( responsive( {
         "*": [ // For all the images in the posts folder
           {

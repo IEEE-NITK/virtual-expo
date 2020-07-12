@@ -23,7 +23,7 @@
         type="application/ld+json"> {"url":"https://ieee.nitk.ac.in//virtual-expo/smart-small-firearms-system/","headline":"Smart Small Firearms System","dateModified":"2020-07-01T00:00:00+05:30","datePublished":"2020-07-01T00:00:00+05:30","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://ieee.nitk.ac.in//virtual-expo/smart-small-firearms-system/"},"author":{"@type":"Person","name":"IEEE NITK"},"description":"Team Members: Kushagra Rawat Naman Agarwal Nisarg Bipin Shah Abhishek R Sharayu Brahmankar Abstract In recent times there has been a steep increase in gun related violence in the US. With the sales of firearms on the rise across the globe, such incidents are only going to increase. However to tackle this issue a US based startup BioFire have come up with smart guns. Such guns use a fingerprint sensor to unlock the trigger of the gun, ensuring that the gun is used only by the authorised person most likely the owner of the gun. Even though this provides a solution to cases where guns are used by a different person, seeing how easy it is to get a gun in the US, this does not solve the problem at all. Hence to up the technology a notch, we aim to install a Machine Learning driven trigger locking system on the gun, which would lock the trigger if there is a person in front of the gun but allow the shooter to shoot otherwise at an object or at gun ranges. Using the fingerprint sensor to lock the trigger shows us that external mechanisms to control the trigger of a gun are possible. Objective To prevent unauthorized use of firearm on another person using computer vision. Problem Formulation The complete project was broken down into three sub systems, namely: Electronic And Circuitry Part Design And Manufacturing Computer Vision For Human Detection Discussed below are tasks performed by each subsystem Part Design And Manufacturing A bb pellet gun was chosen for the project and was subsequently studied by the design team. After careful measurements of all the parts of the firearm and rigorous part drawings a CAD model was created using Catia, according to the dimensions. After study of the Firearm shooting mechanism and noting the dimensional constraints using CAD model, a locking mechanism for the firearm was designed in CAD. The locking mechanism parts were manufactured using 3D printing off campus Fig1. CADModel Of The Firearm (Made Using Catia) Fig 2. CAD Model Firearm Along With The Locking Mechanism (blue and orange components) Electronics Electronics team was involved in the design of the circuitry associated with driving the linear solenoid actuator, so chosen by the part design team for the locking mechanism of the firearm. Upon procurement of the electronics components the electronics team wired and tested all components of the circuit first on a breadboard, then on a permanent circuit on perf board. A control signal was provided to the circuit through an Arduino Board. The solenoid actuator was tested several times, for its response to signal from the Arduino,heating effects and run cycles. Some Of The Electronic Components used: Fig3. Mini Solenoid Actuator Fig4. 7805 Voltage Regulator Fig5. NPN Transistor Fig6. 3.7 V Lipo batteries Fig7. Arduino Board Human Detection HOG detectMultiScale standard python library with tuned parameter was used to detect human in the Live video stream from laptop webcam with 1.2 mp resolution and capturing rate of 30fps. It is later planned to use a mini camera mounted on the firearm to capture real time video for human detection. The HOG detectMultiScale model performed satisfyingly well with a window stride of (7,7) and a scale of 1.3 Other good Human Estimation models using Tensor Flow are being evaluated. Fig 8. Original Image Fig 9. After HOG detectMultiScale Setup Fig.10 Test Setup Test setup consists of a laptop to run the Human Detection code which is connected to a Arduino to send the control signal to the electronic circuitry (here fixed on a perf board) and actuates the solenoid actuator embedded inside the firearm. Fig. 11 Electronic Circuit Fig. 12 Firearm Click to play Results: The final prototype testing will be documented as a video.","@context":"https://schema.org"}</script>
     <!-- End Jekyll SEO tag -->
     <link rel="apple-touch-icon" sizes="180x180"
-        href="/virtual-expo/assets/img/icons/apple-touch-icon.jpg">
+        href="/virtual-expo/assets/img/icons/apple-touch-icon.webp">
     <link rel="icon" type="image/png"
         href="/virtual-expo/favicon.ico">
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -583,7 +583,7 @@
         </div>
     </header>
     <div class="hero lazyload"
-        data-bg="https://ieee.nitk.ac.in//virtual-expo/assets/img/smart-small-firearms-system/ssfs3.jpg">
+        data-bg="https://ieee.nitk.ac.in//virtual-expo/assets/img/smart-small-firearms-system/ssfs3.webp">
         <div class="hero__wrap">
             <div class="hero__categories"> <a class="label" href="/virtual-expo/piston">Piston</a></div>
             <h1 class="hero__title">Smart Small Firearms System</h1>
@@ -616,9 +616,9 @@
                     trigger of a gun are possible.</p>
                 <h2 id="objective">Objective</h2>
                 <p>To prevent unauthorized use of firearm on another person using computer vision.</p>
-                <p><img src="../assets/img/smart-small-firearms-system/ssfs1.jpg" alt="1" class="center-image" /></p>
+                <p><img src="../assets/img/smart-small-firearms-system/ssfs1.webp" alt="1" class="center-image" /></p>
                 <h2 id="problem-formulation">Problem Formulation</h2>
-                <p><img src="../assets/img/smart-small-firearms-system/ssfs2.jpg" alt="2" class="center-image" /></p>
+                <p><img src="../assets/img/smart-small-firearms-system/ssfs2.webp" alt="2" class="center-image" /></p>
                 <p>The complete project was broken down into three sub systems, namely:</p>
                 <ol>
                     <li>Electronic And Circuitry</li>
@@ -635,10 +635,10 @@
                         model, a locking mechanism for the firearm was designed in CAD.</li>
                     <li>The locking mechanism parts were manufactured using 3D printing off campus</li>
                 </ul>
-                <p><img src="../assets/img/smart-small-firearms-system/ssfs3.jpg" alt="CADModel Of The Firearm"
+                <p><img src="../assets/img/smart-small-firearms-system/ssfs3.webp" alt="CADModel Of The Firearm"
                         class="center-image" /></p>
                 <p style="text-align: center;"><em>Fig1. CADModel Of The Firearm (Made Using Catia)</em></p>
-                <p><img src="../assets/img/smart-small-firearms-system/ssfs4.jpg"
+                <p><img src="../assets/img/smart-small-firearms-system/ssfs4.webp"
                         alt="CAD Model Firearm Along With The Locking Mechanism" class="center-image" /></p>
                 <p style="text-align: center;"><em>Fig 2. CAD Model Firearm Along With The Locking Mechanism (blue and
                         orange components)</em></p>
@@ -654,19 +654,19 @@
                         Arduino,heating effects and run cycles.</li>
                 </ul>
                 <p><strong>Some Of The Electronic Components used:</strong></p>
-                <p><img src="../assets/img/smart-small-firearms-system/ssfs5.jpg" alt="Mini Solenoid Actuator"
+                <p><img src="../assets/img/smart-small-firearms-system/ssfs5.webp" alt="Mini Solenoid Actuator"
                         class="center-image" /></p>
                 <p style="text-align: center;"><em>Fig3. Mini Solenoid Actuator</em></p>
-                <p><img src="../assets/img/smart-small-firearms-system/ssfs6.jpg" alt="7805 Voltage Regulator"
+                <p><img src="../assets/img/smart-small-firearms-system/ssfs6.webp" alt="7805 Voltage Regulator"
                         class="center-image" /></p>
                 <p style="text-align: center;"><em>Fig4. 7805 Voltage Regulator</em></p>
-                <p><img src="../assets/img/smart-small-firearms-system/ssfs7.jpg" alt="NPN Transistor"
+                <p><img src="../assets/img/smart-small-firearms-system/ssfs7.webp" alt="NPN Transistor"
                         class="center-image" /></p>
                 <p style="text-align: center;"><em>Fig5. NPN Transistor</em></p>
-                <p><img src="../assets/img/smart-small-firearms-system/ssfs8.jpg" alt="3.7 V Lipo batteries"
+                <p><img src="../assets/img/smart-small-firearms-system/ssfs8.webp" alt="3.7 V Lipo batteries"
                         class="center-image" /></p>
                 <p style="text-align: center;"><em>Fig6. 3.7 V Lipo batteries</em></p>
-                <p><img src="../assets/img/smart-small-firearms-system/ssfs9.jpg" alt="Arduino Board"
+                <p><img src="../assets/img/smart-small-firearms-system/ssfs9.webp" alt="Arduino Board"
                         class="center-image" /></p>
                 <p style="text-align: center;"><em>Fig7. Arduino Board</em></p>
                 <h3 id="human-detection">Human Detection</h3>
@@ -680,23 +680,23 @@
                         scale of 1.3</li>
                     <li>Other good Human Estimation models using Tensor Flow are being evaluated.</li>
                 </ul>
-                <p><img src="../assets/img/smart-small-firearms-system/ssfs10.jpg" alt="Original Image"
+                <p><img src="../assets/img/smart-small-firearms-system/ssfs10.webp" alt="Original Image"
                         class="center-image" /></p>
                 <p style="text-align: center;"><em>Fig 8. Original Image</em></p>
-                <p><img src="../assets/img/smart-small-firearms-system/ssfs11.jpg" alt="After HOG detectMultiScale"
+                <p><img src="../assets/img/smart-small-firearms-system/ssfs11.webp" alt="After HOG detectMultiScale"
                         class="center-image" /></p>
                 <p style="text-align: center;"><em>Fig 9. After HOG detectMultiScale</em></p>
                 <h2 id="setup">Setup</h2>
-                <p><img src="../assets/img/smart-small-firearms-system/ssfs12.jpg" alt="Test Setup"
+                <p><img src="../assets/img/smart-small-firearms-system/ssfs12.webp" alt="Test Setup"
                         class="center-image" /></p>
                 <p style="text-align: center;"><em>Fig.10 Test Setup</em></p>
                 <p>Test setup consists of a laptop to run the Human Detection code which is connected to a Arduino to
                     send the control signal to the electronic circuitry (here fixed on a perf board) and actuates the
                     solenoid actuator embedded inside the firearm.</p>
-                <p><img src="../assets/img/smart-small-firearms-system/ssfs13.jpg" alt="Electronic Circuit"
+                <p><img src="../assets/img/smart-small-firearms-system/ssfs13.webp" alt="Electronic Circuit"
                         class="center-image" /></p>
                 <p style="text-align: center;"><em>Fig. 11 Electronic Circuit</em></p>
-                <p><img src="../assets/img/smart-small-firearms-system/ssfs14.jpg" alt="Firearm" class="center-image" />
+                <p><img src="../assets/img/smart-small-firearms-system/ssfs14.webp" alt="Firearm" class="center-image" />
                 </p>
                 <p style="text-align: center;"><em>Fig. 12 Firearm</em></p><iframe
                     src="https://drive.google.com/file/d/19q0gjijkF3BIlFWfCFrxQ_vh7jZ90b5h/preview" width="100%"
