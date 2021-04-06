@@ -9,7 +9,14 @@ image: "piston.jpg"
         {% for tag in site.categories %}
             {% if tag[0] == "piston" %}
                 {% assign pages_list = tag[1] %}
+            {% endif %}
+        {% endfor %}
+        {% assign card_no = 0 %}
                     {% for post in pages_list reversed %}
+                        {% assign modx = card_no | modulo: 3 %}
+                        {% if modx == 0 %}
+                            <div class="card-deck">
+                        {% endif %}
                         <div class="card animate-box col-md-4">
                             <div class="card-image">
                                 <a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}">
@@ -27,10 +34,10 @@ image: "piston.jpg"
                                 </a>
                             </div>
                         </div>
+                        {% if modx == 2 %}
+                            </div>
+                        {% endif %}
+                        {% assign card_no = card_no | plus: 1 %}
                     {% endfor %}
-                {% assign pages_list = nil %}
-                {% assign group = nil %}
-            {% endif %}
-        {% endfor %}
     </div>
 </div>
