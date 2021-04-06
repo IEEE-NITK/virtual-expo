@@ -1,6 +1,6 @@
 ---
  layout: post
- title: "NBA PREDICTION"
+ title: "NBA Predictions"
  description: "A study on various methods to predict results of NBA games and lineups."
  categories: compsoc
  thumbnail: "nba-prediction.png"
@@ -17,11 +17,11 @@
 - Pranav DV
 - Sanjkeet Jena
 
-# Introduction
+## Introduction
 
 The National Basketball Association (NBA) is vastly considered to be the premier men’s basketball league in the world and is watched by millions of viewers every season. From the moment the jump ball is tossed at the beginning of each game, the question on everyone’s mind is “who will the winner be?”. Most NBA commentators and betting sites make fairly accurate predictions on the outcome of the game. The objective of this project is to build our very own “expert” to do the same using machine learning.
 
-# Brief Overview
+## Brief Overview
 
 The most basic model that we implemented considered a team to be an atomic unit. This meant that the data used to train the model was a team’s statistics instead of the players that constituted it. The outcomes predicted by this model were right about 70% of the time which is on par with most betting sites and expert opinions. Also, given that these games generally have an upset rate of ~30% it seems that our model was doing the best it could.
 
@@ -31,7 +31,7 @@ Although up till this point our models were geared to predicting the game outcom
 
 Finally we looked at a model to build a team that has the best chance at beating a given opponent. This is similar to how teams are formed in Fantasy Basketball leagues. Here we understood how the data was scraped, cleaned and merged and how its features were explored. We observed the performance of some base models and then with a Bayesian optimisation method, found the best parameters for a boosting model using lightGBM. We also looked at three different neural network architectures and noticed that, while deep learning models might not suit this dataset of limited size, it shows improvement compared to boosting models.
 
-# Results of games
+## Results of games
 
 Each game in a season of NBA is associated with many stats. These stats range from the number of points scored by each team in the game, to the percentage of baskets that were a result of a player's assist. These statistics can be used to help a machine learning program _learn_ how a particular team will perform against another team.
 
@@ -43,7 +43,7 @@ After preprocessing the data and fitting the model on the preprocessed data usin
 
 ![training-img](/virtual-expo/assets/img/compsoc/nba_train.png)
 
-# Box Score
+## Box Score
 
 In basketball, box scores provide detailed statistics about each **player** who is on the lineup for a game. Additionally, it contains some team-level information like the 5 players who started the game, team rebounds, etc.
 These box scores provide valuable insights on the skills of each player, and allows a machine learning model to learn certain performance metrics about each player and predict a player's performance in a simulated scenario.
@@ -52,7 +52,7 @@ Keshav Puranmalka proposes in his [paper](https://dspace.mit.edu/bitstream/handl
 
 Using feature selection algorithms and Support Vector Machines (SVM) to predict the performance of team-level and player-level performances, the results prove to be **~2-3% more accurate** than publicly available state-of-the-art predictors of NBA game outcomes.
 
-# Synergy
+## Synergy
 
 In Basketball, player-player chemistry plays a big role in predicting the output of the games. Here, the motivation of this model is to understand the role that player-player chemistry (synergy) may play in predicting game outcomes and providing quantitative predictions of chemistry between players.
 
@@ -82,7 +82,7 @@ This work has a lot of potential as it can effectively predict which players sho
 
 ## Positive and Negative Synergies
 
-**About the paper**
+### About the paper
 
 Allan Z. Maymin et al.[4] provide a novel Skills Plus Minus (“SPM”) framework that can be used to measure synergies within basketball lineups, provide roster-dependent rankings of free agents, and generate mutually beneficial trades.
 
@@ -115,7 +115,8 @@ Using the probabilities the series of events can be predicted using the flow dia
 
 ![Flow of events](/virtual-expo/assets/img/compsoc/nba_events_flow.png)
 
-**Individual Player Ratings**:
+### Individual Player Ratings
+
 By this example we can explain how a player is rated. Let’s say we create a fictional player who has Ronnie Brewer’s “steals” ratings, but is replacement level in all other skills. We then simulate games where one team consists of the fictional player and four replacement players, and their opponent utilizes five replacement players. The estimated point differential of this game is the player’s ratings for that particular skill.
 
 Synergies are measured by how many additional points a combination of two skills create. For
@@ -128,9 +129,9 @@ they tell us which types of players work well with one another.
 
 For constructing a team, a few star players are chosen for a team and all the other players are made as free agents. By generating multiple combinations, a team can be completed by calculating the maximum team rating.
 
-### Generating Line ups
+## Generating Line ups
 
-**LightGBM**
+### LightGBM
 
 Gradient boosting refers to a class of ensemble machine learning algorithms that can be used for classification or regression predictive modeling problems.
 
@@ -154,7 +155,7 @@ Since it is based on decision tree algorithms, it splits the tree leaf wise with
 
 Hyperparameter tuning by Bayesian Optimization of machine learning models is more efficient than Grid Search and Random Search. Bayesian Optimization has better overall performance on the test data and takes less time for optimization.
 
-**Neural Networks**
+### Neural Networks
 
 In order to understand the insight that deep learning can give to this task, we observed 3 different neural networks. All of them were built using TensorFlow 2 with a Keras backend. Each of the models used the ReLU activation function in hidden layers, root mean square error for the loss function and the Adam optimizer. All of them were trained for 100 epochs.
 
@@ -172,14 +173,14 @@ Model 3 also consisted of 5 layers but had 128,256 and 64 units in the hidden la
 
 We can conclude that although deep learning might not be best suited for this task due to the limited size of the dataset, it does provide a slight improvement compared to the boosting models.
 
-**Genetic Algorithms**
+### Genetic Algorithms
 
 Genetic Algorithms are a search-based optimization technique based on principles taken from Genetic phenomena. They are frequently used to find optimal or near-optimal solutions to difficult problems, and in this case, used to solve the problem of Lineup Optimization by selecting the best combinations of players on a given set of games and predictions.
 
 In GAs, we have a population of possible solutions for the problem in question. The solutions producing new children while going through the processes of recombination and mutation, and the process is repeated over various generations. Each individual solution from a population is assigned a fitness value. Like in Darwin's theory of the survival of the fittest, the fitter individuals (aka solutions) are given a higher chance to mate and thus yield more “fitter” individuals. In this way, the algorithm keeps giving us better and fitter solutions over the generations, or until we reach a threshold.
 In this problem, the initial solutions, that is a set of random lineups are chosen as the first generation. Based on their fitness level, the solutions are allowed to mate and produce individuals while also being subject to mutation and recombination leading to the evolution of the random solutions into the optimaized lineups.
 
-### Expert Opinion
+## Expert Opinion
 
 In conventional machine learning tasks, predictions are usually based on available historical and reliable data and disregard insights whose reliability can not be proven, for example, expert opinions, polls and betting odds. This is despite the many examples from daily life that support the validity and the accuracy of experts’ opinions in their fields of expertise. Another reason why these opinions have not been used is the lack of aggregated data in a systematic and objective fashion, but this is soon changing with the advances in NLP studies. For example, film critic reviews have been used to accurately classify the film’s performance at the box office using pre-trained models and word/sentence embeddings.
 To use expert opinions, there is a need to first rank the experts on the basis of the success of previous predictions made. Once these experts are ranked, their opinions are weighted based on their reliability which is derived from their ranking. This is then used to train the ensemble of experts classifier which gives us the best possible outcome of the game.
@@ -194,7 +195,11 @@ We can even take one step further and try deep unsupervised learning approaches 
 
 Using expert opinions for game prediction is not a very widely studied or used topic and there is a lot of scope in the field especially with the amount of data being generated for the same.
 
-### References
+## Demo
+
+<iframe width="956" height="538" src="https://www.youtube.com/embed/iQPnmFsM7Ik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## References
 
 [1] Fazelinia et. al., “Using Experts' Opinions in Machine Learning Tasks”, 2020. \
 [2] Parisi et. al., “Ranking and combining multiple predictors without labelled data”, 2014. \
