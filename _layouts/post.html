@@ -3,10 +3,6 @@
 
 <head>
     {% include head.html %}
-    <script src="{{ "/assets/js/sidebar.js" | prepend: site.baseurl }}"></script>
-    <script>
-        loadArticles();
-    </script>
 </head>
 
 <body>
@@ -23,31 +19,16 @@
         <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
             <div class="container">
-                <div class="col-md-9 animate-box" style="padding: 0;">
-                    <div class="colorlib-bg-white mt mr">
+                <div class="col-md-12 animate-box" style="padding: 0;">
+                    <div class="colorlib-bg-white mt">
                         <article role="article" id="scroll" class="post-content" itemprop="articleBody">
                             {{ content }}
                         </article>
                     </div>
                 </div>
-                <div class="col-md-3 animate-box" style="padding: 0;">
-                    <div class="colorlib-bg-white mt">
-                        {% include sidebar.html %}
-                    </div>
-                    <div class="colorlib-bg-white mt">
-                        <div class="sidebar">
-                            <h3>Browse IEEE Blog</h3>
-                            <p>
-                                <a href="{{ "/series/" | prepend: site.baseurl }}">Series</a>
-                                <br>
-                                <a href="{{ "/tags/" | prepend: site.baseurl }}">Tags</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
             </div>
 
-            {% include author.html %}
+            <!-- {% include author.html %} -->
 
             {% include footer.html %}
             {% include highlighter.html %}

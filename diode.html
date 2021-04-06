@@ -3,3 +3,30 @@ layout: default
 title: "Diode Projects"
 image: "diode.jpg"
 ---
+
+{% for tag in site.categories %}
+    {% if tag[0] == "diode" %}
+        {% assign pages_list = tag[1] %}
+            {% for post in pages_list reversed %}
+                <div class="card animate-box col-md-4">
+                    <div class="card-image">
+                        <a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}">
+                            <img src="{{post.thumbnail}}" alt="{{post.title}}">
+                        </a>
+                    </div>
+                    <div class="card-title">
+                        <a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}">
+                            <h3> {{post.title}} </h3>
+                        </a>
+                    </div>
+                    <div class="card-title">
+                        <a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}">
+                            {{post.description}}
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        {% assign pages_list = nil %}
+        {% assign group = nil %}
+    {% endif %}
+{% endfor %}

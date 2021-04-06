@@ -212,9 +212,15 @@
   }
   
   .post-content img {
-    max-width: 100%;
+    max-width: 80%;
     margin: 1.875rem auto;
     display: block
+  }
+
+  @media only screen and (max-width:768px) {
+    .post-content img {
+      max-width: 100%;
+      }
   }
   
   .post-content p,
@@ -236,6 +242,28 @@
     margin: 0 auto 1.875rem;
     font-weight: 300;
     line-height: 2;
+  }
+
+  .post-content table {
+    width: 500px;
+    display: block;
+    border: 1px solid black;
+    margin: 1.875rem auto;
+  }
+
+  @media only screen and (max-width:768px) {
+    .post-content table {
+      width: 100%;
+      overflow-x: scroll !important;
+    }
+
+    .post-content table thead th{
+      border: 20px solid transparent;
+    }
+  }
+
+  .post-content thead {
+    background-color: whitesmoke;
   }
 
   .post-content .tags {
@@ -323,8 +351,15 @@
   }
   
   .post-content iframe {
-    margin-top: 1.875rem;
-    width: 100%
+    margin: 1.875rem auto;
+    width: 500px;
+    height: 250px;
+  }
+
+  @media only screen and (max-width:768px) {
+    .post-content iframe {
+      width: 100%;
+    }
   }
   
   .post-content #twitter-widget-0 {
