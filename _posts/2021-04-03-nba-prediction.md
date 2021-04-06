@@ -197,7 +197,7 @@ Using expert opinions for game prediction is not a very widely studied or used t
 
 ## Demo
 
-<iframe width="956" height="538" src="https://www.youtube.com/embed/iQPnmFsM7Ik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/iQPnmFsM7Ik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## References
 
