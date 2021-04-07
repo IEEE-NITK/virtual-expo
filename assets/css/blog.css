@@ -245,7 +245,7 @@
   }
 
   .post-content table {
-    width: 500px;
+    width: fit-content;
     display: block;
     border: 1px solid black;
     margin: 1.875rem auto;
