@@ -33,7 +33,7 @@ The image below shows the simulation for the coupling. The first image shows how
 ![Converters](/virtual-expo/assets/img/diode/WPTConverters.jpg)
 ![Coupling](/virtual-expo/assets/img/diode/WPTCoupling.jpg)
 
-## Part 3: The Reciever
+## Part 3: The Receiver
 As shown in the previous image, at the receiver end, the voltage at the end of the coil and capacitor will be the same high-frequency sine wave sent at the transmitter end. This voltage is converted to DC voltage by a full bridge rectifier. The receiver will be charging a Li-ion battery. The DC voltage was passed through a buffer(ex: voltage following opamp) to avoid the distortions that may occur due to the charging algorithm's implementation. The DC voltage available will now be used to charge a Lead acid battery. The charging algorithm was implemented with a PIC micro-controller.
 
 ## Part 4: Implementation

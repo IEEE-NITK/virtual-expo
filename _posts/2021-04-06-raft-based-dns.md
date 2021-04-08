@@ -137,28 +137,31 @@ The Oracle does not directly send the details of other replicas once a nameserve
 ## How to run the setup
 
 1. Clone the `aws-dns` branch of the repo
-```
-git clone https://github.com/krithikvaidya/distributed-dns.git -b aws-dns --single-branch
-cd distributed-dns
-```
+
+    ```
+    git clone https://github.com/krithikvaidya/distributed-dns.git -b aws-dns --single-branch
+    cd distributed-dns
+    ```
 
 2. In your AWS management console, you will first need to create two IAM roles, one to provide the Oracle with permissions to interact with and provision resources in the cloud and the other to allow the replicas to interact with and modify attributes related to their associated NLB.
 
-> In the IAM console, create a new role for EC2 instances with the following policies attached (call this IAM1):
+    > In the IAM console, create a new role for EC2 instances with the following policies attached (call this IAM1):
 
-<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_iam.png" alt=""></figure>
+    <figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_iam.png" alt=""></figure>
 
-> Similarly, create another role for EC2 instances with only the *ElasticLoadBalancingFullAccess* policy attached (call this IAM2).
+    > Similarly, create another role for EC2 instances with only the *ElasticLoadBalancingFullAccess* policy attached (call this IAM2).
+
 
 3. You will need to run the [Oracle](https://github.com/krithikvaidya/distributed-dns/blob/aws-dns/AWS/oracle.py) such that the webserver it defines is accessible over the internet. For this you can create an EC2 instance with the IAM role that was created previously (IAM1) attached to it, a security group allowing inbound SSH traffic and inbound TCP traffic at post 5000 (which is the port at which the server will be listening), and user data as specified [here](https://github.com/krithikvaidya/distributed-dns/blob/aws-dns/AWS/oracle_user_data.sh). Launch the instance and let the instance state change to "Running". Note down it's public IP address.
 
 4. Wait for sometime so that the user data script on the oracle completes executing and the Flask server is started. This can be verified by checking the EC2 startup logs by ssh'ing into the instance and running ```cat /var/log/cloud-init-output.log```. Then, make a POST request from your device to the `/init` endpoint, specifying all the parameters of your setup, an example being as follows (same example as above):
-```
-curl --header "Content-Type: application/json" --request POST --data '{"n_regions": "2", "region_names": ["us-east-1", "ap-southeast-1"], "instances_per_region": "9", "replicas_per_ns": "3"}' http://<oracle_public_ip>:5000/init
-```
-After the oracle completes the initialization procedure, it will respond with the message "Initialization Successful":
 
-<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_oracle_request.png" alt=""></figure>
+    ```
+    curl --header "Content-Type: application/json" --request POST --data '{"n_regions": "2", "region_names": ["us-east-1", "ap-southeast-1"], "instances_per_region": "9", "replicas_per_ns": "3"}' http://<oracle_public_ip>:5000/init
+    ```
+    After the oracle completes the initialization procedure, it will respond with the message "Initialization Successful":
+
+    <figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_oracle_request.png" alt=""></figure>
 
 5. In each AWS region that you will be running nameservers in, create a launch template for EC2 instances. The launch template should specify Ubuntu as the OS (tested with Ubuntu 20.04), specify a security group that allows inbound traffic for port 4000 from anywhere and inbound SSH access (port 22) from anywhere, the previously created IAM role (IAM2) attached, and should define the user data as specified [here](https://github.com/krithikvaidya/distributed-dns/blob/aws-dns/AWS/new_user_data.sh). **NOTE:** the value for the `ORACLE_ADDR` in the last line of the user data should be edited to match the public IP address of the Oracle.
 
@@ -168,7 +171,7 @@ After the oracle completes the initialization procedure, it will respond with th
 
 8. You can now interact with the DNS service (examples shown below).
 
-NOTE: the oracle script does not automatically delete/deprovision resources when terminated. You will manually need to delete the created global accelerators and for each region, delete the load balancers, delete the target groups and terminate the launched EC2 instances after usage is done.
+    NOTE: the oracle script does not automatically delete/deprovision resources when terminated. You will manually need to delete the created global accelerators and for each region, delete the load balancers, delete the target groups and terminate the launched EC2 instances after usage is done.
 
 ## Sample Interaction
 
@@ -178,23 +181,23 @@ Say we are trying to store the address for wikipedia.org and it's IPv4 address i
 
 1. First we will write the address of the nameserver responsible for the "org" domain in the root nameservers as an NS record. We run the [write_record](https://github.com/krithikvaidya/distributed-dns/blob/aws-dns/AWS/write_record.go) script as follows:
 
-<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_org.png" alt=""></figure>
+    <figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_org.png" alt=""></figure>
 
-The two addresses entered above are the addresses of the load balancer in the us-east-1 and the ap-southeast-1 regions responsible for routing requests to the leader of the root nameservers (these addresses can be found through the "Load Balancers" section of the EC2 Management Console). AWS doesn't directly expose the IP address of the load balancers, only tells us its DNS name (which is somewhat redundant), but we can assign a static IP to each load balancer using the Elastic IP functionality.  
+    The two addresses entered above are the addresses of the load balancer in the us-east-1 and the ap-southeast-1 regions responsible for routing requests to the leader of the root nameservers (these addresses can be found through the "Load Balancers" section of the EC2 Management Console). AWS doesn't directly expose the IP address of the load balancers, only tells us its DNS name (which is somewhat redundant), but we can assign a static IP to each load balancer using the Elastic IP functionality.  
 
-The IP address stored in the value of the record is the Global Accelerator address that points to the load balancers responsible for the nameservers responsible for the "org" domain in each region.
+    The IP address stored in the value of the record is the Global Accelerator address that points to the load balancers responsible for the nameservers responsible for the "org" domain in each region.
 
-<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_ga.jpg" alt="">Either one of these IPs could be used</figure>
+    <figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_ga.jpg" alt="">Either one of these IPs could be used</figure>
 
-**NOTE**: Real world DNS "NS" records never store IP addresses, they store the DNS name of the authoritative nameserver that's next in the hierarchy. If the address of the nameserver is a subdomain under the domain it's authoritative for (e.g. ns1.google.com is an authoritative nameserver for google.com), then the IP address of such servers are stored in the ADDITIONAL section of the DNS response to prevent infinitely looping resolutions (also known as "Glue Records"). For simplicity, we directly store the IP address of the next nameserver in the NS record.
+    **NOTE**: Real world DNS "NS" records never store IP addresses, they store the DNS name of the authoritative nameserver that's next in the hierarchy. If the address of the nameserver is a subdomain under the domain it's authoritative for (e.g. ns1.google.com is an authoritative nameserver for google.com), then the IP address of such servers are stored in the ADDITIONAL section of the DNS response to prevent infinitely looping resolutions (also known as "Glue Records"). For simplicity, we directly store the IP address of the next nameserver in the NS record.
 
 2. Then we will write the address of the nameserver responsible for the "wikipedia.org" domain in the nameservers responsible for "org", as an NS record. We run the write_record script as follows:
 
-<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_wikipedia_org.png" alt=""></figure>
+    <figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_wikipedia_org.png" alt=""></figure>
 
 3. The nameservers responsible for the "wikipedia.org" domain are the authoritative nameservers for wikipedia.org. We will write the desired A record (IP address) of wikipedia.org here.
 
-<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_wikipedia_ip.png" alt=""></figure>
+    <figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_wikipedia_ip.png" alt=""></figure>
 
 The process of writing the record is now done. In the future, if someone wished to write the A record for another .org domain, they would only need to perform step 3 above with the required A record.
 

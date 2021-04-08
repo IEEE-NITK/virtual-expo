@@ -42,7 +42,7 @@ To achieve the objectives of the project, initially, an extensive literature sur
 
 Once the preliminary design was drawn out, an initial power estimation was carried out using total energy equations. Based on which a powertrain configuration was decided and its layout is presented in Figure 2.  Following which, momentum theory was used to obtain an initial estimate on the radius of the propellers.
 
-![image 2](/virtual-expo/assets/img/piston/UAV_blog_2.png)
+![image 2](/virtual-expo/assets/img/piston/UAV_blog_2.PNG)
 
 Based on the requirements of the UAV, propellers and wings were designed. The base radius of the propeller is 1.3 m. The propeller was designed with a NACA0012 airfoil with each blade having a linearly varying pitch angle and chord from hub to tip. Several propellers with radii varying in the range of 1.3  0.5 m were analysed to obtain the most efficient design. The airfoil for the wing was chosen to be NACA4412 due to its performance at higher Reynolds number. The dimensions of the wing were decided based on the lift expected from it and the coefficient of lift value obtained from airfoil tools. The total wing area is 60 m2.
 
@@ -62,7 +62,7 @@ Finally, a complete cost analysis was performed on the aircraft to check its fea
 
 The cost of this concept design is estimated using numbers from aircrafts that have similar power consumptions, maximum take-off weight, wingspan and from manufacturers who provided us with the information. The below table states the estimates. All costs are estimated values and must be treated as such. Depending on prevailing market conditions and environmental factors, these values are subject to change. The cost report does however at all times provide a fair insight into the estimated cost of production of such a UAV. All costs are mentioned in INR and all those parts/components which are to be imported are converted from USD to INR or EUR to INR (a current exchange rate of 72.8 INR to one USD and 86.49 INR to one EUR is taken).
 
-![image 3](/virtual-expo/assets/img/piston/UAV_blog_T1.png)
+![image 3](/virtual-expo/assets/img/piston/UAV_blog_T1.PNG)
 
 The above mentioned costs can be severely reduced by:
 
@@ -84,9 +84,9 @@ The CFD analysis of the wing yielded the following results:
 - Lift = 6698.01 N
 - Drag = 926.69 N
 
-![image 4](/virtual-expo/assets/img/piston/UAV_blog_3.png)
+![image 4](/virtual-expo/assets/img/piston/UAV_blog_3.PNG)
 
-![image 5](/virtual-expo/assets/img/piston/UAV_blog_4.png)
+![image 5](/virtual-expo/assets/img/piston/UAV_blog_4.PNG)
 
 The CFD analysis of the entire model aircraft yielded the following results:
 
@@ -95,16 +95,16 @@ The CFD analysis of the entire model aircraft yielded the following results:
 - Lift = 14346.7 N
 - Drag = 2676.31 N
 
-![image 6](/virtual-expo/assets/img/piston/UAV_blog_5.png)
+![image 6](/virtual-expo/assets/img/piston/UAV_blog_5.PNG)
 
-![image 7](/virtual-expo/assets/img/piston/UAV_blog_6.png)
+![image 7](/virtual-expo/assets/img/piston/UAV_blog_6.PNG)
 
 The estimated total cost of the aircraft is about 395,639.33 USD which is approximately equal to 28,860,885.32 INR and is well in the range of 250,000 - 300,000 USD which is the cost of most multi-engine aircrafts.
 At the end, we have a vertical take off and landing aircraft with over 100 kg of maximum payload capacity that can cruise at 100 kmph for more than 200 km as a result of using fixed wings which reduce power consumption drastically.
 
 Aircraft technical specifications:
 
-![image 8](/virtual-expo/assets/img/piston/UAV_blog_T2.png)
+![image 8](/virtual-expo/assets/img/piston/UAV_blog_T2.PNG)
 
 ## Conclusions
 

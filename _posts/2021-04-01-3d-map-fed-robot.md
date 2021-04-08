@@ -94,4 +94,6 @@ We then started making our custom CNN which could classify which object is prese
 
 ![img 8](/virtual-expo/assets/img/piston/3DBOT_blog_8.png)
 
-[//]: # Need to add video iframe
+## Demo
+
+<iframe src="https://www.youtube.com/embed/l_BWglRtIiA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

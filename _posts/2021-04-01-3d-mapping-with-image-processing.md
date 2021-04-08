@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: "3D Mapping with Robotics and Image Processing"
-description: "<TODO>"
+description: "Stereo camera is probably the easist way to reconstruct the world around you."
 categories: diode
 thumbnail: "3d-imaging-using-stereo-vision.png"
 ---
@@ -89,18 +89,14 @@ The final output of the implementation on gazebo
 
 Visualisation of the depth map using point cloud. 
 
-<video controls autoplay>
- <source src="/virtual-expo/assets/img/diode/3dmapping_vid1.mp4" type="video/mp4">
-</video>
+<iframe src="https://www.youtube.com/embed/EbajTZuaTmA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
  Result obtained (Left), Ground truth (Right)
  For visualisation we useed open3d to get an understanding how well the algorithm was performing when compared to the ground truth, and it can be seen that the performance was good. 
 
 Video of the robot moving around, taking images from the stereo camera and finding depth map
 
-<video controls>
- <source src="/virtual-expo/assets/img/diode/3dmapping_vid2.mp4" type="video/mp4">
-</video>
+<iframe src="https://www.youtube.com/embed/3W8nz7LyGsw" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
  Due to the pandemic we choose to test our algorithm in a simulator called Gazebo, the whole robot was designed by us for this specific task. Due to the high computation time we only took pictures at different instances and found the depth map, we are working on making the algorithm faster!! 
 

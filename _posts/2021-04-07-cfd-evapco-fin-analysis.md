@@ -143,7 +143,7 @@ Plot 1 is the Temperature versus Distance graph for the 7.3 mm fin at inlet air 
 
 The video of the simulation has been attached below :
 
-[//]: # Need to add video iframe here
+<iframe src="https://www.youtube.com/embed/ukU0VVGeg2o" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Conclusions
 

@@ -62,6 +62,10 @@ The following waveform is obtained when the above code is run on the processor.
 ![](/virtual-expo/assets/img/diode/security_module5.jpg)
 ![](/virtual-expo/assets/img/diode/security_module6.jpg)
 
+# Demo
+
+<iframe src="https://www.youtube.com/embed/5WTDkMDSMI8" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 # References
 
 - Chih-Pin Su, Tsung-Fu Lin, Chih-Tsiun Huang and Cheng-Wen Wu, "A high-throughput low-cost AES processor," in IEEE Communications Magazine, vol. 41, no. 12, pp. 86-91, Dec. 2003, doi: 10.1109/MCOM.2003.1252803.

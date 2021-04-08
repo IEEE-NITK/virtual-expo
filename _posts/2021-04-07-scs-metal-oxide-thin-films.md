@@ -28,10 +28,10 @@ Combustion synthesis is a self-sustained, exothermic reaction between well mixed
 2. Solid Phase Combustion Synthesis (SPCS): SPCS, which comprises of solid reactants can be classified into two main types: - Self propagating High temperature Synthesis (SHS) and Volume Combustion Synthesis (VCS).
 3. Liquid Phase Combustion Synthesis (LPCS): LPCS is also known as Solution Combustion    Synthesis (SCS) which primarily involves a self-sustaining reaction between a fuel and an oxidant at a set temperature. SCS has diverse applications owing to its feasibility and simplicity.
 
-![img 1](/virtual-expo/assets/img/piston/SCS_blog_1.png)
+![img 1](/virtual-expo/assets/img/piston/SCS_blog_1.PNG)
  *Figure 1: Various thin film preparation technique : a) Self propagating high temperature synthesis, b) Volume combustion synethesis, c) Solution combustion synthesis.*
-\
-\
+
+
 SHS and VCS have inhomogeneous mixing due to solid state, high reaction temperatures (reaching 2000K), low surface area and coarse size of products. Furthermore, additional treatment like mechanical activation, milling and dispersion are required.
 
 ## Solution Combustion Synthesis
@@ -49,15 +49,15 @@ The process of synthesis involves three major steps.
 
 1. **Preparation of precursor materials**: Organic fuel and metal nitrate are mixed together in an aqueous solution. Here, the fuel is the reducer and the nitrate is the oxidizer. The resultant oxide structure significantly depends on the type of fuel used. Preference is given to complexing fuels because of their tendency to improve mixing levels. Hydrates nitrates are preferred due to its high oxidizing powder and low decomposition temperature.
 2. **Deposition of solution on substrate**: The prepared precursor is deposited on a suitable substrate. Techniques such as spray deposition, spin deposition or printing are employed for this purpose. Earliest films were deposited using spin coating technique, however later spray coating is more preferred and found to be advantageous.
-3. **Annealing**: The substrate is then heated to different annealing temperatures, depending on the requirements. Different properties are observed based on the annealing temperatures and there is a general need for reducing the annealing temperature for making the process more economical. In general, combustion at temperatures as low as $$T_{anneal}$$ ~ 150oC have been observed. Annealing temperatures can further be reduced by various methods such as use of co fuels, photochemical activation etc.
-![img 3](/virtual-expo/assets/img/piston/SCS_blog_3.png)
+3. **Annealing**: The substrate is then heated to different annealing temperatures, depending on the requirements. Different properties are observed based on the annealing temperatures and there is a general need for reducing the annealing temperature for making the process more economical. In general, combustion at temperatures as low as T<sub>anneal</sub> ~ 150oC have been observed. Annealing temperatures can further be reduced by various methods such as use of co fuels, photochemical activation etc.
+![img 3](/virtual-expo/assets/img/piston/SCS_Blog_3.png)
 *Figure 3: Atomized droplets spray deposition for chemical solution deposition synthesis of thin films.*
 
 ## Thermal Analysis
 
 Thermogravimetric analysis and differntial thermal analysis was performed on samples to study the difference in the formation mechanism of conventional combustion and solution combustion synthesis. From the figure, it can be observed that SCS occurs at a lower decomposition temperature as compared to conventional methods. Additionally, we can see a stabilization in the mass percentage, implying that 100% transformation has occured.
 
-![img 4](/virtual-expo/assets/img/piston/SCS_blog_4.png)
+![img 4](/virtual-expo/assets/img/piston/SCS_Blog_4.png)
 *Figure 4: Differential Thermal Analysis of Various Precursors.*
 
 ## Outlook

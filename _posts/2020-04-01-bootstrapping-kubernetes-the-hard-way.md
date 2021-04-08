@@ -114,7 +114,7 @@ The implementation scripts and the documentation can be found on our [GitHub](ht
 
 # Demo
 
-<iframe src="https://www.youtube.com/embed/DqT-G_PFyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/6-3Exsx6rCM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Conclusion and References
 In closing, this project achieved its goals of building and deploying a Kubernetes container orchestration environment from the ground up, and testing it robustly with demo multi-container applications. Additionally, from a learning point, this project provided keen insights into the working components as well as the underlying network infrastructure necessary to bootstrap and maintain such a versatile, dynamic and fault-tolerant system.

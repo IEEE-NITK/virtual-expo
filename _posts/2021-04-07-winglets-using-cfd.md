@@ -117,7 +117,7 @@ The results obtained from the analysis are as follows:
 | Sweep 45 | 5.514E-01 | 5.232E-02 | 3.654E-02 | 1.054E+01 |
 | Sweep 60 | 5.392E-01 | 5.392E-02 | 3.656E-02 | 1.000E+01 |
 
-### The graph for Coefficient of drag vs Angle of attack (C****D vs AoA)
+### The graph for Coefficient of drag vs Angle of attack (CD vs AoA)
 
 ![img 10](/virtual-expo/assets/img/piston/DOW_Blog_10.png)
 
