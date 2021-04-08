@@ -21,6 +21,10 @@
 
 The National Basketball Association (NBA) is vastly considered to be the premier men’s basketball league in the world and is watched by millions of viewers every season. From the moment the jump ball is tossed at the beginning of each game, the question on everyone’s mind is “who will the winner be?”. Most NBA commentators and betting sites make fairly accurate predictions on the outcome of the game. The objective of this project is to build our very own “expert” to do the same using machine learning.
 
+## Demo
+
+<iframe src="https://www.youtube.com/embed/0kEWMPaLkIU" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Brief Overview
 
 The most basic model that we implemented considered a team to be an atomic unit. This meant that the data used to train the model was a team’s statistics instead of the players that constituted it. The outcomes predicted by this model were right about 70% of the time which is on par with most betting sites and expert opinions. Also, given that these games generally have an upset rate of ~30% it seems that our model was doing the best it could.
@@ -194,10 +198,6 @@ We can even take one step further and try deep unsupervised learning approaches 
 ![Shaham et. al.](/virtual-expo/assets/img/compsoc/nba_ShahamFlowchart.png)
 
 Using expert opinions for game prediction is not a very widely studied or used topic and there is a lot of scope in the field especially with the amount of data being generated for the same.
-
-## Demo
-
-<iframe src="https://www.youtube.com/embed/0kEWMPaLkIU" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## References
 

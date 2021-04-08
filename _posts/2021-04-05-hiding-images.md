@@ -29,6 +29,9 @@ Steganography is the practice of hiding a secret message inside an image which a
 
 Advantage of steganography over cryptography is that the intended secret message does not attract attention to itself. Cryptography is a science that enables privacy, steganography is a practice that enables secrecy.
 
+## Demo
+
+<iframe src="https://www.youtube.com/embed/rGvy0vgKQvg" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 <h2 align = 'center'>OUR PROJECT</h2>
@@ -122,10 +125,6 @@ The following images were obtained on training the CNNs for optimal performance.
     <img src="https://raw.githubusercontent.com/IEEE-NITK/Hiding-Images/main/Blog/Images/c2.png" />
     <img src="https://raw.githubusercontent.com/IEEE-NITK/Hiding-Images/main/Blog/Images/d2.png" />
 </p>
-
-## DEMO
-
-<iframe src="https://www.youtube.com/embed/rGvy0vgKQvg" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## ADVANTAGES OF CNN-BASED IMPLEMENTATION OVER OTHERS
 

@@ -49,11 +49,10 @@ The aim of this project is to analyse and optimize the aircraft fusalage and win
   - Zero based loading (the one used in this project)
   - Normal fluctuating loading
 
-$$[σ(max)+σ(min)]/2=σ(avg)$$
-$$[σ(max)-σ(min)]/2=σ(amp)$$
+![Equation 1](/virtual-expo/assets/img/piston/stress_and_fatigue_eqn_1.jpeg)
 
 - PS : for static loading,
-$$σ(max)=σ(min)$$ and $$σ(avg)=σ(amp)=0$$
+![Equation 2](/virtual-expo/assets/img/piston/stress_and_fatigue_eqn_2.jpeg)
 
 ![Fatigue graph](/virtual-expo/assets/img/piston/stress_and_fatigue_fatigue.png)
 *Figure 3:Fatigue graph*

@@ -25,6 +25,10 @@ A simple 32-bit RISC processor, the ‘β’, is implemented from scratch to
 demonstrate this strategy. This processor supports arithmetic, bitwise, comparison, and branching operations and can handle loads and stores. Every
 transaction to the memory is secured with an AES encryption block.
 
+# Demo
+
+<iframe src="https://www.youtube.com/embed/5WTDkMDSMI8" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 # Theory
 
 **RISC**, or **Reduced Instruction Set Computer**. is a type of microprocessor architecture that utilizes a small, highly-optimized set of instructions, rather than a more specialized set of instructions often found in other types of architectures. RISC processors have the following features-
@@ -61,11 +65,6 @@ The following waveform is obtained when the above code is run on the processor.
 ![](/virtual-expo/assets/img/diode/security_module4.jpg)
 ![](/virtual-expo/assets/img/diode/security_module5.jpg)
 ![](/virtual-expo/assets/img/diode/security_module6.jpg)
-
-# Demo
-
-<iframe src="https://www.youtube.com/embed/5WTDkMDSMI8" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 # References
 
 - Chih-Pin Su, Tsung-Fu Lin, Chih-Tsiun Huang and Cheng-Wen Wu, "A high-throughput low-cost AES processor," in IEEE Communications Magazine, vol. 41, no. 12, pp. 86-91, Dec. 2003, doi: 10.1109/MCOM.2003.1252803.

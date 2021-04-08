@@ -19,6 +19,10 @@ thumbnail: "3d-map-robot.png"
 
 In the field of robotics and automation systems - localization, navigation and path planning algorithms are some of the most interesting and exciting topics which are also currently under research. Especially in military applications, we often come to situations wherein we need to localize our current location and henceforth perform navigation and other operations. These problems involving self-localization are known as Kidnapped Robot Problem and in this project, we aim to present one solution using feature maps.
 
+## Demo
+
+<iframe src="https://www.youtube.com/embed/l_BWglRtIiA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Aim
 
 The aim of this project to use implement self-localization and path planning on a known environment using the concept of feature based and particle maps, that is, given the floor map and the location of certain features of the room in the map – we intend to determine the location of our bot and finally perform path planning using to reach our desired destination or target.
@@ -93,7 +97,3 @@ We then started making our custom CNN which could classify which object is prese
 ![img 7](/virtual-expo/assets/img/piston/3DBOT_blog_7.png)
 
 ![img 8](/virtual-expo/assets/img/piston/3DBOT_blog_8.png)
-
-## Demo
-
-<iframe src="https://www.youtube.com/embed/l_BWglRtIiA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

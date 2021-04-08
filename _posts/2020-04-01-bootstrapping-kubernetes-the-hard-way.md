@@ -22,6 +22,10 @@ Imagine a situation where you have been using Docker for a little while, and hav
 
 ![Kubernetes CI/CD Pipeline](/virtual-expo/assets/img/compsoc/k8s-cicd-pipeline.png "Kubernetes CI/CD Pipeline")
 
+# Demo
+
+<iframe src="https://www.youtube.com/embed/6-3Exsx6rCM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Where do we use Kubernetes?
 
 Kubernetes works with Amazon EC2, Azure Container Service, Rackspace, GCE, IBM Software, and other clouds. Additionally, it works with bare-metal (using something like CoreOS), Docker, and vSphere, and also with libvirt and KVM, which are Linux machines turned into hypervisors (i.e, a platform to run virtual machines).
@@ -111,10 +115,6 @@ GCP also provides Google Kubernetes engine (GKE) in which bootstraps a Kubernete
 We then installed [Google Cloud SDK](https://cloud.google.com/sdk/) and configured it in order to access GCP on the local machine. Since Google Cloud Platform has a limit on resource quotas, we scaled our project down to use just two controller nodes and two worker nodes.
 
 The implementation scripts and the documentation can be found on our [GitHub](https://github.com/ameyanrd/kubernetes-the-hard-way).
-
-# Demo
-
-<iframe src="https://www.youtube.com/embed/6-3Exsx6rCM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Conclusion and References
 In closing, this project achieved its goals of building and deploying a Kubernetes container orchestration environment from the ground up, and testing it robustly with demo multi-container applications. Additionally, from a learning point, this project provided keen insights into the working components as well as the underlying network infrastructure necessary to bootstrap and maintain such a versatile, dynamic and fault-tolerant system.

@@ -23,6 +23,10 @@ To find the optimum fin height out of 7.3mm and 11.3mm. After finding the optimu
 
 Analysis of two fins of A bend geometry in order to get the optimum inlet air velocity for maximum heat transfer by the fins. The analysis is completely CFD based using ANSYS- Fluent and a basic analysis of novel 3D manifolding architecture heat sink design with fin heights of 7.3mm and 11.3mm is carried out. Optimum inlet velocity and centreline temperature are found out.
 
+## Demo
+
+<iframe src="https://www.youtube.com/embed/ukU0VVGeg2o" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Introduction
 
 Air-cooled condensers (ACC) reduce and completely eliminate freshwater withdrawals for steam-electric plants. The performance of these ACCs is degraded on hot days by up to a 10% reduction in power production leading to higher capital expenditures. In the design modelled here, the condenser consists of an A-tent structure across the inclined walls of the A-tent. The condenser section consists of steam channels surrounded by the aluminum folded-fin assembly. Airflow is generated using very large diameter fans at the bottom of the tents. To achieve good air-side heat exchange, relatively long (~2 m) finned passages are needed due to the low heat transfer of single-phase air flow. Even after this, ACC air-side heat transfer coefficients are generally low (~35 W/m2 K). Therefore, there is a need to improve air-side heat exchange that will reduce total thermal resistance and translate into reductions in steam condensation temperatures.
@@ -140,10 +144,6 @@ Plot 1 is the Temperature versus Distance graph for the 7.3 mm fin at inlet air 
 ![image 20](/virtual-expo/assets/img/piston/DEF_Blog_20.png)
 
 ![image 21](/virtual-expo/assets/img/piston/DEF_Blog_21.png)
-
-The video of the simulation has been attached below :
-
-<iframe src="https://www.youtube.com/embed/ukU0VVGeg2o" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Conclusions
 
