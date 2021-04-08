@@ -139,19 +139,19 @@ After designing the cad model in Solidworks, we export the cad model into Simuli
 
 ## Calculations
 
-- Complementary filter equation:
-$$ Angle = (1 - alpha)*(angle+gyro*dt)+(alpha)*(acc)$$
+-   Complementary filter equation:
+![](/virtual-expo/assets/img/piston/HRA_eqn1.JPG)
 
   where,
   *0<alpha<1,*
-  $$ Angle = angle \hspace{0.1cm} value \hspace{0.1cm} from \hspace{0.1cm} the  \hspace{0.1cm} accelerometer.$$$$ Gyro = angle \hspace{0.1cm} value \hspace{0.1cm} from \hspace{0.1cm} the  \hspace{0.1cm} gyro\hspace{0.1cm} sensor.$$$$ dt = sample \hspace{0.1cm} time \hspace{0.1cm} (0.01\hspace{0.1cm}sec).$$
+![](/virtual-expo/assets/img/piston/HRA_eqn2.JPG)
 
-- Linear input Output relation for flex sensor:
-
-$$ V_{0} = V_{cc}(\,\frac{R_{x}}{R_{1} +R_{x}})\,$$
+-   Linear input Output relation for flex sensor:
+    
+![](/virtual-expo/assets/img/piston/HRA_eqn3.JPG)
   
 where,
-$$ V_{0} = Output Voltage(V).$$$$  R_{1} = Control Resistance.$$ $$ R_{x} = Flex Sensor Resistance.$$
+![](/virtual-expo/assets/img/piston/HRA_eqn4.JPG)
 
 ## Results
 
