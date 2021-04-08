@@ -17,12 +17,6 @@ thumbnail: "3d-imaging-using-stereo-vision.png"
 # Abstract
 3D mapping is a very useful technology in present days. One of the best  benefits of 3D mapping  is that it provides the latest technical methods for  visualization and gathering information. Knowledge visualization and science  mapping become easier when a 3D map is available for the area under study.  In this project we want to implement a robot which can map a 3D model of a  room or an area and simultaneously avoid mapping humans or any other  animal. We have implemented our code from scratch and have optimized the  code to give us better features and faster computational time.
 
-# Demo
-
-Video of the robot moving around, taking images from the stereo camera and finding depth map
-
-<iframe src="https://www.youtube.com/embed/3W8nz7LyGsw" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 # Theory
 There are various ways which can be used to find the depth of an object like LIDAR, InfraRed, Stereo matching etc.
 In this project we use the stereo based approach to calculate the depth of an object. **Stereo matching** aims to identify the corresponding points and retrieve their displacement to reconstruct the geometry of the scene as a depth map. 
@@ -99,6 +93,10 @@ Visualisation of the depth map using point cloud.
 
  Result obtained (Left), Ground truth (Right)
  For visualisation we useed open3d to get an understanding how well the algorithm was performing when compared to the ground truth, and it can be seen that the performance was good. 
+
+ Video of the robot moving around, taking images from the stereo camera and finding depth map
+
+<iframe src="https://www.youtube.com/embed/3W8nz7LyGsw" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
  Due to the pandemic we choose to test our algorithm in a simulator called Gazebo, the whole robot was designed by us for this specific task. Due to the high computation time we only took pictures at different instances and found the depth map, we are working on making the algorithm faster!! 
 

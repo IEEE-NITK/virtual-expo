@@ -29,7 +29,7 @@ Steganography is the practice of hiding a secret message inside an image which a
 
 Advantage of steganography over cryptography is that the intended secret message does not attract attention to itself. Cryptography is a science that enables privacy, steganography is a practice that enables secrecy.
 
-## Demo
+## DEMO
 
 <iframe src="https://www.youtube.com/embed/rGvy0vgKQvg" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

@@ -17,14 +17,15 @@
 *   Venkata Sravani
 *   Tilak Madichetti
 
+# Demo
+
+<iframe src="https://www.youtube.com/embed/6-3Exsx6rCM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+
 # Introduction to Kubernetes
 Imagine a situation where you have been using Docker for a little while, and have deployed on a few different servers. Your application starts getting massive traffic, and you need to scale up fast; how will you go from 3 servers to 40 servers that you may require? And how will you decide which container should go where? How would you monitor all these containers and make sure they are restarted if they die? This is where [Kubernetes](https://kubernetes.io/) comes in.
 
 ![Kubernetes CI/CD Pipeline](/virtual-expo/assets/img/compsoc/k8s-cicd-pipeline.png "Kubernetes CI/CD Pipeline")
-
-# Demo
-
-<iframe src="https://www.youtube.com/embed/6-3Exsx6rCM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Where do we use Kubernetes?
 
