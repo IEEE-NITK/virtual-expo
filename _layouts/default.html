@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% include head.html %}
+    {% unless page.image %}
+    <script src="{{site.baseurl}}/assets/js/particles.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            particlesJS.load('particles-js', '{{site.baseurl}}/particlesjs-config.json', function () {
+            });
+        });
+    </script>
+    {% endunless %}
+
+    {% if page.image %}
+    <style>
+        .video-hero {
+            background: url('{{site.baseurl}}/assets/img/{{page.image}}');
+            background-position: 0% 50%;
+        }
+        #particles-js {
+            background-color: black;
+            opacity: 0.7;
+        }
+    </style>
+    {% endif %}
+</head>
+
+<body>
+    <div class="colorlib-loader">
+        <div id="loader"></div>
+        <div id="loader"></div>
+        <div id="loader"></div>
+        <div id="loader"></div>
+        <div id="loader"></div>
+    </div>
+    <div id="page">
+
+        {% include header-default.html %}
+
+        <!-- Landing -->
+        <section class="video-hero"
+            style="height: 500px; background-size:cover;"
+            data-section="home">
+            <div id="particles-js"></div>
+            <div class="display-t display-t2 text-center">
+                <div class="display-tc display-tc2">
+                    <div class="container">
+                        <div class="row row-title">
+                            <div class="col-md-12 animate-box">
+                                <h2 class="page-title">{{page.title}}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{ content }}
+
+        {% include footer.html %}
+    </div>
+
+    <script src="{{site.baseurl}}/assets/js/main.js"></script>
+    <script id="dsq-count-scr" src="//ieeenitk.disqus.com/count.js" async></script>
+</body>
+
+</html>
