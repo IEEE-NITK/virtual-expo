@@ -40,3 +40,5 @@ plugins: [jekyll-paginate]
 # gems: [jekyll-paginate, jemoji]
 
 future: true
+
+timezone: Asia/Kolkata
