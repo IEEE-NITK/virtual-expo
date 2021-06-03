@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Virtual Rockstar - Simulating Guitar Effect Pedals"
-description: ""
+description: "A simulation of guitar effect pedals"
 categories: envision
-thumbnail: ""
+thumbnail: "guitar-sim.jpeg"
 gmeet: "https://meet.google.com/mii-csgb-mhi"
 ---
 
