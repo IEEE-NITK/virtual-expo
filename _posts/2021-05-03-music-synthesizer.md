@@ -3,7 +3,7 @@ layout: post
 title: "Digital Music Synthesizer"
 description: "Generating music using computers"
 categories: envision
-thumbnail: "no-image.png"
+thumbnail: "music-synth.jpeg"
 gmeet: "https://meet.google.com/njq-idjh-fes"
 ---
 

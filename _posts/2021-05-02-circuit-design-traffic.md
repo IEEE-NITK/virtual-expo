@@ -119,10 +119,6 @@ The inputs given to the Control unit are the sensor inputs and the output of the
 
 ### Simulated model
 
-<!-- blank line
-<figure class="video_container">
-  <iframe src="https://drive.google.com/file/d/1M3YHl7IcsOZB2zbB1aiLvK6RRQKZ3FEr/view?usp=sharing" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
--->
+<iframe width="956" height="538" src="https://www.youtube.com/embed/dfmU4xTpOe8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 The sensor inputs are randomized using randomizers for each input which changes the input every 8 clock pulses (in this case 1 clock pulse is 1 second). The corresponding sensor values are shown on bottom right.
