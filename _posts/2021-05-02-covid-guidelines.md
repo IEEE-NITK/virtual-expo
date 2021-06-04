@@ -7,28 +7,28 @@ thumbnail: "covid-guidelines.jpg"
 gmeet: "https://meet.google.com/ote-pzua-nuy"
 ---
 
-**Mentors:**
+### Mentors
 
-- **Rohan Mallya**
-- **Shreyas Rao**
+- Rohan Mallya
+- Shreyas Rao
 
-**An Effort by:**
+### Members
 
-- **Abhinav Sai**
-- **Aryan Agrawal**
-- **Hrishikesh Kulkarni**
-- **Malkangouda S Patil**
-- **Nihal**
+- Abhinav Sai
+- Aryan Agrawal
+- Hrishikesh Kulkarni
+- Malkangouda S Patil
+- Nihal
 
-![image-1](/virtual-expo/assets/img/envision/diode/covid_image1.png)
+![image-1](/virtual-expo/assets/img/envision/diode/covid_image1.PNG)
 
-![image-2](/virtual-expo/assets/img/envision/diode/covid_image2.png)
+![image-2](/virtual-expo/assets/img/envision/diode/covid_image2.PNG)
 
 ## **OBJECTIVE**
 
 After the outbreak of the worldwide pandemic COVID-19, there arises a severe need to build computer vision frameworks to detect face masks and count the number of social distancing violations in videos. Image processing and Machine Learning have various applications in motion detection and allied fields such as Face detection, sports analysis, agriculture, and autonomous vehicles, etc. The project focuses on the concepts of image processing and deep learning using OpenCV and TensorFlow libraries and how it can be used in motion detection, face detection, and recognition. In the new world of coronavirus, computer vision can play a crucial role in monitoring the spread of the disease.
 
-![image-3](/virtual-expo/assets/img/envision/diode/covid_image3.png)
+![image-3](/virtual-expo/assets/img/envision/diode/covid_image3.PNG)
 
 ## **Motivation**
 
@@ -42,7 +42,7 @@ We plan to use the various image processing algorithms in the Open-CV documentat
 
 The dataset we have used consisted of 3919 which were labelled with mask and without mask. There were a total 1915 images under with mask category and 1924 images under without mask category. These datasets are taken from Kaggle, face without masks includes faces with various skin colors, different angles, occlusion, etc. Faces with masks include a mask with hand, with masks and other objects that cover the face, that provides us an advantage to improve variants of the dataset.
 
-![image-4](/virtual-expo/assets/img/envision/diode/covid_image4.png)
+![image-4](/virtual-expo/assets/img/envision/diode/covid_image4.PNG)
 
 ## **Implementation**
 
@@ -50,7 +50,7 @@ Firstly the images are resized to 240 X 240 pixels before feeding it to the mode
 
 Now we split the dataset into X\_train, X\_test, y\_train, y\_test using train\_test\_split() from sklearn library.
 
-![image-5](/virtual-expo/assets/img/envision/diode/covid_image5.png)
+![image-5](/virtual-expo/assets/img/envision/diode/covid_image5.PNG)
 
 To reduce the model complexity and training time we convert the list into a more effective numpy array. And using feature scaling to normalize the pixel intensity from 0 to 1.
 
@@ -58,7 +58,7 @@ Now we move towards the interesting part of this project &quot;CNN&quot;. Before
 
 **Keras** is a neural network library while **TensorFlow** is the open-source library for a number of various tasks in machine learning. **TensorFlow** provides both high-level and low-level APIs while **Keras** provides only high-level APIs.
 
-![image-6](/virtual-expo/assets/img/envision/diode/covid_image6.png)
+![image-6](/virtual-expo/assets/img/envision/diode/covid_image6.PNG)
 
 In deep learning, the convolutional neural network (CNN, or ConvNet) is a phase of the deep neural network, which is widely used to analyze visual images.
 
@@ -80,7 +80,7 @@ The steps to build a social distancing detector include:
 2. **We get a bounding box now we compute the pairwise distances between the centroids of all the bounding boxes**
 3. **Based on these distances, check if any two people are closer than a given threshold.**
 
-![image-7](/virtual-expo/assets/img/envision/diode/covid_image7.png)
+![image-7](/virtual-expo/assets/img/envision/diode/covid_image7.PNG)
 
 For the most accurate results,we should have calibrated our camera through intrinsic/extrinsic parameters so that we would have mapped pixels to measurable units.
 
@@ -98,26 +98,26 @@ We&#39;ll be using the **YOLO object detector** to detect people in our video st
 
 After running the 10 epochs we get the following results:-
 
-![image-8](/virtual-expo/assets/img/envision/diode/covid_image8.png)
+![image-8](/virtual-expo/assets/img/envision/diode/covid_image8.PNG)
 
 Now we check how our model performs on the testing set. We have plotted the classification report using the sklearn library. Further a confusion matrix is created.
 
-![image-9](/virtual-expo/assets/img/envision/diode/covid_image9.png)
+![image-9](/virtual-expo/assets/img/envision/diode/covid_image9.PNG)
 
 Now we finally use the model to predict on the images which were not in the dataset and the results are:-
 
-![image-10](/virtual-expo/assets/img/envision/diode/covid_image10.png)
+![image-10](/virtual-expo/assets/img/envision/diode/covid_image10.PNG)
 
-![image-11](/virtual-expo/assets/img/envision/diode/covid_image11.png)
+![image-11](/virtual-expo/assets/img/envision/diode/covid_image11.PNG)
 
 Now applying the model in real time mask detection using webcam or on a video camera the results are-
 
-![image-12](/virtual-expo/assets/img/envision/diode/covid_image12.png)
+![image-12](/virtual-expo/assets/img/envision/diode/covid_image12.PNG)
 
-![image-13](/virtual-expo/assets/img/envision/diode/covid_image13.png)
+![image-13](/virtual-expo/assets/img/envision/diode/covid_image13.PNG)
 
 Now let&#39;s look how the social distancing feature works on a video clip:-
 
-![image-14](/virtual-expo/assets/img/envision/diode/covid_image14.png)
+![image-14](/virtual-expo/assets/img/envision/diode/covid_image14.PNG)
 
-![image-15](/virtual-expo/assets/img/envision/diode/covid_image15.png)
+![image-15](/virtual-expo/assets/img/envision/diode/covid_image15.PNG)
