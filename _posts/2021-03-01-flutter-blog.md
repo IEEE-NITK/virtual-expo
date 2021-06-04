@@ -8,13 +8,16 @@
 ---
 
 ## Mentors
- - Ikjot Singh Dhody   
- - Sravani Katasani
+
+- Ikjot Singh Dhody
+- Sravani Katasani
+
 ## Members
- - Shashank SM
- - Fathima 
- - Khushi Rathod
- - Hritik Mehta
+
+- Shashank SM
+- Fathima
+- Khushi Rathod
+- Hritik Mehta
 
 ## Introduction
 
@@ -35,6 +38,7 @@ Apps have now become any integral part of all our lives and we have a wide array
 The Blog app is built using Flutter. It has a total of 6 screens (Splash Screen, Home, Favourites, Single Blog page, 2 x Loading screens).
 
 ### Home Screen
+
 <img src = "https://raw.githubusercontent.com/ikjot-2605/blog-app/master/screenshots/all_blogs_page.jpeg?token=ANF347M322Y4NHZAATLUWL3AXPNJO" height = "300">
 <img src = "https://raw.githubusercontent.com/ikjot-2605/blog-app/master/screenshots/add_to_favorites.jpeg?token=ANF347OGS4LZ6UOVEB4XSTTAXPOBO" height = "300">
 
@@ -46,6 +50,7 @@ The Blog app is built using Flutter. It has a total of 6 screens (Splash Screen,
 - The Home screen also contains a drop-down menu to navigate between the Home screen and Favourite Screen
 
 ### Favourite Screen
+
 <img src = "https://raw.githubusercontent.com/ikjot-2605/blog-app/master/screenshots/favorites_page.jpeg?token=ANF347PQDJ3WHNIK3BWRJN3AXPOD6" height = "300">
 <img src = "https://raw.githubusercontent.com/ikjot-2605/blog-app/master/screenshots/remove_from_favorites_page.jpeg?token=ANF347P5QJWDOMPE7S7E6KLAXPOEW" height = "300">
 
@@ -60,6 +65,7 @@ The Blog app is built using Flutter. It has a total of 6 screens (Splash Screen,
 - The second loading Screen appears when we transit from the home screen to the favourite screen, containing a loading bar.
 
 ### Firebase &amp; Hive
+
 <img src = "https://raw.githubusercontent.com/ikjot-2605/blog-app/master/screenshots/firebase.png?token=ANF347MSPICQFWU3D3CQPC3AXPONI" height = "250">
 
 - The app uses Firebase to store all the blogs and directly imports blogs from its database which is then displayed in the home screen.
