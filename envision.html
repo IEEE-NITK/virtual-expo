@@ -5,6 +5,12 @@ image: "ieee.jpg"
 ---
 
 <div class="colorlib-blog">
+    <div class="container text-center">
+        <h2>Meet Links to the Expo will be shared soon. Stay tuned!!</h2>
+    </div>
+</div>
+
+<div class="colorlib-blog">
     <div class="container">
         {% for tag in site.categories %}
         {% if tag[0] == "envision" %}
@@ -34,7 +40,7 @@ image: "ieee.jpg"
                     </a>
                 </div>
                 <div class="card-links">
-                    <a href="{{post.gmeet}}" title="Join Meet" class="btn btn-warning btn-outline with-arrow" style="padding: 1rem 2rem;" target="_blank">Join Meet</a>
+                    <!-- <a href="{{post.gmeet}}" title="Join Meet" class="btn btn-warning btn-outline with-arrow" style="padding: 1rem 2rem;" target="_blank">Join Meet</a> -->
                     <a href="{{site.baseurl}}{{post.url}}" class="btn btn-primary btn-outline with-arrow" style="padding: 1rem 2rem;" title="{{post.title}}">Read More</a>
                 </div>
             </div>
