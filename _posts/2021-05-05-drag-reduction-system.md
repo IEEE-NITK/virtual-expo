@@ -52,7 +52,7 @@ The aerofoils were created by importing the coordinates from a txt file in Desig
 
 ![](/virtual-expo/assets/img/envision/piston/DRS_1.png)
 
-Selig 1223 Geometry: 
+**Selig 1223 Geometry:**
 
 ![](/virtual-expo/assets/img/envision/piston/DRS_2.png)
 
@@ -62,8 +62,7 @@ Selig 1223 Geometry:
 
 The aerofoils were created by importing the coordinates from a .txt file in Design Modeller and manipulated to get the correct shape (scaled, rotated, and then translated). A large rectangular fluid domain region was constructed around the aerofoil. The aerofoil surfaces were subtracted from this region using the Boolean operation.
 
-![](/virtual-expo/assets/img/envision/piston/DRS_3.png) ![](/virtual-expo/assets/img/envision/piston/DRS_4.png)
-![](/virtual-expo/assets/img/envision/piston/DRS_5.png) ![](/virtual-expo/assets/img/envision/piston/DRS_6.png)
+![](/virtual-expo/assets/img/envision/piston/drs-geometry.jpeg)
 
 ### Meshing
 
@@ -80,8 +79,8 @@ The mesh used is inflation-type mesh with a body sizing around the aerofoil and 
 
 The mesh used is of refinement type. Every edge of the aerofoil has edge sizing and a grid independent study was conducted with a tolerance limit of 1%.
 
-![](/virtual-expo/assets/img/envision/piston/DRS_9.png) ![](/virtual-expo/assets/img/envision/piston/DRS_10.png)
-![](/virtual-expo/assets/img/envision/piston/DRS_11.png) ![](/virtual-expo/assets/img/envision/piston/DRS_12.png)
+![](/virtual-expo/assets/img/envision/piston/drs-mesh1.jpeg)
+![](/virtual-expo/assets/img/envision/piston/drs-mesh2.jpeg)
 
 
 ### Setup & Solution
@@ -91,7 +90,7 @@ Turbulence Model used for Analysis : Spallart-Allmaras (one-equation model)
 
 Method : Coupled (Pseudo-Transient)
 
-Setup Parameters :
+**Setup Parameters:**
 
 - Reynold’s Number = 3e+6
 - Fluid : Air
@@ -135,8 +134,7 @@ From the above tables, it can be concluded that the optimum angle of attack is 1
 
 The 3D model was constructed on Fusion and can be used to conduct further analysis on the rear wing so as to optimize it along with the end plates.
 
-![](/virtual-expo/assets/img/envision/piston/DRS_22.jpeg)
-
+![](/virtual-expo/assets/img/envision/piston/drs-3d-model.jpeg)
 
 ## Conclusion
 

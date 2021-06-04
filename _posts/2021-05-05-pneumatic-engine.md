@@ -18,7 +18,7 @@ gmeet: "https://meet.google.com/uvy-hmfx-ims"
 
 ### Introduction
 The pneumatic motor works on compressed air only and no fossil fuels are required. We store compressed air in a cylinder, which holds some useful energy within it. This energy can be utilized for useful purposes. When this  compressed air expands, the energy is released to do mechanical work, which may be rotatory or linear.
-![](/virtual-expo/assets/img/envision/piston/pneumaticmotor_2.png)
+![](/virtual-expo/assets/img/envision/piston/pneumaticmotor_1.png)
 
 ### Objectives
 This project aimed to design a pneumatic motor, which works only on pressurized air. This motor has a speed of 400 rpm and can withstand a high pressure of 830188.9117Pa. 
