@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Covid-19 Guidelines Check
-description: ""
+description: "A surveillance system to detect violation of COVID guidelines like masks and social distancing"
 categories: envision
-thumbnail: "covid-guidelines.PNG"
+thumbnail: "covid-guidelines.jpg"
 gmeet: "https://meet.google.com/ote-pzua-nuy"
 ---
 
