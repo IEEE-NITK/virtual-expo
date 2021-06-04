@@ -1,0 +1,54 @@
+---
+layout: default
+title: "Envision Projects"
+image: "ieee.jpg"
+---
+
+<div class="colorlib-blog">
+    <div class="container text-center">
+        <h2>Meet Links to the Expo will be shared soon. Stay tuned!!</h2>
+    </div>
+</div>
+
+<div class="colorlib-blog">
+    <div class="container">
+        {% for tag in site.categories %}
+        {% if tag[0] == "envision" %}
+        {% assign pages_list = tag[1] %}
+        {% endif %}
+        {% endfor %}
+        {% assign card_no = 0 %}
+        {% for post in pages_list reversed %}
+        {% assign modx = card_no | modulo: 3 %}
+        {% if modx == 0 %}
+        <div class="card-deck">
+            {% endif %}
+            <div class="card animate-box col-md-4">
+                <div class="card-image">
+                    <a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}">
+                        <img src="{{site.baseurl}}/assets/img/thumbnails/{{post.thumbnail}}" alt="{{post.title}}">
+                    </a>
+                </div>
+                <div class="card-title">
+                    <a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}">
+                        <h3> {{post.title}} </h3>
+                    </a>
+                </div>
+                <div class="card-title">
+                    <a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}">
+                        {{post.description}}
+                    </a>
+                </div>
+                <div class="card-links">
+                    <!-- <a href="{{post.gmeet}}" title="Join Meet" class="btn btn-warning btn-outline with-arrow" style="padding: 1rem 2rem;" target="_blank">Join Meet</a> -->
+                    <a href="{{site.baseurl}}{{post.url}}" class="btn btn-primary btn-outline with-arrow" style="padding: 1rem 2rem;" title="{{post.title}}">Read More</a>
+                </div>
+            </div>
+            {% if modx == 2 %}
+        </div>
+        {% endif %}
+        {% assign card_no = card_no | plus: 1 %}
+        {% endfor %}
+    </div>
+</div>
+</div
