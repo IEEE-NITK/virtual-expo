@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Connect-4 Webapp with Computer Bot"
-description: ""
+description: "A connect-4 web app where you can play against the computer or with friends"
 categories: envision
-thumbnail: "no-image.png"
+thumbnail: "connect4.png"
 gmeet: "https://meet.google.com/bbb-evus-fng"
 ---
 

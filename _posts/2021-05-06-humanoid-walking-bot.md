@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Humanoid Walking Bot"
-description: "video left"
+description: "Designing of a Humanoid Walking BOT using SimuLink and SimSCape Multibody"
 categories: envision
-thumbnail: "no-image.png"
+thumbnail: "humanoid-bot.jpeg"
 gmeet: "https://meet.google.com/gys-rrik-tct"
 ---
 
@@ -93,7 +93,7 @@ These arrays contain the config info from each joint enter the measurement subsy
 ![](/virtual-expo/assets/img/envision/piston/HWB_8.png)
 ## Simulation player
 The following video shows the final result.
-<iframe src="" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/qPuFNFQdX88" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br>
 
 ## Conclusion

@@ -1,9 +1,9 @@
 ---
  layout: post
  title: "Blog Application with Flutter"
- description: ""
+ description: "A blog application built using Flutter"
  categories: envision
- thumbnail: "no-image.png"
+ thumbnail: "flutter.png"
  gmeet: "https://meet.google.com/fqb-bvad-xiw"
 ---
 
