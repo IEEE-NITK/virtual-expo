@@ -1059,6 +1059,19 @@ input[type=search] {
   object-fit: cover;
 }
 
+.card .card-links {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.card .card-links a {
+  flex: 1;
+  margin: 1rem auto;
+  width: 50%;
+}
+
 .card h2 {
   font-weight: 400;
   margin-bottom: 15px;

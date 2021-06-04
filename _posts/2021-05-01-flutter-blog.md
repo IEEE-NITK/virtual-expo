@@ -3,7 +3,7 @@
  title: "Blog Application with Flutter"
  description: ""
  categories: envision
- thumbnail: ""
+ thumbnail: "no-image.png"
  gmeet: "https://meet.google.com/fqb-bvad-xiw"
 ---
 

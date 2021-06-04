@@ -33,8 +33,9 @@ image: "ieee.jpg"
                         {{post.description}}
                     </a>
                 </div>
-                <div class="card-title">
-                    <a href="{{post.gmeet}}" title="Join Meet" class="btn btn-warning" style="padding: 1rem 2rem;" target="_blank">Join Meet</a>
+                <div class="card-links">
+                    <a href="{{post.gmeet}}" title="Join Meet" class="btn btn-warning btn-outline with-arrow" style="padding: 1rem 2rem;" target="_blank">Join Meet</a>
+                    <a href="{{site.baseurl}}{{post.url}}" class="btn btn-primary btn-outline with-arrow" style="padding: 1rem 2rem;" title="{{post.title}}">Read More</a>
                 </div>
             </div>
             {% if modx == 2 %}
