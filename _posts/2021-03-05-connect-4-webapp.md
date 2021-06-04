@@ -3,7 +3,7 @@ layout: post
 title: "Connect-4 Webapp with Computer Bot"
 description: ""
 categories: envision
-thumbnail: ""
+thumbnail: "no-image.png"
 gmeet: "https://meet.google.com/bbb-evus-fng"
 ---
 
