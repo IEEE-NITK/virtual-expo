@@ -3,7 +3,7 @@ layout: post
 title: "Circuit Design for Traffic Signals"
 description: "Circuit Design and implementation of a sensor based automatic Traffic signal system"
 categories: envision
-thumbnail: "cd_traffic_signals.png"
+thumbnail: "cd_traffic_signals.jpeg"
 gmeet: "https://meet.google.com/pjy-qbbs-zcz"
 ---
 

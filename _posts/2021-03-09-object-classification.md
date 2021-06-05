@@ -15,7 +15,7 @@ gmeet: "https://meet.google.com/jsm-uwpg-buo"
 -   Chinmaya Sharma   
 -   Sasank Mohan P
 -   Shama GS
--   Vinayak Vatsalya G
+-   Vinayak Vatsalya J
 -   Mohammed Mansoor
 
 ## Introduction
