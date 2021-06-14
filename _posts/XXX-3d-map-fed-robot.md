@@ -5,7 +5,7 @@ description: "Simplifying Self-Localization with Feature Based Mapping"
 categories: piston
 thumbnail: "3d-map-robot.png"
 ---
-
+<!-- Not rendering on request of project mentors, to avoid plagiarism checks for papers they are publishing -->
 ### Project Mentors
 
 - Chandran Nandkumar
