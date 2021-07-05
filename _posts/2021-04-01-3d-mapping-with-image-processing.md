@@ -4,6 +4,7 @@ title: "3D Mapping with Robotics and Image Processing"
 description: "Stereo camera is probably the easist way to reconstruct the world around you."
 categories: diode
 thumbnail: "3d-imaging-using-stereo-vision.png"
+year: 2021
 ---
 
 ### Mentors

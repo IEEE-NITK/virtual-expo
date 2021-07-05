@@ -4,7 +4,7 @@ title: "Image Captioning Using Attention Mechanism"
 description: "One can see an image and the brain can easily tell what the image is about, but can a computer tell what the image is representing?"
 categories: envision
 thumbnail: "image-captioning.jpg"
-gmeet: "https://meet.google.com/efz-jzkd-ewa"
+year: 2021
 ---
 
 ### Mentors

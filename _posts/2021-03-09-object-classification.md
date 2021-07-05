@@ -4,7 +4,7 @@ title: "Object Classification Using Machine Learning"
 description: "To use Convolutional Neural Networks to classify objects in the CIFAR-10 dataset"
 categories: envision
 thumbnail: "object-classification.png"
-gmeet: "https://meet.google.com/jsm-uwpg-buo"
+year: 2021
 ---
 
 ## Mentors

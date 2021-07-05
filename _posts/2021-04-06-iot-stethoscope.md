@@ -4,6 +4,7 @@ title: "IoT - Stethoscope"
 description: "A pre-diagnosis tool to save time and effort"
 categories: diode
 thumbnail: "iot-stethoscope.jpg"
+year: 2021
 ---
 
 ### Faculty Guide

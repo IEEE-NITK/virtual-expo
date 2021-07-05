@@ -4,7 +4,7 @@ title: "Analysis of Drag Reduction System using CFD (ANSYS)"
 description: "Analysis of the feasibility of the implementation of a drag reduction  system on the rear wing of a car using CFD ANSYS"
 categories: envision
 thumbnail: "drs.jpeg"
-gmeet: "https://meet.google.com/foq-aurg-bjw"
+year: 2021
 ---
 
 ### Mentors

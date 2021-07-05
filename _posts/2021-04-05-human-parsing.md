@@ -4,6 +4,7 @@ title: "Human Parsing"
 description: "Multi Purpose Deep Learning Segmentation Framework for 2-D Human Images"
 categories: compsoc
 thumbnail: "human-parsing.jpeg"
+year: 2021
 ---
 
 ### Mentors

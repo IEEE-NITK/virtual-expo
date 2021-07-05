@@ -4,6 +4,7 @@
  description: "A hands-on approach to developing and deploying a reliable, robust and secure container orchestration system from the ground up"
  categories: compsoc
  thumbnail: "bkthw.jpeg"
+ year: 2021
 ---
 
 ### Mentors

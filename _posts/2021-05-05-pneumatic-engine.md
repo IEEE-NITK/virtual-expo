@@ -4,7 +4,7 @@ title: "Design of Pneumatic Motor using Fusion 360"
 description: "Design of a single cylinder single stroke pneumatic air engine using Fusion 360"
 categories: envision
 thumbnail: "pneumatic-motor.png"
-gmeet: "https://meet.google.com/uvy-hmfx-ims"
+year: 2021
 ---
 
 ### Project Mentors

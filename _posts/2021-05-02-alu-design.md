@@ -4,7 +4,7 @@ title: "ALU Design"
 description: "A project to design a simple ALU that can perform some of the most basic arithmetic and logical operations"
 categories: envision
 thumbnail: "alu_design.jpg"
-gmeet: "https://meet.google.com/mvf-tkgv-bne"
+year: 2021
 ---
 
 ### Mentors
