@@ -4,7 +4,7 @@ title: "Flappy Bird"
 description: "Clones of the flappy bird game"
 categories: envision
 thumbnail: "flappy-bird.jpg"
-gmeet: "https://meet.google.com/jkx-skon-dqm"
+year: 2021
 ---
 
 ## Mentors

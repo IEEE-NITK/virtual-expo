@@ -4,6 +4,7 @@ title: "Depth Vision Methods and their Hardware Implementaion"
 description: "Accurate algorithms for 3d imaging and their efficient hardware implementation"
 categories: diode
 thumbnail: "depth-vision-and-hardware.png"
+year: 2021
 ---
 
 ### Faculty Guide

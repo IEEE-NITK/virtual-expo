@@ -4,7 +4,7 @@ title: "Digital Music Synthesizer"
 description: "Generating music using computers"
 categories: envision
 thumbnail: "music-synth.jpeg"
-gmeet: "https://meet.google.com/njq-idjh-fes"
+year: 2021
 ---
 
 ### Mentors

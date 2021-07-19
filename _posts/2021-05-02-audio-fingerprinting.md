@@ -4,7 +4,7 @@ title: "Audio Fingerprinting"
 description: "To create a program that can identify which song a short audio sample originated from."
 categories: envision
 thumbnail: "audio_fingerprinting.png"
-gmeet: "https://meet.google.com/hyw-mgpe-xay"
+year: 2021
 ---
 
 **Mentors:**

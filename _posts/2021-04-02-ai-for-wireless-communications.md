@@ -4,6 +4,7 @@ title: "AI for Wireless Communication"
 description: "Using Self-Supervised learning to find User location based on the channel data"
 categories: diode
 thumbnail: "Self-Supervised_learning.jpeg"
+year: 2021
 ---
 
 ### Mentors: 

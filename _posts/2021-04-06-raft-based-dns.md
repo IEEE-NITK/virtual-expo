@@ -4,6 +4,7 @@
  description: "Using Raft consensus to build a DNS service with stronger consistency guarantees"
  categories: compsoc
  thumbnail: "raft-dns.jpeg"
+ year: 2021
 ---
 
 ### Mentors

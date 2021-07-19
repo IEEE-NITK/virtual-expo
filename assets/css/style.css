@@ -2284,3 +2284,48 @@ li.dropdown-nav {
       opacity:0
   }
 }
+
+.nav-pills-custom {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.nav-pills-custom > li > a {
+  padding: 10px 15px;
+}
+
+.nav-pills-custom > li {
+  display: block;
+}
+
+.nav-pills-custom li:first-child {
+  border-radius: 30px 0 0 30px;
+}
+
+.nav-pills-custom li:last-child {
+  border-radius: 0 30px 30px 0;
+}
+
+.nav-item-custom {
+  background: transparent !important;
+  color: rgb(0, 86, 167);
+  border: 1px solid rgb(0, 86, 167);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.nav-item-custom.active,
+.nav-item-custom:focus,
+.nav-item-custom:active,
+.nav-item-custom:hover {
+  background: rgb(0, 86, 167) !important;
+  color: #fff !important;
+}
+
+.nav-item-custom.active > a,
+.nav-item-custom:focus > a,
+.nav-item-custom:active > a,
+.nav-item-custom:hover > a {
+  color: #fff !important;
+}

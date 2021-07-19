@@ -4,7 +4,7 @@ title: "Covid Tracker"
 description: "A website that displays plots and analytics by scraping relevant data from government data portals to give an insight into the current state-wise pandemic situation and recovery status in India"
 categories: envision
 thumbnail: "covid-tracker.jpg"
-gmeet: "https://meet.google.com/emu-gyyq-tmq"
+year: 2021
 ---
 
 ## Mentors

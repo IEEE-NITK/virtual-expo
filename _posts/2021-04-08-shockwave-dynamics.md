@@ -4,6 +4,7 @@ title: "Shockwave Dynamics Simulator"
 description: "Project on the implementation of a scheme to simulate compressible flow to further understanding of shockwave interaction"
 categories: piston
 thumbnail: "shockwave-dynamics.jpeg"
+year: 2021
 ---
 
 ### Project Members

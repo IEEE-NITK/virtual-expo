@@ -4,7 +4,7 @@
  description: "This project incorporates the two most popular technologies for App Development today, i.e. the famous Google UI toolkit - Flutter and Google powered Cloud service provider Firebase"
  categories: envision
  thumbnail: "flutter.png"
- gmeet: "https://meet.google.com/fqb-bvad-xiw"
+ year: 2021
 ---
 
 ## Mentors

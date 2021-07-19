@@ -4,6 +4,7 @@
  description: "To analyze stress concentration at window panes and carry out fatigue analysis on the fuselage of an aircraft."
  categories: piston
  thumbnail: "stress-concentration.png"
+ year: 2021
 ---
 
 ### Project Members

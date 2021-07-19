@@ -4,7 +4,7 @@ title: "Face Detection and Recognition"
 description: "A real time Face Detection and Recognition based Attendance System model for a workplace"
 categories: envision
 thumbnail: "face-detection.png"
-gmeet: "https://meet.google.com/pam-jqnj-mjw"
+year: 2021
 ---
 
 Mentors: Achintya K N, Akash S Bharadwaj, Sankarsh R

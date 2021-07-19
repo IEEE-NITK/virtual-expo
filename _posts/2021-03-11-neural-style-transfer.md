@@ -4,7 +4,7 @@ title: "Real Time Style Transfer"
 description: "Neural Style Transfer using the VGG19 model"
 categories: envision
 thumbnail: "real-time-transfer.jpeg"
-gmeet: "https://meet.google.com/zkt-uaak-oye"
+year: 2021
 ---
 
 ### Mentors

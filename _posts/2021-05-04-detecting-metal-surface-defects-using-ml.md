@@ -4,7 +4,7 @@ title: "Detecting Metal Surface Defects using ML"
 description: "Predicting the type of defects found in steel manufacturing by making a Custom Convolutional Neural Network"
 categories: envision
 thumbnail: "MetalDefectsUsingML.png"
-gmeet: "https://meet.google.com/qzo-kabp-wyh"
+year: 2021
 ---
 
 ### Project Mentors

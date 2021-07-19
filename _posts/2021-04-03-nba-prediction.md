@@ -4,6 +4,7 @@
  description: "A study on various methods to predict results of NBA games and lineups."
  categories: compsoc
  thumbnail: "nba-prediction.png"
+ year: 2021
 ---
 
 ### Mentors

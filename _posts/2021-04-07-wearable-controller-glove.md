@@ -4,6 +4,7 @@ title: "Wearable Controller Glove for a Humanoid Robotic Arm"
 description: "Design And Development of Wearable Controller For Controlling Humanoid Robotic Arm using Simulink and SolidWorks"
 categories: piston
 thumbnail: "wearable-controller-glove.jpg"
+year: 2021
 ---
 ### Project Mentors
 

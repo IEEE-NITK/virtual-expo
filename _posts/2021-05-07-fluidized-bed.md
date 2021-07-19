@@ -4,7 +4,7 @@ title: "CFD Modelling of 2D Fluidized Bed"
 description: "Study of the hydrodynamic behavior of a 2-D gas–solid fluidized bed using computational fluid dynamics (CFD) software ANSYS Fluent."
 categories: envision
 thumbnail: "fluidized-beds.png"
-gmeet: "https://meet.google.com/jih-tqne-bix"
+year: 2021
 ---
 
 ### Mentors

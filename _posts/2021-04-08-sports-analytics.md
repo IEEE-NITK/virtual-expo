@@ -4,6 +4,7 @@ title: "Sports Video Analysis using Computer Vision"
 description: "To build frameworks that detect objects and events in sports videos"
 categories: diode
 thumbnail: "player-tracking.jpg"
+year: 2021
 ---
 
 ### Mentors

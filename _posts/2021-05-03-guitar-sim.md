@@ -4,7 +4,7 @@ title: "Virtual Rockstar - Simulating Guitar Effect Pedals"
 description: "A simulation of guitar effect pedals"
 categories: envision
 thumbnail: "guitar-sim.jpeg"
-gmeet: "https://meet.google.com/mii-csgb-mhi"
+year: 2021
 ---
 
 ### **Project Mentors**

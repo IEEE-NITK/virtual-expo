@@ -4,6 +4,7 @@ title: "Hiding Images within Images"
 description: "Just like a face mask hides true face, can an image be hidden inside another image?"
 categories: diode
 thumbnail: "hiding-images.jpg"
+year: 2021
 ---
 
 ### Mentors

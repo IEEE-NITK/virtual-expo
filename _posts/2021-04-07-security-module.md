@@ -4,6 +4,7 @@
  description: "This project tries to implement a strategy to prevent unwanted snooping on physical memory."
  categories: diode
  thumbnail: "security-module.jpeg"
+ year: 2021
 ---
 
 ### Mentor

@@ -4,7 +4,7 @@ title: "Humanoid Walking Bot"
 description: "Designing of a Humanoid Walking BOT using SimuLink and SimSCape Multibody"
 categories: envision
 thumbnail: "humanoid-bot.jpeg"
-gmeet: "https://meet.google.com/gys-rrik-tct"
+year: 2021
 ---
 
 ### Project Mentors
