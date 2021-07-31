@@ -18,7 +18,7 @@ year: 2021
 
 ### Introduction
 The pneumatic motor works on compressed air only and no fossil fuels are required. We store compressed air in a cylinder, which holds some useful energy within it. This energy can be utilized for useful purposes. When this  compressed air expands, the energy is released to do mechanical work, which may be rotatory or linear.
-![](/virtual-expo/assets/img/envision/piston/pneumaticmotor_1.png)
+![img](/virtual-expo/assets/img/envision/piston/pneumaticmotor_1.png)
 
 ### Objectives
 This project aimed to design a pneumatic motor, which works only on pressurized air. This motor has a speed of 400 rpm and can withstand a high pressure of 830188.9117Pa. 
@@ -30,7 +30,7 @@ The overall model contains two basic mechanisms;
 
 The complete cycle starts when the inlet valve opens. As it opens pressurized air fills into a chamber above the piston. As enclosed air exerts equal pressure in all directions, the piston is forced downwards. As the piston moves down the crank is rotated. Just above the bottom dead centre of the piston are the outlet valves. The pressurized air mover out through it. The momentum of the rotating crank pushes the piston back upwards. Just before the piston reaches back to the top dead centre the push-rod moves up opening the inlet valve again and the cycle repeats.
 
-![](/virtual-expo/assets/img/envision/piston/pneumaticmotor_3.png)
+![img](/virtual-expo/assets/img/envision/piston/pneumaticmotor_3.png)
 
 ### Calculations
 t = time required to complete one cycle of rotation<br>
@@ -52,7 +52,7 @@ P3 = Pressure of air at the outlet<br>
 <br>
 V1 = Volume of pressurised air above the piston<br>
 V2 = Volume of pressurised air after expansion<br>
-![](/virtual-expo/assets/img/envision/piston/pneumaticmotor_4.png)
+![img](/virtual-expo/assets/img/envision/piston/pneumaticmotor_4.png)
 
 ### Conclusions
 The model designed by us is a small-scale working model of the pneumatic engine. 
@@ -60,7 +60,7 @@ This model has various advantages as compared to the conventional model which us
 1. Zero emission. 
 2. Use of renewable fuel. 
 3. Zero fuel cost (the cost is involved only in the compression of air).
-![](/virtual-expo/assets/img/envision/piston/pneumaticmotor_2.png)
+![img](/virtual-expo/assets/img/envision/piston/pneumaticmotor_2.png)
 
 ### Need of a pneumatic motor
 Pneumatics has long since played an?important role?as a technology in the performance of mechanical work. It is also being used in the development of automation solutions. 

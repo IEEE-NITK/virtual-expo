@@ -32,7 +32,7 @@ On deployment, users can diagnose two different breathing disorders, wheeze and 
 
 Example of a STFT spectrogram with both wheeze and crackle is given below - 
 
-![](/virtual-expo/assets/img/diode/STFT_spec.png)
+![img](/virtual-expo/assets/img/diode/STFT_spec.png)
 
 ## 2) Mel - Frequency Cepstral Coefficients (MFCC)
 
@@ -40,7 +40,7 @@ Example of a STFT spectrogram with both wheeze and crackle is given below -
 
 Here is an example of a spectrogram with both wheezes and crackles - 
 
-![](/virtual-expo/assets/img/diode/mfcc_spec.jpeg)
+![img](/virtual-expo/assets/img/diode/mfcc_spec.jpeg)
 
 ## 3) Continuous Wavelet Transform (CWT)
 
@@ -49,21 +49,21 @@ The Continuous Wavelet Transform is the decomposition of a signal into a set of 
 
 In the processing of our dataset, the Complex Morlet wavelet was used for analysis and 6 scales were taken for the same. Given below is a spectrogram for a sample with both wheezing and crackling - 
 
-![](/virtual-expo/assets/img/diode/CWT_spec.png)
+![img](/virtual-expo/assets/img/diode/CWT_spec.png)
 
 # Results
 
 ​For the STFT, a CNN model with 1.7M parameters was trained and the validation accuracy achieved was 91%.
 
-![](/virtual-expo/assets/img/diode/STFT_acc.png)
+![img](/virtual-expo/assets/img/diode/STFT_acc.png)
 
 For MFCC, the model yielded a healthy result of 97% validation accuracy
 
-![](/virtual-expo/assets/img/diode/mfcc_acc.jpeg)
+![img](/virtual-expo/assets/img/diode/mfcc_acc.jpeg)
 
 For the CWT, a CNN model with 28M parameters was trained and the validation accuracy of 80% was obtained
 
-![](/virtual-expo/assets/img/diode/CWT_acc.png)
+![img](/virtual-expo/assets/img/diode/CWT_acc.png)
 
 ​Python libraries such as Librosa, Numpy, Pandas, SoundFile and an assortment of audio processing libraries were used to obtain the various spectrograms. Keras was used for deep learning.
 

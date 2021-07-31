@@ -50,11 +50,11 @@ into four parts : Geometry, Meshing, Setup & Solution, and Results.
 
 The aerofoils were created by importing the coordinates from a txt file in Design Modeller. A bullet shaped fluid domain region was constructed. The aerofoil surface was subtracted from this region using the Boolean operation.
 
-![](/virtual-expo/assets/img/envision/piston/DRS_1.png)
+![img](/virtual-expo/assets/img/envision/piston/DRS_1.png)
 
 **Selig 1223 Geometry:**
 
-![](/virtual-expo/assets/img/envision/piston/DRS_2.png)
+![img](/virtual-expo/assets/img/envision/piston/DRS_2.png)
 
 #### For DRS analysis
 
@@ -62,7 +62,7 @@ The aerofoils were created by importing the coordinates from a txt file in Desig
 
 The aerofoils were created by importing the coordinates from a .txt file in Design Modeller and manipulated to get the correct shape (scaled, rotated, and then translated). A large rectangular fluid domain region was constructed around the aerofoil. The aerofoil surfaces were subtracted from this region using the Boolean operation.
 
-![](/virtual-expo/assets/img/envision/piston/drs-geometry.jpeg)
+![img](/virtual-expo/assets/img/envision/piston/drs-geometry.jpeg)
 
 ### Meshing
 
@@ -70,8 +70,8 @@ The aerofoils were created by importing the coordinates from a .txt file in Desi
 
 The mesh used is inflation-type mesh with a body sizing around the aerofoil and edge sizing to get finer elements. Finally, a grid independent study was conducted with a tolerance limit of 1%.
 
-![](/virtual-expo/assets/img/envision/piston/DRS_7.png) 
-![](/virtual-expo/assets/img/envision/piston/DRS_8.png)
+![img](/virtual-expo/assets/img/envision/piston/DRS_7.png) 
+![img](/virtual-expo/assets/img/envision/piston/DRS_8.png)
 
 
 #### For DRS analysis
@@ -79,8 +79,8 @@ The mesh used is inflation-type mesh with a body sizing around the aerofoil and 
 
 The mesh used is of refinement type. Every edge of the aerofoil has edge sizing and a grid independent study was conducted with a tolerance limit of 1%.
 
-![](/virtual-expo/assets/img/envision/piston/drs-mesh1.jpeg)
-![](/virtual-expo/assets/img/envision/piston/drs-mesh2.jpeg)
+![img](/virtual-expo/assets/img/envision/piston/drs-mesh1.jpeg)
+![img](/virtual-expo/assets/img/envision/piston/drs-mesh2.jpeg)
 
 
 ### Setup & Solution
@@ -101,7 +101,7 @@ Method : Coupled (Pseudo-Transient)
 - Upper and lower boundary - Zero Shear walls
 - Aerofoil edge - No Slip walls
 
-<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/envision/piston/DRS_13.png" alt="">Setup of the closed DRS model for Angle of Attack = 8 degrees on the main wing)</figure>
+<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/envision/piston/DRS_13.png" alt="img">Setup of the closed DRS model for Angle of Attack = 8 degrees on the main wing)</figure>
 
 Velocity Inlet : 3 values of inlet velocity were chosen (30 m/s, 43.33 m/s and 50 m/s) and analysis of all three was conducted with the selected angles of attack 12 degrees and 8 degrees on the main wing.
 
@@ -114,27 +114,27 @@ The angle of attack on the open system was 8 degrees in both the analyses, chose
 
 The results obtained from the analysis are as follows:
 
-<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/envision/piston/DRS_14.png" alt="">Angle of Attack on main wing (Selig 1223) = 12 degrees<br><em>Approximate reduction in Drag = 75%</em><br><em>Approximate reduction in Downforce = 20%</em></figure>
+<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/envision/piston/DRS_14.png" alt="img">Angle of Attack on main wing (Selig 1223) = 12 degrees<br><em>Approximate reduction in Drag = 75%</em><br><em>Approximate reduction in Downforce = 20%</em></figure>
 
-<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/envision/piston/DRS_15.png" alt="">Angle of Attack on main wing (Selig 1223) = 8 degrees<br><em>Approximate reduction in Drag = 57%</em><br><em>Approximate reduction in Downforce = 47%</em></figure>
+<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/envision/piston/DRS_15.png" alt="img">Angle of Attack on main wing (Selig 1223) = 8 degrees<br><em>Approximate reduction in Drag = 57%</em><br><em>Approximate reduction in Downforce = 47%</em></figure>
 
 From the above tables, it can be concluded that the optimum angle of attack is 12 degrees on the main wing for maximum reduction in drag and minimum loss of downforce.
 
-<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/envision/piston/DRS_16.png" alt=""><img src="/virtual-expo/assets/img/envision/piston/DRS_17.png" alt="">Comparison of Pressure Contours over the rear wing in Closed DRS (top) with Open DRS (bottom) for AoA = 12 degrees and u = 30 m/s</figure>
+<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/envision/piston/DRS_16.png" alt="img"><img src="/virtual-expo/assets/img/envision/piston/DRS_17.png" alt="img">Comparison of Pressure Contours over the rear wing in Closed DRS (top) with Open DRS (bottom) for AoA = 12 degrees and u = 30 m/s</figure>
 
 <hr>
 
-<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/envision/piston/DRS_18.png" alt=""><img src="/virtual-expo/assets/img/envision/piston/DRS_19.png" alt="">Comparison of Velocity Streamlines over the rear wing in Closed DRS (top) with Open DRS (bottom)) for AoA = 12 degrees and u = 43.33 m/s</figure>
+<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/envision/piston/DRS_18.png" alt="img"><img src="/virtual-expo/assets/img/envision/piston/DRS_19.png" alt="img">Comparison of Velocity Streamlines over the rear wing in Closed DRS (top) with Open DRS (bottom)) for AoA = 12 degrees and u = 43.33 m/s</figure>
 
 <hr>
 
-<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/envision/piston/DRS_20.png" alt=""><img src="/virtual-expo/assets/img/envision/piston/DRS_21.png" alt="">Comparison of Velocity Vectors over the rear wing in Closed DRS (top) with Open DRS (bottom) for AoA = 12 degrees and u = 50 m/s</figure>
+<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/envision/piston/DRS_20.png" alt="img"><img src="/virtual-expo/assets/img/envision/piston/DRS_21.png" alt="img">Comparison of Velocity Vectors over the rear wing in Closed DRS (top) with Open DRS (bottom) for AoA = 12 degrees and u = 50 m/s</figure>
 
 ## 3D Model
 
 The 3D model was constructed on Fusion and can be used to conduct further analysis on the rear wing so as to optimize it along with the end plates.
 
-![](/virtual-expo/assets/img/envision/piston/drs-3d-model.jpeg)
+![img](/virtual-expo/assets/img/envision/piston/drs-3d-model.jpeg)
 
 ## Conclusion
 

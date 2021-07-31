@@ -51,21 +51,21 @@ The whole project was implemented using Verilog. The source files can be found [
 
 The RTL design is illustrated below.
 
-![](/virtual-expo/assets/img/diode/security_module1.png) 
+![img](/virtual-expo/assets/img/diode/security_module1.png) 
 
 The assembler in action for a simple program which calculates the sum of the first 'n' integers.
 
-![](/virtual-expo/assets/img/diode/security_module2.png)
+![img](/virtual-expo/assets/img/diode/security_module2.png)
 
 The generated machine code will be 128 bits long, as shown below. This will be stored in the physical memory, not the actual instruction.
 
-![](/virtual-expo/assets/img/diode/security_module3.png)
+![img](/virtual-expo/assets/img/diode/security_module3.png)
 
 The following waveform is obtained when the above code is run on the processor.
 
-![](/virtual-expo/assets/img/diode/security_module4.jpg)
-![](/virtual-expo/assets/img/diode/security_module5.jpg)
-![](/virtual-expo/assets/img/diode/security_module6.jpg)
+![img](/virtual-expo/assets/img/diode/security_module4.jpg)
+![img](/virtual-expo/assets/img/diode/security_module5.jpg)
+![img](/virtual-expo/assets/img/diode/security_module6.jpg)
 # References
 
 - Chih-Pin Su, Tsung-Fu Lin, Chih-Tsiun Huang and Cheng-Wen Wu, "A high-throughput low-cost AES processor," in IEEE Communications Magazine, vol. 41, no. 12, pp. 86-91, Dec. 2003, doi: 10.1109/MCOM.2003.1252803.

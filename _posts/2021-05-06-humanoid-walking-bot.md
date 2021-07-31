@@ -26,7 +26,7 @@ The project aims to develop a mathematical and mechanical model for a humanoid w
 # Mechanical Design
 The proposed robot is a humanoid walking robot with 6 DOF, including torso, leg, and foot consisting of three revolute joints (hip, knee, ankle) as shown in the figure.
 Each rigid body is defined with basic details like dimensions, density, frames, etc., to simulate real-time dynamics. Extending The dimensions are determined using MATLAB variables.
-![](/virtual-expo/assets/img/envision/piston/HWB_1.png)
+![img](/virtual-expo/assets/img/envision/piston/HWB_1.png)
 
 ### Component 1 - Torso
 -   Specified dimensions: 0.20 x 0.24 x 0.35m.    
@@ -54,8 +54,8 @@ The two essential concepts in humanoid robotics are:
 We initially take some approximations that the humanoid bot walks while maintaining a constant height, and the angular momentum around the COM is minimal. This is to model a robot walking on a flat surface. The entire model is approximated as the center of mass. These approximations help us to assume the  model is similar to an inverted pendulum model maintained at constant height.
 
 With simple mathematical equations, we can plot the points where the foot shall travel.
-![](/virtual-expo/assets/img/envision/piston/HWB_2.png)
-![](/virtual-expo/assets/img/envision/piston/HWB_3.png)
+![img](/virtual-expo/assets/img/envision/piston/HWB_2.png)
+![img](/virtual-expo/assets/img/envision/piston/HWB_3.png)
 
 So, from these state dynamic equations, we can generate a center of mass trajectory that is physically consistent. Once the trajectory of the foot is obtained and graphed, inverse kinematics is applied to find the trajectory of the joints and hip (torso).
 
@@ -71,7 +71,7 @@ Hence, we were able to generate the desired motion of the joints and commands fo
 ## Implementation in Simulink
 ### Inputs and Plant Model
 Joint Angles R and Joint Angles L are input blocks corresponding to the variables 'jAngsR’ and ‘jAngsL‘ respectively. Each store a double matrix containing precise angles to be made by revolute joints after every 0.01 sec to achieve a walking trajectory. These matrices are solutions of the inverse kinematic model based on the trajectory of the robot’s feet to enable it to walk.
-![](/virtual-expo/assets/img/envision/piston/HWB_4.png)
+![img](/virtual-expo/assets/img/envision/piston/HWB_4.png)
 
 These inputs go into the inputR and InputL ports. From there, the signals are quickly passed into Robot Leg R and Robot Leg L subsystems, respectively. In every system, the signal is transferred to a bus that splits the array of signals into individual signals for every joint present in this subsystem. These signals are passed to motion actuators attached to each of the joints, which ends up in a precise movement of the joints.
 
@@ -80,17 +80,17 @@ The combined output from each subsystem, Robot Leg R and Robot Leg S, is stored 
 ### Mechanical and Simulation Model
 The mechanical model of the robot was created using SimScape multibody blocks. We used the solid blocks to develop solid meshes of the world plane (on which the robot walks), torso, upper legs, lower legs, and feet. These were the contact points from the robot body to the world frame and their interaction caused the necessary motions. The revolute joints are used to join the different parts of the robot. A 6-DOF joint was associated with the torso for its free movement across the world frame. This was to ensure that our results were correctly embedded into the controller and model.
 
-![](/virtual-expo/assets/img/envision/piston/HWB_5.png)
+![img](/virtual-expo/assets/img/envision/piston/HWB_5.png)
 
 ### Robot Leg Model
 Then inputs (joint angles) were connected to the bus, which transferred the input signal to each revolute joint through Simulink-ps converter blocks as shown in the figure.. Then an array is generated from the joint blocks containing information about the current configuration of that joint (torque, speed, and angle). This is to ensure we have entirely controllable as well as visual feedback. This constitutes the forward kinematics of the robot.
-![](/virtual-expo/assets/img/envision/piston/HWB_6.png)
+![img](/virtual-expo/assets/img/envision/piston/HWB_6.png)
 These arrays contain the config info from each joint enter the measurement subsystem, which gives an output ‘meas’ having the current configuration of the entire robot. This essentially contains the mathematical solutions to our project, finally to visualize it, it is sent to the SimScape body. The result is transferred to the inverse kinematic solver to generate joint angles for forward movement at the next instance.
-![](/virtual-expo/assets/img/envision/piston/HWB_7.png)
+![img](/virtual-expo/assets/img/envision/piston/HWB_7.png)
 
 ## Results
 ## Different perspective views of a still frame of the simulation
-![](/virtual-expo/assets/img/envision/piston/HWB_8.png)
+![img](/virtual-expo/assets/img/envision/piston/HWB_8.png)
 ## Simulation player
 The following video shows the final result.
 <iframe src="https://www.youtube.com/embed/qPuFNFQdX88" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

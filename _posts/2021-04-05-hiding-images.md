@@ -24,9 +24,9 @@ year: 2021
 
 Steganography is the practice of hiding a secret message inside an image which acts as a carrier. The carrier can be an image, word document or even an excel sheet.
 
-<figure class="image" style="text-align: center; color: gray;"><img src="https://raw.githubusercontent.com/IEEE-NITK/Hiding-Images/main/Blog/Images/Steganography_original.png" alt="">Steganographical image of tree</figure>
+<figure class="image" style="text-align: center; color: gray;"><img src="https://raw.githubusercontent.com/IEEE-NITK/Hiding-Images/main/Blog/Images/Steganography_original.png" alt="img">Steganographical image of tree</figure>
 
-<figure class="image" style="text-align: center; color: gray;"><img src="https://raw.githubusercontent.com/IEEE-NITK/Hiding-Images/main/Blog/Images/Steganography_recovered.png" alt="">Recovered image of cat</figure>
+<figure class="image" style="text-align: center; color: gray;"><img src="https://raw.githubusercontent.com/IEEE-NITK/Hiding-Images/main/Blog/Images/Steganography_recovered.png" alt="img">Recovered image of cat</figure>
 
 Advantage of steganography over cryptography is that the intended secret message does not attract attention to itself. Cryptography is a science that enables privacy, steganography is a practice that enables secrecy.
 
@@ -81,9 +81,9 @@ We perceive an image in terms of its brightness and colors. The Fourier transfor
 
 The discrete Fourier transform can be obtained by sampling the Fourier transform of an image at certain frequencies.  The discrete Fourier transform of an image has the same size as the image. Using the inverse discrete Fourier transform  it is possible to recover the image from frequency domain.
 
-<figure class="image" style="text-align: center; color: gray;"><img src="https://raw.githubusercontent.com/IEEE-NITK/Hiding-Images/main/Blog/Images/img1.png" alt="">Image</figure>
+<figure class="image" style="text-align: center; color: gray;"><img src="https://raw.githubusercontent.com/IEEE-NITK/Hiding-Images/main/Blog/Images/img1.png" alt="img">Image</figure>
 
-<figure class="image" style="text-align: center; color: gray;"><img src="https://raw.githubusercontent.com/IEEE-NITK/Hiding-Images/main/Blog/Images/img2.png" alt="">Magnitude of its DFT</figure>
+<figure class="image" style="text-align: center; color: gray;"><img src="https://raw.githubusercontent.com/IEEE-NITK/Hiding-Images/main/Blog/Images/img2.png" alt="img">Magnitude of its DFT</figure>
 
 The DFT of an image results in a matrix of complex numbers. When plotting DFT we plot only the magnitude of the DFT. 
 

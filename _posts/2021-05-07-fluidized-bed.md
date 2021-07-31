@@ -43,19 +43,19 @@ Dimensions of the Fluidized Bed :
 
 Figure 1 shows the dimensions of the bed.
 
-![](/virtual-expo/assets/img/envision/piston/FB_1.png)
+![img](/virtual-expo/assets/img/envision/piston/FB_1.png)
 
 #### Geometry
 
 The 2D fluidized bed was designed using Ansys Design-Modeller. The sketching plane was chosen to be the XY plane. A rectangle was drawn on the XY plane. The rectangular sketch was made using the ‘surface from sketches’.
 
-![](/virtual-expo/assets/img/envision/piston/FB_2.png)
+![img](/virtual-expo/assets/img/envision/piston/FB_2.png)
 
 #### Meshing
 
 The element size for the mesh was taken as 0.002m. Linear elements were chosen to generate the mesh. The element size for the mesh was chosen by assessing the mesh quality at different element sizes.
 
-![](/virtual-expo/assets/img/envision/piston/FB_3.png)
+![img](/virtual-expo/assets/img/envision/piston/FB_3.png)
 
 The **named selections** used for the mesh (Figure 3) are :
 
@@ -66,7 +66,7 @@ The **named selections** used for the mesh (Figure 3) are :
 
 #### Setup 
 
-![](/virtual-expo/assets/img/envision/piston/FB_4.png)
+![img](/virtual-expo/assets/img/envision/piston/FB_4.png)
 
 Eulerian Multiphase model was used to model the 2D Fluidized bed. Fluid inflow was modelled using the Viscous laminar model. A new fluid named solid with a density of1242 kg/m3 was created. The diameter of the solid was fixed at 0.0003 m. Syamlal and O’Brien drag model was chosen to model the granular viscosity and the drag coefficient.
 
@@ -78,9 +78,9 @@ Eulerian Multiphase model was used to model the 2D Fluidized bed. Fluid inflow w
 In solution methods, the transient formulation was changed to Second Order implicit. A new cell region was added by specifying the coordinates of the region. The cell region was patched with a volume fraction (solid) of 0.6. The contour of the volume fraction (solid) was added. A solution animation was added for the contour. The number of time steps was chosen to be 1500 and the time step size was chosen to be 0.001s. The results were calculated after the solution initialization.
                                        
                                    
-![](/virtual-expo/assets/img/envision/piston/FB_5.png)
+![img](/virtual-expo/assets/img/envision/piston/FB_5.png)
 
-![](/virtual-expo/assets/img/envision/piston/FB_6.png)
+![img](/virtual-expo/assets/img/envision/piston/FB_6.png)
 
 ## Results
 
@@ -88,45 +88,45 @@ In solution methods, the transient formulation was changed to Second Order impli
 
 - Contours of Volume Fraction at inlet velocity 0.05 m/s.
 
-![](/virtual-expo/assets/img/envision/piston/FB_7a.png)
+![img](/virtual-expo/assets/img/envision/piston/FB_7a.png)
 
-![](/virtual-expo/assets/img/envision/piston/FB_7b.png)
+![img](/virtual-expo/assets/img/envision/piston/FB_7b.png)
 
 - Contours of Volume Fraction at inlet velocity 0.10 m/s.
 
-![](/virtual-expo/assets/img/envision/piston/FB_8a.png)
+![img](/virtual-expo/assets/img/envision/piston/FB_8a.png)
 
-![](/virtual-expo/assets/img/envision/piston/FB_8b.png)
+![img](/virtual-expo/assets/img/envision/piston/FB_8b.png)
 
 - Contours of Volume Fraction at inlet velocity 0.15 m/s.
 
-![](/virtual-expo/assets/img/envision/piston/FB_9a.png)
+![img](/virtual-expo/assets/img/envision/piston/FB_9a.png)
 
-![](/virtual-expo/assets/img/envision/piston/FB_9b.png)
+![img](/virtual-expo/assets/img/envision/piston/FB_9b.png)
 
 - Contours of Volume Fraction at inlet velocity 0.19 m/s.
 
-![](/virtual-expo/assets/img/envision/piston/FB_10a.png)
+![img](/virtual-expo/assets/img/envision/piston/FB_10a.png)
 
-![](/virtual-expo/assets/img/envision/piston/FB_10b.png)
+![img](/virtual-expo/assets/img/envision/piston/FB_10b.png)
 
 - Contours of Volume Fraction at inlet velocity 0.55 m/s.
 
-![](/virtual-expo/assets/img/envision/piston/FB_11a.png)
+![img](/virtual-expo/assets/img/envision/piston/FB_11a.png)
 
-![](/virtual-expo/assets/img/envision/piston/FB_11b.png)
+![img](/virtual-expo/assets/img/envision/piston/FB_11b.png)
 
 #### Calculations
 
-![](/virtual-expo/assets/img/envision/piston/FB_12.PNG)
+![img](/virtual-expo/assets/img/envision/piston/FB_12.PNG)
 
-![](/virtual-expo/assets/img/envision/piston/FB_13.PNG)
+![img](/virtual-expo/assets/img/envision/piston/FB_13.PNG)
 
-![](/virtual-expo/assets/img/envision/piston/FB_14.PNG)
+![img](/virtual-expo/assets/img/envision/piston/FB_14.PNG)
 
 **Nomenclature**
 
-![](/virtual-expo/assets/img/envision/piston/FB_T1.PNG)
+![img](/virtual-expo/assets/img/envision/piston/FB_T1.PNG)
 
 ## Conclusion
 
