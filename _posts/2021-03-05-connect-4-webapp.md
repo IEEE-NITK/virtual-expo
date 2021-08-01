@@ -7,12 +7,12 @@ thumbnail: "connect4.png"
 year: 2021
 ---
 
-### MENTORS
+### Mentors
 
 - Adithya Rajesh
 - Anirudh Achal
 
-### MEMBERS
+### Members
 
 - Dhruvil Lakhtaria
 - Pranav RS
@@ -27,7 +27,7 @@ The aim of the project was to implement a connect 4 webapp with an intelligent c
 
 Connect-4 is a two-player board game in which player tries to connect 4 dots of his color and opponent does the same. The dot is dropped on the lower most empty row of the column chose.
 
-<img src = "https://github.com/Dhruvil-Lakhtaria/Connect4/blob/master/readme_images/board.JPG?raw=true">
+<img alt="img" src = "https://github.com/Dhruvil-Lakhtaria/Connect4/blob/master/readme_images/board.JPG?raw=true">
 
 ## MINIMAX ALGORITHM
 
@@ -35,7 +35,7 @@ Minimax algorithm is a backtracking algorithm that has two parts namely maximise
 
 Each board state has a value associates to it and maximiser tries to make the move such that the value increases while the minimizer does the opposite.
 
-<img src = " https://github.com/Dhruvil-Lakhtaria/Connect4/blob/master/readme_images/minimax-tree.png?raw=true">
+<img alt="img" src = " https://github.com/Dhruvil-Lakhtaria/Connect4/blob/master/readme_images/minimax-tree.png?raw=true">
 
 For Example, consider the above image where the evaluation is done till 4 level and then scores are evaluated. Here score is random but in the project, scoring is done based on heuristic analysis.
 
@@ -57,7 +57,7 @@ We introduce two new parameter alpha and beta which are minimum maximizer score 
 
 Condition is if alpha > beta then we don’t need to evaluate that branch further.
 
-  <img src = "https://github.com/Dhruvil-Lakhtaria/Connect4/blob/master/readme_images/alpha-beta.png?raw=true">
+  <img alt="img" src = "https://github.com/Dhruvil-Lakhtaria/Connect4/blob/master/readme_images/alpha-beta.png?raw=true">
 
 In above image going down from 5 to the second branch till seven ,then to 4 since it is minimizers turn 4 is picked over 7,Now observe ,the turn is of minimizer and already 5(alpha) > 4(beta).Now the most favorable outcome we can get after traversing further branches is 4 as now minimizer will pick min(4,further nodes),so going down the further branches is useless and we can cut these branches off.
 
