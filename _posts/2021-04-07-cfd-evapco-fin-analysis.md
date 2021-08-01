@@ -4,6 +4,7 @@ title: "CFD Analysis of A-Tent Design of Evapco Fins"
 description: "This project aims to find the optimum fin height and inlet air velocity for a 3D manifolding architecture heat sink design."
 categories: piston
 thumbnail: "cfd-fin-analysis.jpg"
+year: 2021
 ---
 
 ### Project Mentor

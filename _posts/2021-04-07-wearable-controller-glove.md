@@ -4,6 +4,7 @@ title: "Wearable Controller Glove for a Humanoid Robotic Arm"
 description: "Design And Development of Wearable Controller For Controlling Humanoid Robotic Arm using Simulink and SolidWorks"
 categories: piston
 thumbnail: "wearable-controller-glove.jpg"
+year: 2021
 ---
 ### Project Mentors
 
@@ -140,18 +141,18 @@ After designing the cad model in Solidworks, we export the cad model into Simuli
 ## Calculations
 
 -   Complementary filter equation:
-![](/virtual-expo/assets/img/piston/HRA_eqn1.JPG)
+![img](/virtual-expo/assets/img/piston/HRA_eqn1.JPG)
 
   where,
   *0<alpha<1,*
-![](/virtual-expo/assets/img/piston/HRA_eqn2.JPG)
+![img](/virtual-expo/assets/img/piston/HRA_eqn2.JPG)
 
 -   Linear input Output relation for flex sensor:
     
-![](/virtual-expo/assets/img/piston/HRA_eqn3.JPG)
+![img](/virtual-expo/assets/img/piston/HRA_eqn3.JPG)
   
 where,
-![](/virtual-expo/assets/img/piston/HRA_eqn4.JPG)
+![img](/virtual-expo/assets/img/piston/HRA_eqn4.JPG)
 
 ## Results
 

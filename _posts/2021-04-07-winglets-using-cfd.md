@@ -4,6 +4,7 @@
  description: "Design and optimization of winglets for an aircraft by varying configurations of winglets using CFD ANSYS"
  categories: piston
  thumbnail: "cfd-winglets.jpg"
+ year: 2021
 ---
 
 ### Project Mentors

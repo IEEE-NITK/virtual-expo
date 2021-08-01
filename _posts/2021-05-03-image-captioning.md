@@ -4,7 +4,7 @@ title: "Image Captioning Using Attention Mechanism"
 description: "One can see an image and the brain can easily tell what the image is about, but can a computer tell what the image is representing?"
 categories: envision
 thumbnail: "image-captioning.jpg"
-gmeet: "https://meet.google.com/efz-jzkd-ewa"
+year: 2021
 ---
 
 ### Mentors
@@ -82,7 +82,7 @@ A Gated Recurrent Unit (GRU), as its name suggests, is a variant of the RNN arch
 
 Bahdanau’s Attention, commonly referred to as Additive Attention, came from a paper by Dzmitry Bahdanau. The model aimed at improving the sequence-to-sequence model in machine translation by aligning the decoder with the relevant input sentences and thereby implementing Attention.
 
-![decoder](/virtual-expo/assets/img/envision/diode/img_caption_img5.jpg)
+![decoder](/virtual-expo/assets/img/envision/diode/img_caption_img5.JPG)
 
 ### Steps involved in Attention Mechanism
 

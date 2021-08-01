@@ -4,6 +4,7 @@ title: "Depth Vision Methods and their Hardware Implementaion"
 description: "Accurate algorithms for 3d imaging and their efficient hardware implementation"
 categories: diode
 thumbnail: "depth-vision-and-hardware.png"
+year: 2021
 ---
 
 ### Faculty Guide
@@ -53,7 +54,7 @@ The Census transform uses the relative intensity of input images; it is robust t
 
 Two pixels of the census transformed images are compared for similarity using the Hamming distance, which is the number of bits that differ in the two bit strings as shown (this is done by performing an XOR operation between the bit strings). To compute the correspondences, the Hamming distance is minimized after applying the census transform.
 
-![](/virtual-expo/assets/img/diode/depth_vision_hardware_implementation_1.png)
+![img](/virtual-expo/assets/img/diode/depth_vision_hardware_implementation_1.png)
 
 Some other algorithms in the reckoning were the Rank tranform for Stereo Matching. This algorithm essentially transforms each pixel into their respective ranks. Rank is an integer which represents how large an element is compared to the other elements belonging to its row and column. 
 Also traditional stereo-matching algorithms use the Sum of Squared Differences algorithm to compute the disparity values of pixels. It essentially computes the differences between the pixel values at corresponding locations in the two images (left and right).
@@ -64,13 +65,13 @@ The necessary research for the same was carried out and after much deliberation,
 
 Census transform coded in python provided us with a better pixel values to find depth, the result is shown below
 
-![](/virtual-expo/assets/img/diode/depth_vision_hardware_implementation_2.png)
+![img](/virtual-expo/assets/img/diode/depth_vision_hardware_implementation_2.png)
 
-![](/virtual-expo/assets/img/diode/depth_vision_hardware_implementation_3.png)
+![img](/virtual-expo/assets/img/diode/depth_vision_hardware_implementation_3.png)
 
 Finally, to find the depth the hamming distance is found, giving us the resultant depth image as 
 
-![](/virtual-expo/assets/img/diode/depth_vision_hardware_implementation_4.png)
+![img](/virtual-expo/assets/img/diode/depth_vision_hardware_implementation_4.png)
 
 Some of these codes could be found at:
 
@@ -78,7 +79,7 @@ https://github.com/IEEE-NITK/Depth\_estimation\_on\_FPGA/tree/final-codes
 
 Also, the verilog code for the same is almost complete which defines a hardware architecture for the algorithm as shown below.
 
-![](/virtual-expo/assets/img/diode/depth_vision_hardware_implementation_5.png)
+![img](/virtual-expo/assets/img/diode/depth_vision_hardware_implementation_5.png)
 
 Since, Verilog cannot read images we use a line buffer to take a lines of pixels from the images and then perform census transform on it. Then the left pixels are iterated through the right to get hamming distances. 
 
@@ -113,7 +114,7 @@ We also intended to develop hardware accelator for CNN using verilog which will 
 
 Now, to obtain fusion of the disparity maps from the upsampled ToF camera and the stereo vision system using the confidence information estimated by the deep learning framework, we used  Locally Consistent (LC) technique. The idea behind the method is to start by computing the plausibility of each valid depth measure at each point. The plausibility is a function of the color and spatial consistency of the data. Multiple plausibilities are then propagated to neighboring points. In the final step the overall plausibility is accumulated for each point and a winner-takesall strategy is used to compute the optimal disparity value. Result of approach is shown as below.
 
-![](/virtual-expo/assets/img/diode/depth_vision_hardware_implementation_8.png)
+![img](/virtual-expo/assets/img/diode/depth_vision_hardware_implementation_8.png)
 
 # Future Works
 

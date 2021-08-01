@@ -4,6 +4,7 @@ title: "Sports Video Analysis using Computer Vision"
 description: "To build frameworks that detect objects and events in sports videos"
 categories: diode
 thumbnail: "player-tracking.jpg"
+year: 2021
 ---
 
 ### Mentors
@@ -46,7 +47,7 @@ From the results obtained, we felt that the second approach was more robust in d
 
 ## Final Result
 
-![](/virtual-expo/assets/img/diode/ball_tracking.gif)
+![img](/virtual-expo/assets/img/diode/ball_tracking.gif)
 
 # Pose Estimation
 
@@ -58,7 +59,7 @@ Next, we pass the segmented players into a model called OpenPose.OpenPose is an 
 
 As you can see in the below image, keypoints such as elbows, shoulders, knees and ankles are detected and joined together.
 
-![](/virtual-expo/assets/img/diode/pose1.jpeg)
+![img](/virtual-expo/assets/img/diode/pose1.jpeg)
 
 # Conclusion
 

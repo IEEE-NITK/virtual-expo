@@ -4,6 +4,7 @@
  description: "Using Raft consensus to build a DNS service with stronger consistency guarantees"
  categories: compsoc
  thumbnail: "raft-dns.jpeg"
+ year: 2021
 ---
 
 ### Mentors
@@ -38,7 +39,7 @@ In the current TCP/IP model of the internet, the address to all web resources ar
 
 Domain Name Server (DNS) is a standard protocol that helps Internet users discover websites using human-readable addresses (eg. github.com). Like a phonebook that lets you look up the name of a person and discover their number, DNS lets you type the address of a website and automatically discover the Internet Protocol (IP) address for that website. Under the hood, it is often constructed as a hierarchy of nameservers that progressively resolve a given domain name into the corresponding Internet address.
 
-<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_dns.png" alt="">Image Credits: https://www.itgeared.com/articles/1354-domain-name-system-dns-tutorial-overview/</figure>
+<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_dns.png" alt="img">Image Credits: https://www.itgeared.com/articles/1354-domain-name-system-dns-tutorial-overview/</figure>
 
 This also offers another advantage: It makes the web resource IP address agnostic, meaning that the resource will not be tied to the IP address of the node it is on. This means that the IP address of the node can be changed and the resource can still be accessed through the same human-readable name. In this way, it provides a kind of abstraction between the web resource and the user since they don’t need to deal with the complexity associated with using IP addresses to access web resources.
 
@@ -89,7 +90,7 @@ Using AWS services, we will setup a hierarchy consisting of a set of replicas re
 
 A rough AWS architecture diagram is as follows:
 
-<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_aws_arch.png" alt=""></figure>
+<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_aws_arch.png" alt="img"></figure>
 
 Each larger rectangle enclosing 3 instances represents a nameserver group. As can be seen, we have 3 nameserver groups in each AWS region, (we have chosen 2 regions here, us-east-1 and ap-southeast-1) and each nameserver group is an independent set of raft replicas. (Each nameserver group consists of 3 replicas). Each replica of a nameserver group is an EC2 instance and normally contains data that is identical to the other two replicas. 
 
@@ -147,7 +148,7 @@ The Oracle does not directly send the details of other replicas once a nameserve
 
     > In the IAM console, create a new role for EC2 instances with the following policies attached (call this IAM1):
 
-    <figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_iam.png" alt=""></figure>
+    <figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_iam.png" alt="img"></figure>
 
     > Similarly, create another role for EC2 instances with only the *ElasticLoadBalancingFullAccess* policy attached (call this IAM2).
 
@@ -161,7 +162,7 @@ The Oracle does not directly send the details of other replicas once a nameserve
     ```
     After the oracle completes the initialization procedure, it will respond with the message "Initialization Successful":
 
-    <figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_oracle_request.png" alt=""></figure>
+    <figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_oracle_request.png" alt="img"></figure>
 
 5. In each AWS region that you will be running nameservers in, create a launch template for EC2 instances. The launch template should specify Ubuntu as the OS (tested with Ubuntu 20.04), specify a security group that allows inbound traffic for port 4000 from anywhere and inbound SSH access (port 22) from anywhere, the previously created IAM role (IAM2) attached, and should define the user data as specified [here](https://github.com/krithikvaidya/distributed-dns/blob/aws-dns/AWS/new_user_data.sh). **NOTE:** the value for the `ORACLE_ADDR` in the last line of the user data should be edited to match the public IP address of the Oracle.
 
@@ -181,29 +182,29 @@ Say we are trying to store the address for wikipedia.org and it's IPv4 address i
 
 1. First we will write the address of the nameserver responsible for the "org" domain in the root nameservers as an NS record. We run the [write_record](https://github.com/krithikvaidya/distributed-dns/blob/aws-dns/AWS/write_record.go) script as follows:
 
-    <figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_org.png" alt=""></figure>
+    <figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_org.png" alt="img"></figure>
 
     The two addresses entered above are the addresses of the load balancer in the us-east-1 and the ap-southeast-1 regions responsible for routing requests to the leader of the root nameservers (these addresses can be found through the "Load Balancers" section of the EC2 Management Console). AWS doesn't directly expose the IP address of the load balancers, only tells us its DNS name (which is somewhat redundant), but we can assign a static IP to each load balancer using the Elastic IP functionality.  
 
     The IP address stored in the value of the record is the Global Accelerator address that points to the load balancers responsible for the nameservers responsible for the "org" domain in each region.
 
-    <figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_ga.jpg" alt="">Either one of these IPs could be used</figure>
+    <figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_ga.jpg" alt="img">Either one of these IPs could be used</figure>
 
     **NOTE**: Real world DNS "NS" records never store IP addresses, they store the DNS name of the authoritative nameserver that's next in the hierarchy. If the address of the nameserver is a subdomain under the domain it's authoritative for (e.g. ns1.google.com is an authoritative nameserver for google.com), then the IP address of such servers are stored in the ADDITIONAL section of the DNS response to prevent infinitely looping resolutions (also known as "Glue Records"). For simplicity, we directly store the IP address of the next nameserver in the NS record.
 
 2. Then we will write the address of the nameserver responsible for the "wikipedia.org" domain in the nameservers responsible for "org", as an NS record. We run the write_record script as follows:
 
-    <figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_wikipedia_org.png" alt=""></figure>
+    <figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_wikipedia_org.png" alt="img"></figure>
 
 3. The nameservers responsible for the "wikipedia.org" domain are the authoritative nameservers for wikipedia.org. We will write the desired A record (IP address) of wikipedia.org here.
 
-    <figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_wikipedia_ip.png" alt=""></figure>
+    <figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_wikipedia_ip.png" alt="img"></figure>
 
 The process of writing the record is now done. In the future, if someone wished to write the A record for another .org domain, they would only need to perform step 3 above with the required A record.
 
 ### Resolving a record
 
-<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_resolve.png" alt=""></figure>
+<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/compsoc/ddns_resolve.png" alt="img"></figure>
 
 We supply the name we wish to resolve and the address of the root nameserver (Global Accelerator address) as input to the [resolver](https://github.com/krithikvaidya/distributed-dns/blob/aws-dns/AWS/resolver.go) script. The resolver recursively performs the resolution process until an A record for the given name is obtained. 
 

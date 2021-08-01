@@ -4,6 +4,7 @@ title: "Human Parsing"
 description: "Multi Purpose Deep Learning Segmentation Framework for 2-D Human Images"
 categories: compsoc
 thumbnail: "human-parsing.jpeg"
+year: 2021
 ---
 
 ### Mentors
@@ -28,7 +29,7 @@ The aim is to assign each pixel from the human image to a semantic category like
 ## Semantic Segmentation
 Semantic segmentation, or image segmentation, is a Computer Vision task where we label each pixel of an image with a corresponding class among a set of predefined classes as to what is being represented by that image. In Semantic Segmentation, multiple occurrences of a given object (say a car) are all given the same color code as they all belong to the same class, i.e., instances of an object aren’t differentiated and their respective pixels are assigned the same color. When pixels corresponding to distinct instances of the same class are given a different color, it is called Instance segmentation. Semantic Segmentation has its useful application in various fields like autonomous driving, medical image diagnostics, robotic vision, and many more.
 
-![](/virtual-expo/assets/img/compsoc/human-parsing_img1.jpeg)
+![img](/virtual-expo/assets/img/compsoc/human-parsing_img1.jpeg)
 
 Most semantic segmentation networks work on high-resolution images which involve heavy processing at every scale, which proves to be quite computationally intensive. We have used Pyramid Scene Parsing Network (PSPNet) in our project, which can work on low-resolution images, and uses multiple scales of pooling to effectively extract features at different scales. As an addition to a standard feature extraction network (ResNet, DenseNet, etc), PSPNet applies 4 different max pooling operations with 4 different window sizes and strides. This effectively captures feature information from 4 different scales without the need for heavy individual processing of each one.
 
@@ -68,15 +69,15 @@ In the above dataset structure, the id.txt files contain the IDs of the images. 
 
 Pyramid Scene Parsing Network (PSPset) is the model that we chose to implement in order to accurately segment the various classes present in the dataset. It is basically a Pyramid Pooling Module used along with various different backbone implementations including Resnets and Densnets. In the Pyramid Pooling Module we use filters of 4 different scales (1, 2, 3, 6) and then combine the outputs after appropriate upsampling. This avoids loss in information and lets us capture all features from the coarsest ones to the finest ones. Below is a figure representing a Pyramid Pooling Module.
 
-![](/virtual-expo/assets/img/compsoc/human-parsing_img2.png)
+![img](/virtual-expo/assets/img/compsoc/human-parsing_img2.png)
 
 Residual Neural Networks (ResNets) are a neural network architecture that allows skip connection between various different layers in the neural network. As we increase the number of layers in vanilla neural networks, we observe the performance plateau or even reduce. One reason for this is that as the number of layers increases, it becomes increasingly difficult for the model to learn the identity function. Residual Neural Networks provide skip connections between various which allows the model to learn the identity function easily if required. This allows us to train very deep neural networks with over 100 layers without seeing a drop in performance. Below is a comparison of the performance of a plain neural network and that of a ResNet.
 
-![](/virtual-expo/assets/img/compsoc/human-parsing_img3.png)
+![img](/virtual-expo/assets/img/compsoc/human-parsing_img3.png)
 
 Below is a comparison of the model architecture for a plain 34 layer Neural Network with the model architecture for a 34 layer ResNet. We see the various skip connections present.
 
-![](/virtual-expo/assets/img/compsoc/human-parsing_img4.png)
+![img](/virtual-expo/assets/img/compsoc/human-parsing_img4.png)
 
 In our project, we have tried out the performance of the PSPnet using Resnet-18, Resnet-34, Resnet-50, Resnet-101 and Resnet-152 as a backbone.
 

@@ -4,6 +4,7 @@
  description: "Utilising Wireless Power Transfer to make a Wireless Battery Charger"
  category: diode
  thumbnail: "wireless-battery-charger.png"
+ year: 2021
 ---
 
 ### Faculty Guide

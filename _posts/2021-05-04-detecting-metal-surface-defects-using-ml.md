@@ -4,7 +4,7 @@ title: "Detecting Metal Surface Defects using ML"
 description: "Predicting the type of defects found in steel manufacturing by making a Custom Convolutional Neural Network"
 categories: envision
 thumbnail: "MetalDefectsUsingML.png"
-gmeet: "https://meet.google.com/qzo-kabp-wyh"
+year: 2021
 ---
 
 ### Project Mentors
@@ -74,11 +74,11 @@ This is what the model summary looks like:
 
 ## Result
 
-<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/envision/piston/metal-defects-ml-2.png" alt="">Training Accuracy has substantially increased during the entire training cycle.</figure>
+<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/envision/piston/metal-defects-ml-2.png" alt="img">Training Accuracy has substantially increased during the entire training cycle.</figure>
 
-<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/envision/piston/Validation-Accuracy-Vs-Epochs.png" alt="">Validation Accuracy has substantially increased during the entire training cycle, but not as much as the training accuracy but seemed to not saturate by running on more epochs.</figure>
+<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/envision/piston/Validation-Accuracy-Vs-Epochs.png" alt="img">Validation Accuracy has substantially increased during the entire training cycle, but not as much as the training accuracy but seemed to not saturate by running on more epochs.</figure>
 
-<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/envision/piston/MSE-Vs-Epoch.png" alt="">MSE lowers as we run the epochs for both Accuracy and Validation.</figure>
+<figure class="image" style="text-align: center; color: gray;"><img src="/virtual-expo/assets/img/envision/piston/MSE-Vs-Epoch.png" alt="img">MSE lowers as we run the epochs for both Accuracy and Validation.</figure>
 
 ![Validation Loss Vs Epochs.png](/virtual-expo/assets/img/envision/piston/Validation-Loss-Vs-Epochs.png)
 

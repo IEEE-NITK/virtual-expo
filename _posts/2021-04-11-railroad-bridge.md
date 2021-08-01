@@ -4,6 +4,7 @@ title: "Design and Analysis of Road cum Railway Bridge"
 description: "A RoadRail Bridge is a multipurpose bridge that enhances connectivity by serving two purposes at the same time. This steel bridge can serve the purpose with high durability and strength."
 categories: piston
 thumbnail: "railroad-bridge.jpg"
+year: 2021
 ---
 
 ### Project Mentors

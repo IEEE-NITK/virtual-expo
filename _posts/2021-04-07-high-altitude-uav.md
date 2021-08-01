@@ -4,6 +4,7 @@ title: "Concept Design for High Altitude Hybrid UAV"
 description: "This project entails power train sizing, component selection and conceptual aeronautical design of UAV for rescue and utility during extreme situations."
 categories: piston
 thumbnail: "high-altitude-uav.png"
+year: 2021
 ---
 
 ### Project Guide

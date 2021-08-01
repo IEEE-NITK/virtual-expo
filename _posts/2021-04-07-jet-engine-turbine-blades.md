@@ -4,6 +4,7 @@ title: "Design and Analysis of Jet Engine Turbine Blades with Leading Edge Tuber
 description: "This project aims to design the baseline blade and blade with leading-edge tubercles, and compare the performance of the baseline blade with the tubercled blade."
 categories: piston
 thumbnail: "jet-engine-blades.jpg"
+year: 2021
 ---
 
 ### Project Mentors

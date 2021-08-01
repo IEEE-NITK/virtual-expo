@@ -4,7 +4,7 @@
  description: "This project incorporates the two most popular technologies for App Development today, i.e. the famous Google UI toolkit - Flutter and Google powered Cloud service provider Firebase"
  categories: envision
  thumbnail: "flutter.png"
- gmeet: "https://meet.google.com/fqb-bvad-xiw"
+ year: 2021
 ---
 
 ## Mentors
@@ -39,8 +39,8 @@ The Blog app is built using Flutter. It has a total of 6 screens (Splash Screen,
 
 ### Home Screen
 
-<img src = "https://raw.githubusercontent.com/ikjot-2605/blog-app/master/screenshots/all_blogs_page.jpeg?token=ANF347M322Y4NHZAATLUWL3AXPNJO" height = "300">
-<img src = "https://raw.githubusercontent.com/ikjot-2605/blog-app/master/screenshots/add_to_favorites.jpeg?token=ANF347OGS4LZ6UOVEB4XSTTAXPOBO" height = "300">
+<img alt="img" src = "https://raw.githubusercontent.com/ikjot-2605/blog-app/master/screenshots/all_blogs_page.jpeg?token=ANF347M322Y4NHZAATLUWL3AXPNJO" height = "300">
+<img alt="img" src = "https://raw.githubusercontent.com/ikjot-2605/blog-app/master/screenshots/add_to_favorites.jpeg?token=ANF347OGS4LZ6UOVEB4XSTTAXPOBO" height = "300">
 
 - The home screen contains all the blogs added to firebase and is presented in List view.
 - Every List element contains a Blog name, Preview and an Icon, which can be used to add the blog to the favourites list and a delete icon to delete that app.
@@ -51,8 +51,8 @@ The Blog app is built using Flutter. It has a total of 6 screens (Splash Screen,
 
 ### Favourite Screen
 
-<img src = "https://raw.githubusercontent.com/ikjot-2605/blog-app/master/screenshots/favorites_page.jpeg?token=ANF347PQDJ3WHNIK3BWRJN3AXPOD6" height = "300">
-<img src = "https://raw.githubusercontent.com/ikjot-2605/blog-app/master/screenshots/remove_from_favorites_page.jpeg?token=ANF347P5QJWDOMPE7S7E6KLAXPOEW" height = "300">
+<img alt="img" src = "https://raw.githubusercontent.com/ikjot-2605/blog-app/master/screenshots/favorites_page.jpeg?token=ANF347PQDJ3WHNIK3BWRJN3AXPOD6" height = "300">
+<img alt="img" src = "https://raw.githubusercontent.com/ikjot-2605/blog-app/master/screenshots/remove_from_favorites_page.jpeg?token=ANF347P5QJWDOMPE7S7E6KLAXPOEW" height = "300">
 
 - This screen shows all the Blogs which have been added to the favourites list by the user.
 - When a user adds a blog to the favourite list, that blog gets stored locally (implemented using Hive), and then the files are derived from this local storage to be displayed on the favourite screen.
@@ -66,14 +66,14 @@ The Blog app is built using Flutter. It has a total of 6 screens (Splash Screen,
 
 ### Firebase &amp; Hive
 
-<img src = "https://raw.githubusercontent.com/ikjot-2605/blog-app/master/screenshots/firebase.png?token=ANF347MSPICQFWU3D3CQPC3AXPONI" height = "250">
+<img alt="img" src = "https://raw.githubusercontent.com/ikjot-2605/blog-app/master/screenshots/firebase.png?token=ANF347MSPICQFWU3D3CQPC3AXPONI" height = "250">
 
 - The app uses Firebase to store all the blogs and directly imports blogs from its database which is then displayed in the home screen.
 - Hive was used to store some a set of blogs locally which are selected from user and then this local database is used by favorite screen to display its blog.
 
 ### Below, is an overview of the running of the application.
 
-<img src = "https://raw.githubusercontent.com/ikjot-2605/blog-app/master/screenshots/runthrough_final.gif?token=ANF347KGQH2VJIHHHEUTNETAXPPJQ" height = "400">
+<img alt="img" src = "https://raw.githubusercontent.com/ikjot-2605/blog-app/master/screenshots/runthrough_final.gif?token=ANF347KGQH2VJIHHHEUTNETAXPPJQ" height = "400">
 
 ## Conclusion
 
