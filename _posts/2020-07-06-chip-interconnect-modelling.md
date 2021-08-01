@@ -6,17 +6,16 @@ categories: diode
 description: "This project aims at modelling the lower metal layers using physical fabrication parameters."
 thumbnail: "chip_modelling_thumb.jpg"
 ---
+### Guides
+
+* Prof. M S Bhat, National Institute of Technology Karnataka
+* Aditya Kulkarni
 
 ### Team Members
 
 * Sahith S R
 * Iteesha V A
 * A Shrikant
-
-### Guides
-
-* Aditya Kulkarni
-* Prof. M S Bhat, National Institute of Technology Karnataka
 
 ## Objectives
 

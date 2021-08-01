@@ -17,6 +17,10 @@ thumbnail: "decentralized-social-network.jpg"
  -  Aditya Chirania
  -  Arnav Santosh Nair
 
+## Demo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gQYH_UTsU0c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Objectives
 
 -  Leverage the principles and capabilities of InterPlanetary File System(IPFS) to form the foundation of our Decentralized Social Network.
@@ -63,7 +67,6 @@ How we used it:
     What we have done here is that is that we have explicitly created channel names by appending the peerid of yours and and your friends in lexicographical order so there exists a unique channel name between you and your friend .This helps any two friends to chat on a unique channel . 
 
 Another feature we have created is the ability to chat on a channel that you can decide yourself. This way multiple people / groups can indulge in chats.
-
 
 ## Results (Screenshots of the working application)
 ![Main Page](/virtual-expo/assets/img/compsoc/SS1.png)

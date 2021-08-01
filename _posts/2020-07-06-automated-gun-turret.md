@@ -7,7 +7,7 @@ description: "An automated turret is a defence weapon that automatically detects
 thumbnail: "gunturret1_thumb.jpg"
 ---
 
-### Team members
+### Team Members
 
 - Jeet Shah
 - Gayatri Tanksali

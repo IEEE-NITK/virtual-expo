@@ -7,17 +7,17 @@ description: "A project to develop a robotic system which helps people to handle
 thumbnail: "blindassistance1_thumb.jpg"
 ---
 
-### Team Members
-
-- Saikumar Dande
-- Bhaskar Vyas
-- Rahul Hanchate
-
 ### Mentors
 
 - Manan Sharma
 - Anirudh BH
 - Anirudh Sundar
+
+### Members
+
+- Saikumar Dande
+- Bhaskar Vyas
+- Rahul Hanchate
 
 ## Objectives
 
@@ -43,4 +43,4 @@ Also, it can be further developed by embedding a voice recognition system so tha
 
 ## References and Acknowledgements
 
-- [https://ieeexplore.ieee.org/document/7918924](https://ieeexplore.ieee.org/document/7918924)
+- [Visual impairment aid using haptic and sound feedback](https://ieeexplore.ieee.org/document/7918924)
