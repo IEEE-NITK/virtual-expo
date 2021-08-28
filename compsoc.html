@@ -65,6 +65,12 @@ image: "compsoc.jpg"
 
 <script>
     $(document).ready(function() {
-        $("#{{latest_year}}-projects-tab").click();
+        let url = new URL(window.location.href);
+        let year = url.searchParams.get("year");
+
+        if ($(`#${year}-projects-tab`)[0])
+            $(`#${year}-projects-tab`).click();
+        else
+            $("#{{latest_year}}-projects-tab").click();
     });
 </script>
