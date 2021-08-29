@@ -2,6 +2,7 @@
 layout: default
 title: "Piston Projects"
 image: "piston.jpg"
+use_sig_js: true
 ---
 
 {% assign all_posts_by_year = site.posts | group_by: "year" %}
@@ -62,15 +63,3 @@ image: "piston.jpg"
         </div>
     </div>
 </div>
-
-<script>
-    $(document).ready(function() {
-        let url = new URL(window.location.href);
-        let year = url.searchParams.get("year");
-
-        if ($(`#${year}-projects-tab`)[0])
-            $(`#${year}-projects-tab`).click();
-        else
-            $("#{{latest_year}}-projects-tab").click();
-    });
-</script>

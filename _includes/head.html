@@ -116,6 +116,10 @@
 {% include math.html %}
 {% endif %}
 
+{% if page.use_sig_js %}
+    <script src="{{site.baseurl}}/assets/js/sig.js"></script>
+{% endif %}
+
 <!-- Global site tag (gtag.js) - Google Analytics Personal
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167549289-3"></script>
     <script>
