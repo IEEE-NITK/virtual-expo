@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "LITHIUM ION BATTERIES : INTO THE FUTURE"
+title: "Lithium Ion Batteries: Into the Future"
 description: "A look into the current trends and future of Lithium ion battery"
 categories: piston
 thumbnail: "Lithium-Ion.jpg"
@@ -76,7 +76,7 @@ Future mobility needs novel concepts that strike a balance between individual mo
 
 ![Image-7](/virtual-expo/assets/img/piston/Lithium-Ion-7.png)
 
-One example of application in the electric vehicle class is the BMW Active Hybrid 5. The battery used in the BMW Active Hybrid 5 is the first battery in series production which was developed and manufactured entirely by BMW. The lithium-ion cell and other sub-components are supplied by external companies. A cylindrical cell is used with lithium iron phosphate as the cathode material. Another example of an application in electric vehicles is the so-called conversion vehicle, i.e., a conventional BMW 1 Series coupé converted into an electric vehicle. After the MINI E, the BMW Active E was the second electric vehicle on the market. 
+One example of application in the electric vehicle class is the BMW Active Hybrid 5. The battery used in the BMW Active Hybrid 5 is the first battery in series production which was developed and manufactured entirely by BMW. The lithium-ion cell and other sub-components are supplied by external companies. A cylindrical cell is used with lithium iron phosphate as the cathode material. Another example of an application in electric vehicles is the so-called conversion vehicle, i.e., a conventional BMW 1 Series coupé converted into an electric vehicle. After the MINI E, the BMW Active E was the second electric vehicle on the market.
 
 
 ## Comparison with Sodium Ion batteries
@@ -86,7 +86,7 @@ Even though Sodium Ion batteries were studied around the same time as lithium io
 
 ![Image-8](/virtual-expo/assets/img/piston/Lithium-Ion-8.png)
 
-Electrodes with open frameworks are more desirable in sodium systems, as the larger-sized Na+ (in comparison to Li+) can be introduced into the framework. However, given how the immense structural changes that occur when introducing Na+ cannot be avoided, disruption of structure's durability while trying to maintain its original state is bound to happen. Moreover, sodiated transition metal materials are particularly hygroscopic, even upon brief exposure to air. Thus, the preparation of sodiated cathode materials and batteries requires meticulous handling and moisture-free conditions. 
+Electrodes with open frameworks are more desirable in sodium systems, as the larger-sized Na+ (in comparison to Li+) can be introduced into the framework. However, given how the immense structural changes that occur when introducing Na+ cannot be avoided, disruption of structure's durability while trying to maintain its original state is bound to happen. Moreover, sodiated transition metal materials are particularly hygroscopic, even upon brief exposure to air. Thus, the preparation of sodiated cathode materials and batteries requires meticulous handling and moisture-free conditions.
 The hydration of materials will deteriorate the electrochemical performance of the electrode due to the formation of intrinsically insulating NaOH. One recent study on cathode materials for Sodium Ion batteries has focused on this hygroscopic problem. Specifically, the Sumitomo Chemical CoLtd research group has successfully synthesized O3-type Ca-doped NaFe0.4Ni0.3Mn0.3O2, and they managed to suppress its tendency to absorb moisture through Ca doping. Although it is reasonable to suspect that the kinetics of Na+ ion diffusion might be a problem due to the larger ionic size relative to that of Li+, Ceder et al. reported that Na+ extraction/re-insertion from/into Na-containing materials is experimentally and computationally faster compared to Li systems due to the low Lewis acidity of Na+. By contrast, the insertion of Na+ into non Na-containing compounds with a smaller bottleneck size may be slower compared to the insertion of Li+.
 
 

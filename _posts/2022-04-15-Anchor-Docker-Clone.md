@@ -62,13 +62,13 @@ A container is a runnable instance of an image. Users can create, start, stop, m
 Because containers are lightweight and only include high level software, they are very fast to modify and iterate on. Containers on Docker Hub can instantly be downloaded and deployed to a local Docker runtime.
 
 The container includes all the code, its dependencies and even the operating system itself. This enables applications to run almost anywhere — a desktop computer, a traditional IT infrastructure or the cloud.
-![Container](/virtual-expo/assets/img/CompSoc/Container.png)
+![Container](/virtual-expo/assets/img/compsoc/Container.png)
 
-![Docker- file-image](/virtual-expo/assets/img/CompSoc/Docker.png)
+![Docker- file-image](/virtual-expo/assets/img/compsoc/Docker.png)
 
 ## Containers over VM
 
-![Containers](/virtual-expo/assets/img/CompSoc/Container_over_vm.png)
+![Containers](/virtual-expo/assets/img/compsoc/Container_over_vm.png)
 In traditional virtualization, a hypervisor virtualizes physical hardware. The result is that each virtual machine contains a guest OS, a virtual copy of the hardware that the OS requires to run and an application and its associated libraries and dependencies. VMs with different operating systems can be run on the same physical server.
 
 Instead of virtualizing the underlying hardware, containers virtualize the operating system (typically Linux or Windows) so each individual container contains only the application and its libraries and dependencies. Containers are small, fast, and portable because, unlike a virtual machine, containers do not need to include a guest OS in every instance and can, instead, simply leverage the features and resources of the host OS.
@@ -101,9 +101,9 @@ CoW adds an overhead each time a different file is edited, but it is a tradeoff 
 
 Before CoW:
 
-![Before CoW](/virtual-expo/assets/img/CompSoc/before_cow.png)
+![Before CoW](/virtual-expo/assets/img/compsoc/before_cow.png)
 After CoW:
-![After Cow](/virtual-expo/assets/img/CompSoc/after_cow.png)
+![After Cow](/virtual-expo/assets/img/compsoc/after_cow.png)
 
 ## **How to run the setup**
 
@@ -155,20 +155,19 @@ After CoW:
 
 ## Conclusion
 
-Currently our command line based tool is able to mimic the working of the Docker command “run”.  
+Currently our command line based tool is able to mimic the working of the Docker command “run”.
 Our future plan is to be able to mimic the working of the Docker commands of “ps”, “image”, “container”, “rm”, “exec” and implement support for the “volume” command in docker.
 
 ## References
 
 1. Docker home page [https://www.docker.com/](https://www.docker.com/)
 2. Containers From Scratch by Liz Rice [Containers From Scratch • Liz Rice • GOTO 2018](https://youtu.be/8fi7uSYlOdc)
-3. Linux Primitives [Linux Primitives](/vle/presentation/d/10vFQfEUvpf7qYyksNqiy-bAxcy-bvF0OnUElCOtTTRc/edit#slide=id.p)
-4. Docker labs [https://github.com/docker/labs](https://github.com/docker/labs)
-5. Docker orientation and setup [https://docs.docker.com/get-started/](https://docs.docker.com/get-started/)
-6. Docker Fundamentals [https://www.coursera.org/projects/docker-fundamentals](https://www.coursera.org/projects/docker-fundamentals)
-7. Docker for the Absolute Beginner [https://kodekloud.com/p/docker-for-the-absolute-beginner-hands-on](https://kodekloud.com/p/docker-for-the-absolute-beginner-hands-on)
-8. Container based virtualization [http://www.ce.uniroma2.it/courses/sdcc1819/slides/Docker.pdf](http://www.ce.uniroma2.it/courses/sdcc1819/slides/Docker.pdf)
-9. Docker internals [http://docker-saigon.github.io/post/Docker-Internals/](http://docker-saigon.github.io/post/Docker-Internals/)
-10. Cgroups, Namespaces and beyond - [https://youtu.be/sK5i-N34im8](https://youtu.be/sK5i-N34im8)
-11. Containers vs VMs : [ Containers vs VMs: What's the difference? - YouTube](https://www.youtube.com/watch?v=cjXI-yxqGTI&t=215s&ab_channel=IBMTechnology)
-12. How Docker Works [How Docker Works - Intro to Namespaces - YouTube](https://www.youtube.com/watch?v=-YnMr1lj4Z8&t=2s&ab_channel=LiveOverflow)
+3. Docker labs [https://github.com/docker/labs](https://github.com/docker/labs)
+4. Docker orientation and setup [https://docs.docker.com/get-started/](https://docs.docker.com/get-started/)
+5. Docker Fundamentals [https://www.coursera.org/projects/docker-fundamentals](https://www.coursera.org/projects/docker-fundamentals)
+6. Docker for the Absolute Beginner [https://kodekloud.com/p/docker-for-the-absolute-beginner-hands-on](https://kodekloud.com/p/docker-for-the-absolute-beginner-hands-on)
+7. Container based virtualization [http://www.ce.uniroma2.it/courses/sdcc1819/slides/Docker.pdf](http://www.ce.uniroma2.it/courses/sdcc1819/slides/Docker.pdf)
+8. Docker internals [http://docker-saigon.github.io/post/Docker-Internals/](http://docker-saigon.github.io/post/Docker-Internals/)
+9. Cgroups, Namespaces and beyond - [https://youtu.be/sK5i-N34im8](https://youtu.be/sK5i-N34im8)
+10. Containers vs VMs : [ Containers vs VMs: What's the difference? - YouTube](https://www.youtube.com/watch?v=cjXI-yxqGTI&t=215s&ab_channel=IBMTechnology)
+11. How Docker Works [How Docker Works - Intro to Namespaces - YouTube](https://www.youtube.com/watch?v=-YnMr1lj4Z8&t=2s&ab_channel=LiveOverflow)

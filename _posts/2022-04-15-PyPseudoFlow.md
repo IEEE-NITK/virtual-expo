@@ -54,7 +54,7 @@ The statistical approach contrasts with the rule-based approaches to machine tra
 More recently, deep neural network models have achieved state-of-the-art results in a field that is aptly named Neural Machine Translation. Most Neural Machine Translation systems follow the encoder-decoder architecture where the source sentence is encoded into a constant size vector using a Recurrent Neural Network as shown below and fed into another decoder network along with words from the input sentence. The constant size vector provides the required contextual information to
 
 <p align="center">
-  <img src="https://d2l.ai/_images/seq2seq.svg">
+  <img src="https://d2l.ai/_images/seq2seq.svg" alt="sequence to sequence model">
 </p>
 
 The above architecture, however, fails when the length of the sentence increases beyond a certain limit. This happens because we are trying to cram variable amount of contextual information into a fixed sized vector. In order to overcome this, we use Attention Mechanism.
@@ -62,7 +62,7 @@ The above architecture, however, fails when the length of the sentence increases
 Attention allows the decoder network to “focus” on a different part of the encoder’s outputs for every step of the decoder’s own outputs. First we calculate a set of _attention weights_. These will be multiplied by the encoder output vectors to create a weighted combination. The result should contain information about that specific part of the input sequence, and thus help the decoder choose the right output words. Calculating the attention weights is done with another feed-forward layer, using the decoder’s input and hidden state as inputs.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/76606666/162220562-9aa1db1f-6c9a-4c59-9300-b36c1974c2a0.png">
+  <img src="https://user-images.githubusercontent.com/76606666/162220562-9aa1db1f-6c9a-4c59-9300-b36c1974c2a0.png" alt="Model architecture">
 </p>
 
 <br>

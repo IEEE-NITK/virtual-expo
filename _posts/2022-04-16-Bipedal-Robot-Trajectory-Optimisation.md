@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DEEP LEARNING BASED TRAJECTORY OPTIMIZATION OF BIPEDAL ROBOTS"
+title: "Deep Learning based Trajectory Optimization of Bipedal Robots"
 description: "Developing robust environment for the Reinforcement Learning algorithms and attempt to develop a controller for stability and trajectory manipulation"
 categories: piston
 thumbnail: "BipedalRobotTrajectory.jpg"
@@ -13,7 +13,7 @@ gmeet: "https://meet.google.com/zrh-jrvv-sio"
 
 
 - Pranshu Shukla
-- Monal Singh 
+- Monal Singh
 - Viren Varma
 
 
@@ -75,7 +75,7 @@ OpenAI conducts research in many domains of Artificial Intelligence. One such pr
 
 OpenAI Gym
 
-OpenAI is a collection of open-source environments that are used as a standard benchmark for testing RL algorithms. They range anywhere from simple Atari Games like Atari Breakout to complex simulations of Robot arms and walkers. We used the BipedalWalker-v2  for testing the algorithms in the initial phase. After which we moved on to the MuJoCo environment. 
+OpenAI is a collection of open-source environments that are used as a standard benchmark for testing RL algorithms. They range anywhere from simple Atari Games like Atari Breakout to complex simulations of Robot arms and walkers. We used the BipedalWalker-v2  for testing the algorithms in the initial phase. After which we moved on to the MuJoCo environment.
 
 [https://gym.openai.com/envs/BipedalWalker-v2/](https://gym.openai.com/envs/BipedalWalker-v2/)
 
@@ -104,16 +104,16 @@ Learning a cost function from expert demonstrations is called Inverse Reinforcem
 HER
 Hindsight Experience Replay (HER)
 HER is a method wrapper that works with Off policy methods (DQN, SAC, TD3 and DDPG for example).
- 
- 
+
+
 PPO1
 The Proximal Policy Optimization algorithm combines ideas from A2C (having multiple workers) and TRPO (it uses a trust region to improve the actor).
 The main idea is that after an update, the new policy should be not too far from the old policy. For that, ppo uses clipping to avoid too large updates.
- 
+
 PPO2
 The Proximal Policy Optimization algorithm combines ideas from A2C (having multiple workers) and TRPO (it uses a trust region to improve the actor).
 The main idea is that after an update, the new policy should be not too far from the old policy. For that, PPO uses clipping to avoid too large updates.
- 
+
 SAC
 Soft Actor Critic (SAC) Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor.
 SAC is the successor of Soft Q-Learning SQL and incorporates the double Q-learning trick from TD3. A key feature of SAC, and a major difference with common RL algorithms, is that it is trained to maximize a trade-off between expected return and entropy, a measure of randomness in the policy.
@@ -138,5 +138,3 @@ Thus we successfully tested out applications of Policy based (DDPG, DQN, PPO1, P
 3. [https://github.com/openai/gym/blob/master/gym/envs/box2d/bipedal_walker.py](https://github.com/openai/gym/blob/master/gym/envs/box2d/bipedal_walker.py)
 4. Learning Linear Policies for Robust Bipedal Locomotion on Terrains with Varying Slopes Lokesh Krishna, Utkarsh A. Mishra, Guillermo A. Castillo, Ayonga Hereid, Shishir Kolathaya
 5. [https://github.com/adityasagi/robotics_tutorial](https://github.com/adityasagi/robotics_tutorial)
-
-

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ANTI-ANTI-MASKER"
+title: "Anti-Anti-Masker"
 description: "A mid-pandemic attempt to innovate a drone that can pick out the unmasked among a crowd of people."
 categories: piston
 thumbnail: "anti-anti-masker.jpeg"
@@ -24,7 +24,7 @@ Dr. K. R. Guruprasad, Department of Mechanical Engineering
 
 - Shivani Chanda
 - Spandan Patkar
-- Sunaina Sunil 
+- Sunaina Sunil
 
 
 ## Acknowledgements
@@ -40,7 +40,7 @@ Anti-Anti-Masker aims to simulate a drone that will roam in crowded city areas a
 ## Introduction
 
 
-The COVID-19 pandemic saw a surge in the number of cases of the SARS-COV-2 virus infection all across the globe. It was quite surprising to notice that despite knowing that the possibility of infection could be reduced by a huge margin through hygienic habits like washing hands with soap regularly, maintaining social distance and wearing a mask in public spaces, a huge number of people refuse to do something as simple as wear a mask, because of many unintelligent and baseless reasons. 
+The COVID-19 pandemic saw a surge in the number of cases of the SARS-COV-2 virus infection all across the globe. It was quite surprising to notice that despite knowing that the possibility of infection could be reduced by a huge margin through hygienic habits like washing hands with soap regularly, maintaining social distance and wearing a mask in public spaces, a huge number of people refuse to do something as simple as wear a mask, because of many unintelligent and baseless reasons.
 
 The project ‘Anti-Anti-Maskers’ is an attempt to deal with such a situation, wherein we use a drone utilizing Artificial Intelligence for automatic detection of and differentiation between Masked and Unmasked people.
 
@@ -97,19 +97,19 @@ Computer Vision Dependencies:
 - OpenCV 4.5.x
 
 ## Computer Vision
- 
+
 The computer vision for the drone uses Convolutional Neural Networks for realtime image processing.A Neural Network is a series of algorithms made of units called 'nodes' which help in pattern recognition and machine learning. The type used in this project,Convolutional Neural Networks is among the most popular deep learning algorithm, widely used for image processing. Being more specific, the code uses MobileNetV2 architecture for doing the same. Owing to the use of MobileNetV2 architecture, it is very easy to deploy the pre-trained model on to embedded hardwares like Arduino and RasberryPi and making a real-life working model for this project. The model has been deployed employing Keras Dense layers (tf.keras.layers.Dense), with 128 dense layers of 'RELU' activation function and 2 additional layers of 'Softmax' activation function. The model gives a final train accuracy of 99.22% and a test accuracy of 98.19% for the dataset used.
 
 - For Additional Details on Convolutional Layers used,refer
 [Detection Model Block](https://github.com/IEEE-NITK/Anti-Anti-Masker/blob/model2/drone_vision/notebooks/Detection_Model_Readme.md).
- 
+
 The model code: [The notebook](https://github.com/IEEE-NITK/Anti-Anti-Masker/blob/model2/drone_vision/notebooks/Detection_Model.ipynb)
- 
+
 The model structure:
 ```
 input = keras.layers.Input(shape=(224,224,3))
 baseModel = MobileNetV2(weights="imagenet", include_top=False, input_shape=(224,224,3), input_tensor= input)
- 
+
 headModel = baseModel.output
 headModel = AveragePooling2D(pool_size=(7, 7))(headModel)
 headModel = Flatten()(headModel)
@@ -117,7 +117,7 @@ headModel = Dense(128, activation="relu")(headModel)
 headModel = Dropout(0.5)(headModel)
 headModel = Dense(2, activation="softmax")(headModel)
 model = Model(inputs=baseModel.input, outputs=headModel)
- 
+
 for layer in baseModel.layers:
    layer.trainable = False
 ```
@@ -125,18 +125,18 @@ The CNN model parameter specifications are as follows:
 - Total parameters: 2,422,210
 - Trainable parameters: 164,226
 - Non-trainable parameters: 2,257,984
- 
+
  Training Loss and Accuracy plot:
-  
+
 ![accuracy curve](/virtual-expo/assets/img/piston/accuracy curve.png)
 
 
 <!--For TensorFlow 2 installation refer to this link: [TensorFlow Installation](drone_vision/README.md)-->
 
 
- 
+
 ## Training Dataset
- 
+
 - The Dataset used is : [With/Without Mask Dataset](https://www.kaggle.com/niharika41298/withwithout-mask); which has been taken from Kaggle.
 - The Training dataset for this particular model has been created with the help of the repository : [Masking code](https://github.com/prajnasb/observations/tree/master/mask_classifier/Data_Generator)
 - The Training dataset includes both non-masked and masked images (black and white coloured masks used).
@@ -196,16 +196,11 @@ The simulation of the Anti-Anti-Masked Drone has further scope to be implemented
 1. [Di Puglia Pugliese, L., Guerriero, F., Zorbas, D.et al. Modelling the mobile target covering problem using flying drones. Optim Lett 10, 1021–1052(2016)](https://doi.org/10.1007/s11590-015-0932-1)
 2. F. Schroff, D. Kalenichenko and J. Philbin, "FaceNet:A unified embedding for face recognition and clustering," 2015 IEEE Conference on ComputerVision and Pattern Recognition (CVPR),2015, pp. 815-823, doi: 10.1109/CVPR.2015.7298682.
 3. Casado, R., & Bermúdez, A. (2020). A Simulation Frameworkfor Developing Autonomous DroneNavigation Systems. Electronics, 10, 7.
-4. [UBUNTU 20.04 INSTALLATION](https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/) 
+4. [UBUNTU 20.04 INSTALLATION](https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/)
 5. [ROS NOETIC INSTALLATION](http://wiki.ros.org/noetic/Installation/Ubuntu)
-6. UDEMY COURSES FOR ROS :                                            
-	i.  [Course 1](https://www.udemy.com/course/ros-essentials/)  
-	ii. [Course 2](https://www.udemy.com/course/ros-navigation/)                                                                                       
+6. UDEMY COURSES FOR ROS :
+	i.  [Course 1](https://www.udemy.com/course/ros-essentials/)
+	ii. [Course 2](https://www.udemy.com/course/ros-navigation/)
 7. [https://github.com/smitkesaria/vitarana_drone](https://github.com/smitkesaria/vitarana_drone)
 8. [https://github.com/ipazc/mtcnn](https://github.com/ipazc/mtcnn)
 9. [https://github.com/tahsinkose/sjtu-drone](https://github.com/tahsinkose/sjtu-drone)
-
-
-
-
-

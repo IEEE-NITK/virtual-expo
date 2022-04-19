@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "VLSI_design-of-RISC_processor"
+title: "VLSI Design of RISC Processor"
 description: "This project aims at designing an optimized MIPS Pipelined processor from scratch. The processor includes 5 pipeline stages - Instruction fetch, Decode, Execute, Memory access and Write back. The project involves the behavioural modelling of the processor in Verilog and generate it's physical design using Openlane - an opensource tool used to generate GDS II file from the RTL netlist. The OpenLane physical design tool is also used to select optimized synthesis strategy and to compare the designs obtained with varying the parameters. "
 categories: diode
 thumbnail: "VLSI_design_of_RISC_processor.jpg"
@@ -21,7 +21,7 @@ gmeet: "meet.google.com/tgq-ohyi-jkt "
 - K A Gaganashree
 
 ## Introduction
-Microprocessors and Microcontrollers are generally designed in the vicinity of two main computer architectures: Complex Instruction Set Computing i.e. CISC architecture and Reduced Instruction Set Computing i.e. The main idea of CISC is that a single instruction will do all loading, evaluating, and storing operations just like a multiplication command will do stuff like loading data, evaluating, and storing it, hence it’s complex.  Thus causing them to have varying execution time and lengths thereby authoritatively mandating an intricate Control Unit, which inhabits an immensely existent region on the chip. 
+Microprocessors and Microcontrollers are generally designed in the vicinity of two main computer architectures: Complex Instruction Set Computing i.e. CISC architecture and Reduced Instruction Set Computing i.e. The main idea of CISC is that a single instruction will do all loading, evaluating, and storing operations just like a multiplication command will do stuff like loading data, evaluating, and storing it, hence it’s complex.  Thus causing them to have varying execution time and lengths thereby authoritatively mandating an intricate Control Unit, which inhabits an immensely existent region on the chip.
 
 Compared with their CISC analogue, RISC processors typically support a minuscule set of instructions. A display that juxtaposes RISC processor with CISC processor, the number of instructions in a RISC Processor is low while the number of general purpose registers, addressing modes, fixed instruction length and load-store architecture is more this in turn facilitates the execution of instructions to be carried out in a short time thus achieving higher overall performance .Currently, the efficacy of the RISC processors is generally accepted to be greater than that of their CISC counterparts. Before their execution the instructions are translated into RISC instructions in even the most popular CISC processors. The attributes mentioned above accentuate the design strength of RISC in the market for embedded systems known as "system-on-a-chip (SoC)". The premier micro processors exhibiting reduced instruction set are SPARC, ARM, MIPS and IBM's PowerPC. RISC processors typically have load store architecture. This denotes there are two instructions for accessing memory which are a load instruction set to load data from the memory and store instruction set to Write Back (WB) the data into memory without any instructions
 
@@ -58,11 +58,11 @@ In R-format instructions the data is read from two register operands (rs & rt) .
 ### Types of instructions: load, store, addi
 ![Image 5](/virtual-expo/assets/img/diode/VLSI-img-5.png)
 
- 
+
 
 Immediate arithmetic and load/store instructions
 -rt : destination or source register number
--Constant: -2 ^15 to +2 ^15 
+-Constant: -2 ^15 to +2 ^15
 -Address: offset added to base address in rs
 
 ### Encode full address in instruction
@@ -72,7 +72,7 @@ Immediate arithmetic and load/store instructions
 Target address = PC 31…28 : (address × 4)
 
 ### Branch Addressing
-Branch instructions specify Opcode, two registers, target address. Most branch targets are near branch. 
+Branch instructions specify Opcode, two registers, target address. Most branch targets are near branch.
 
 ![Image 7](/virtual-expo/assets/img/diode/VLSI-img-7.png)
 
@@ -82,15 +82,15 @@ PC already incremented by 4 by this time
 
 ### Instruction execution:
 
-Microprocessor without Interlocked Pipeline Stages (MIPS) is a RISC (Reduced Instruction Set Computing) architecture.Pipelining means several operations in a single data path at the same instant. Pipelined MIPS has five stages which are IF, ID, EX, MEM and WB. 
+Microprocessor without Interlocked Pipeline Stages (MIPS) is a RISC (Reduced Instruction Set Computing) architecture.Pipelining means several operations in a single data path at the same instant. Pipelined MIPS has five stages which are IF, ID, EX, MEM and WB.
 
 ## MIPS PIPELINE
-Five stages, one step per stage 
+Five stages, one step per stage
 
-1. IF: Instruction fetch from memory 
-2. ID/RF: Instruction decode & register read 
-3. EX/EA: Execute operation or calculate address 
-4. MEM: Access memory operand 
+1. IF: Instruction fetch from memory
+2. ID/RF: Instruction decode & register read
+3. EX/EA: Execute operation or calculate address
+4. MEM: Access memory operand
 5. WB: Write result back to register
 
 Pipelining is used to enhance the capabilities of the RISC processor which is the reason for its
@@ -121,7 +121,7 @@ The two elements needed to implement R-format ALU operations are the register fi
 The register file always outputs the contents of the registers corresponding to the Read register inputs on the outputs; no other control inputs are needed. In contrast, a register write must be explicitly indicated by asserting the write control signal.
 The RISC-V load register and store register instructions, which have the general form ld x1, offset(x2) or sd x1, offset(x2). These instructions compute a memory address by adding the base register, which is x2, to the 12-bit signed offset field contained in the instruction. If the instruction is a store, the value to be stored must also be read from the register file where it resides in x1. If the instruction is a load, the value read from memory must be written into the register file in the specified register, which is x1.
 
-### ALU Control 
+### ALU Control
 ![Image 12](/virtual-expo/assets/img/diode/VLSI-img-12.png)
 
 Alu control takes in function code and shift amount as input and a combinational logic derives alu control signals to the ALU unit. These alu control signals decides which alu operation has to be performed while taking in what type of instruction is given
@@ -138,7 +138,7 @@ Here all stages discussed above are linked together.
 ##  Processor design:
 
 MIPS processor is executed utilizing five pipeline stages, which are Instruction Fetch (IF), Instruction Decode (ID), Execution Stage (EX), Memory access (MEM) and Write Back (WB).
-This isolation of stages is achieved by special registers known as pipeline registers. The aim of 
+This isolation of stages is achieved by special registers known as pipeline registers. The aim of
 These registers are to isolate the stages of the instructions so that there is no inadmissible information because of various directions being executed all the while. They are named in the middle of each of these: IF/ID Register, ID/EX Register, EX/MEM Register and MEM/WB Register. The data path demonstrated in above figure is that of the MIPS pipelined processor.
 
 ## Physical design preview
@@ -160,27 +160,27 @@ OpenLane flow consists of several stages. By default all flow steps are run in s
   iii. OpenSTA - Performs static timing analysis on the resulting netlist to generate timing reports
 ### 2. Floorplan and PDN
   i. init_fp - Defines the core area for the macro as well as the rows (used for placement) and the tracks (used for routing)
-  
+
   ii. ioplacer - Places the macro input and output ports
-  
+
   iii. pdn - Generates the power distribution network
-  
+
   iv. tapcell - Inserts welltap and decap cells in the floorplan
 ### 3. Placement
   i. RePLace - Performs global placement
-  
+
   ii. Resizer - Performs optional optimizations on the design
-  
+
   iii. OpenDP - Perfroms detailed placement to legalize the globally placed components
 ### 4. CTS
   i. TritonCTS - Synthesizes the clock distribution network (the clock tree)
 ### 5. Routing
   i. FastRoute - Performs global routing to generate a guide file for the detailed router
-  
+
   ii. CU-GR - Another option for performing global routing.
-  
+
   iii. TritonRoute - Performs detailed routing
-  
+
   iv. SPEF-Extractor - Performs SPEF extraction
 ### 6. GDSII Generation
   i. Magic - Streams out the final GDSII layout file from the routed def
