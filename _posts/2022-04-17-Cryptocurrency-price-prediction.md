@@ -2,7 +2,7 @@
 layout: post
 title: "Crypto Prediction Exchange App"
 description: "Prediction of cryptocurrency prices based on past data in the form of a react-based app"
-categories: compsoc
+categories: diode
 thumbnail: "Cryptocurrency-Price-Prediction.png"
 year: 2022
 gmeet: ""
