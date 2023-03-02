@@ -26,9 +26,9 @@ year: 2022
 - Siddhardha V Sreeramagiri
 - Gulshan Goyal
 
-## Acknowledgements
+<!-- ## Acknowledgements
 
-(If you have a guide, acknowledge it here)
+(If you have a guide, acknowledge it here) -->
 
 ## Aim
 
