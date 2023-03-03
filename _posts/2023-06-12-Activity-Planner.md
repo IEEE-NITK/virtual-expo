@@ -51,15 +51,16 @@ User authentication was implemented using inbuilt Django functions. The user obj
   ![image 3](/virtual-expo/assets/img/envision/compsoc/AP-3.png)
 
 - A user can view the tasks that are due today or in the future, using the `Today` and `Upcoming` tabs. <br>
-  ![image 4](/virtual-expo/assets/img/envision/compsoc/) <br>
+  <!-- ![image 4](/virtual-expo/assets/img/envision/compsoc/) <br> -->
+
   ![image 5](/virtual-expo/assets/img/envision/compsoc/AP-5.png)
 
 - Users can add and edit tasks, or mark them as completed:
-  ![image 6](/virtual-expo/assets/img/envision/compsoc/) <br>
-  ![image 7](/virtual-expo/assets/img/envision/compsoc/)
+  <!-- ![image 6](/virtual-expo/assets/img/envision/compsoc/) <br>
+  ![image 7](/virtual-expo/assets/img/envision/compsoc/) -->
 
 - A user has the ability to group their tasks into task lists, to ease management. <br>
-  ![image 8](/virtual-expo/assets/img/envision/compsoc/)
+  <!-- ![image 8](/virtual-expo/assets/img/envision/compsoc/) -->
 
 Axios, a HTTP client, is used to send the respective requests to the Django API endpoints, which then returns the relevant data.
 

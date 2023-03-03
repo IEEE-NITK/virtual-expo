@@ -3,7 +3,7 @@ layout: post
 title: "Speech Emotion Recognition"
 description: "Predicts Emotion of the Input Speech"
 categories: envision
-thumbnail: "filename.jpg"
+thumbnail: "placeholder-image.jpg"
 year: 2022
 ---
 
@@ -180,7 +180,7 @@ We still plan on improving the accuracy of our model.
 
 ## A snippet of the predicted output is shown below
 
-![image8](/virtual-expo/assets/img/envision/diode/SER-8.jpg)
+<!-- ![image8](/virtual-expo/assets/img/envision/diode/SER-8.jpg) -->
 
 ## Conclusion
 

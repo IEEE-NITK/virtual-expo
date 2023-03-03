@@ -3,7 +3,7 @@ layout: post
 title: "PATH FOLLOWING ROBOT"
 description: "Simulation of a robot that follows a specified path"
 categories: envision
-thumbnail: "thumbnail.jpeg"
+thumbnail: "placeholder-image.jpg"
 year: 2022
 ---
 
@@ -57,7 +57,8 @@ Basic Terminology of ROS:
 
 Turtlebot is a low-cost, personal robot kit with open-source software.
 It is a ROS standard platform robot. It uses Raspberry Pi as its default computer but is also compatible with Jetson Nano SBC.
-![turtlebot3](/virtual-expo/assets/img/SIG/turtlebot3.png)
+
+<!-- ![turtlebot3](/virtual-expo/assets/img/SIG/turtlebot3.png) -->
 
 ### Turtlebot Dynamics
 

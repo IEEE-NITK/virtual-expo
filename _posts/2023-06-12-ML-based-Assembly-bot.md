@@ -3,7 +3,7 @@ layout: post
 title: "ML based Assembly Bot"
 description: "The project aims to develop a robotic arm, in simulation, with an objective of segregation of different items based on size, shape and color scattered in a basket."
 categories: envision
-thumbnail: "ML-based-assembly-bot.png"
+thumbnail: "placeholder-image.jpg"
 year: 2022
 ---
 
@@ -42,9 +42,9 @@ The project aims at integration of Robotics and Machine Learning. The Convolutio
 
 ### Subheading 2.1
 
-![image_2](/virtual-expo/assets/img/SIG/img2.jpg)
+<!-- ![image_2](/virtual-expo/assets/img/SIG/img2.jpg)
 
-![image_3](/virtual-expo/assets/img/SIG/img3.jpg)
+![image_3](/virtual-expo/assets/img/SIG/img3.jpg) -->
 
 ### Subheading 2.2
 

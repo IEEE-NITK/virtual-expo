@@ -3,7 +3,7 @@ layout: post
 title: "DRONE CONTROL SYSTEM IN MATLAB AND SIMULINK"
 description: "Mathematically modelling and building a attitude PID controller for drone "
 categories: envision
-thumbnail: "filename.jpg"
+thumbnail: "placeholder-image.jpg"
 year: 2022
 ---
 
@@ -42,7 +42,7 @@ In this project the drone is assumed to be made of two beams placed perpendicula
 
 ### z-y or z-x plane view
 
-![image 2](ideVisew.png)
+<!-- ![image 2](ideVisew.png) -->
 
 - Length of bar: 335 mm
 - Depth of bar: 60 mm
@@ -92,7 +92,7 @@ tq = (4x10^-14)*Rpm^3 + (8x10^-12)*Rmp^2+ (3x10^-6)\*Rpm
 
 ## Rigid body dynamics of drone
 
-![image_5](ZfreeBodyDiagram.png)
+<!-- ![image_5](ZfreeBodyDiagram.png) -->
 
 ### Fundamendal equations of motion
 
@@ -105,7 +105,7 @@ About the z-axis: Mz = <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><m
 
 ### Final rigid body equtions
 
-![image_6](zzzTorque.png)
+<!-- ![image_6](zzzTorque.png) -->
 
 𝑀𝑧 = 𝑇4 − 𝑇1 + 𝑇2 − 𝑇3  
 𝑀𝑥 = (𝐹3 + 𝐹4) ∗
@@ -164,7 +164,7 @@ With the help of rigid body equations and calculated values of moment of inertia
 
 ### PID controllers
 
-![image_11](zzzzzzzzFullSimulink.png)
+<!-- ![image_11](zzzzzzzzFullSimulink.png) -->
 
 The simulink model consist of four PID controllers  
 1-> For attaining the desired altitude.  
@@ -174,7 +174,7 @@ The simulink model consist of four PID controllers
 
 ## Simulation results
 
-![image_12](zzzzzzzzzAltitude.png)
+<!-- ![image_12](zzzzzzzzzAltitude.png) -->
 
 ![image_13](/virtual-expo/assets/img/envision/piston/DSMS-13.png)
 

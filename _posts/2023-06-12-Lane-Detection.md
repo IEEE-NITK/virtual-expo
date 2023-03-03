@@ -39,7 +39,7 @@ Firstly it would include capturing and decoding the video, remove noise and use 
 This model will be able to automatically detect lanes in a video stream from a front-facing camera mounted on a car.
 Canny Edge detector needs grey scale images, hence we need to convert our image into grey scale. We are collapsing 3 channels of pixel value (Red, Green, and Blue) into a single channel with a pixel value range of [0,255]. Then we will create Gaussian blur over gray scale image .
 
-![image_2](/virtual-expo/assets/img/envision/diode/LD-2.jpg)
+<!-- ![image_2](/virtual-expo/assets/img/envision/diode/LD-2.jpg) -->
 
 This is how our image looks after Gaussian Blur.Next we will use canny to detect the edge of the lane.
 
