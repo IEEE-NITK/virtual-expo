@@ -10,13 +10,16 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Build Jekyll Site
-        uses: jerryjvl/jekyll-build-action@v1
+      - name: Setup Ruby Environment
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+          bundler-cache: true
 
-      - name: Run HTML Proofer
+      - name: Build Site and run HTML Proofer
         run: |
-          sudo gem install html-proofer -v 3.19.4
-          htmlproofer --assume-extension ./_site --url-swap '^/virtual-expo/:/' --disable-external
+          bundle exec jekyll build
+          bundle exec htmlproofer --assume-extension ./_site --url-swap '^/virtual-expo/:/' --disable-external
 
   deploy:
     name: "Deploy to GitHub Pages"
