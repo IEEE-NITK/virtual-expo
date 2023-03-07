@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "THE GALACTIC WIDE WEB"
+title: "The Galactic Wide Web"
 description: "’Space Invaders’, a fun space themed game where the player’s goal is to shoot the asteroids while avoiding the planets"
 categories: envision
 thumbnail: "thumbnail_galactic-wide-web.jpg"

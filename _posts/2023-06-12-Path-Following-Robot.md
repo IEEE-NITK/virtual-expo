@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "PATH FOLLOWING ROBOT"
+title: "Path Following Robot"
 description: "Simulation of a robot that follows a specified path"
 categories: envision
 thumbnail: "placeholder-image.jpg"
@@ -112,8 +112,8 @@ The robot has been exported to the Gazebo environment successfully.The robot sim
 
 ## References
 
-- https://github.com/sudrag/line_follower_turtlebot
+- [https://github.com/sudrag/line_follower_turtlebot](https://github.com/sudrag/line_follower_turtlebot)
 - Robot operating system Documentations, [Link](http://wiki.ros.org/Documentation)
-- https://github.com/DougUOW/line_follower_pkg/tree/master/src
-- https://github.com/arjunskumar/Line-Follower--ROS
+- [https://github.com/DougUOW/line_follower_pkg/tree/master/src](https://github.com/DougUOW/line_follower_pkg/tree/master/src)
+- [https://github.com/arjunskumar/Line-Follower--ROS](https://github.com/arjunskumar/Line-Follower--ROS)
 - OpenCV API, [Link](https://opencv.org/)

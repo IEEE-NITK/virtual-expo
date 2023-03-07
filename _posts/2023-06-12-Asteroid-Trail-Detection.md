@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 
-title: "ASTEROID DETECTION USING ML"
+title: "Asteroid Detection Using ML"
 
 description: "Detection of Asteroid trails in Hubble Space Telescope images"
 
@@ -19,21 +19,15 @@ year: 2022
 ### Mentors
 
 - Gaganashree
-
 - Dharaneedaran
 
 ### Members
 
 - Achinthya Krishna B
-
 - Imamhusen H Konasagar
-
 - Sachin Prasanna
-
 - Shreyas Udaya
-
 - Aditya Tyagi
-
 - Karan Kumar Bhagat
 
 ## Aim
@@ -79,13 +73,10 @@ YOLOv5 is a family of compound-scaled object detection models trained on the COC
 ## Conclusion
 
 - The project didn’t reach its full potential.
-
 - It was highly realised that the project needs more time, there are several better implementation and ways to sort the data.
-
 - We could use better use of the Image processing method and use manual data sorting to better the dataset to let the model learn better.
 
 ## References
 
 1. Detection of asteroid trails in Hubble Space Telescope images using Deep Learning by Parfeni, Caramete, Dobre Mach
-
 2. The Hubble Asteroid Hunter project on Zooniverse

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DRONE CONTROL SYSTEM IN MATLAB AND SIMULINK"
+title: "Drone Control System in MATLAB and Simulink"
 description: "Mathematically modelling and building a attitude PID controller for drone "
 categories: envision
 thumbnail: "placeholder-image.jpg"
@@ -77,17 +77,17 @@ The section of the propeller blades are similar to the airfoil section, so when 
 
 #### Thrust
 
-thrust = ct ∗ 𝜌 ∗ 𝑛² ∗𝐷^4  
-ct ->coefficient of thrust  
- 𝜌-> density of air  
- n-> number of revolutions per second  
- D-> diameter of propellers  
- The value of ct is found to be related to the rpm by this equation  
+thrust = ct ∗ 𝜌 ∗ 𝑛² ∗𝐷^4
+ct ->coefficient of thrust
+ 𝜌-> density of air
+ n-> number of revolutions per second
+ D-> diameter of propellers
+ The value of ct is found to be related to the rpm by this equation
  ct = (2x10^-15)*Rpm^3 - (4x10^-11)*Rpm^2 + (3x10^-7)\*Rpm
 
 #### Torque
 
-Torque is related to Rpm using this relation  
+Torque is related to Rpm using this relation
 tq = (4x10^-14)*Rpm^3 + (8x10^-12)*Rmp^2+ (3x10^-6)\*Rpm
 
 ## Rigid body dynamics of drone
@@ -96,34 +96,34 @@ tq = (4x10^-14)*Rpm^3 + (8x10^-12)*Rmp^2+ (3x10^-6)\*Rpm
 
 ### Fundamendal equations of motion
 
-In the x direction: 𝐹𝑥 = 𝑚𝑎𝑥  
-In the y direction: 𝐹𝑦 = 𝑚𝑎𝑦  
-In the z direction: 𝐹𝑧 = 𝑚𝑎z  
-About the x-axis: Mx = <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mi>Ixx</mi><mo> </mo><mover accent="true" accentunder="false"><mrow><mover accent="true" accentunder="false"><mrow><mi>θ</mi></mrow><mrow><mo>˙</mo></mrow></mover></mrow><mrow><mo>˙</mo></mrow></mover></mrow></mrow></math>  
-About the y-axis: My = <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mi>Iyy</mi><mo> </mo><mover accent="true" accentunder="false"><mrow><mover accent="true" accentunder="false"><mrow><mi>ϕ</mi></mrow><mrow><mo>˙</mo></mrow></mover></mrow><mrow><mo>˙</mo></mrow></mover></mrow></mrow></math>  
+In the x direction: 𝐹𝑥 = 𝑚𝑎𝑥
+In the y direction: 𝐹𝑦 = 𝑚𝑎𝑦
+In the z direction: 𝐹𝑧 = 𝑚𝑎z
+About the x-axis: Mx = <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mi>Ixx</mi><mo> </mo><mover accent="true" accentunder="false"><mrow><mover accent="true" accentunder="false"><mrow><mi>θ</mi></mrow><mrow><mo>˙</mo></mrow></mover></mrow><mrow><mo>˙</mo></mrow></mover></mrow></mrow></math>
+About the y-axis: My = <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mi>Iyy</mi><mo> </mo><mover accent="true" accentunder="false"><mrow><mover accent="true" accentunder="false"><mrow><mi>ϕ</mi></mrow><mrow><mo>˙</mo></mrow></mover></mrow><mrow><mo>˙</mo></mrow></mover></mrow></mrow></math>
 About the z-axis: Mz = <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mi>Izz</mi><mo> </mo><mover accent="true" accentunder="false"><mrow><mover accent="true" accentunder="false"><mrow><mi>ψ</mi></mrow><mrow><mo>˙</mo></mrow></mover></mrow><mrow><mo>˙</mo></mrow></mover></mrow></mrow></math>
 
 ### Final rigid body equtions
 
 <!-- ![image_6](zzzTorque.png) -->
 
-𝑀𝑧 = 𝑇4 − 𝑇1 + 𝑇2 − 𝑇3  
+𝑀𝑧 = 𝑇4 − 𝑇1 + 𝑇2 − 𝑇3
 𝑀𝑥 = (𝐹3 + 𝐹4) ∗
 0.237/
 2
 − (𝐹1 + 𝐹2) ∗
 0.237/
-2  
+2
 𝑀𝑦 = (𝐹3 + 𝐹2) ∗
 0.237/
 2
 − (𝐹4 + 𝐹1) ∗
 0.237/
-2  
+2
 𝐹𝑝𝑟𝑜𝑝𝑥
-= sin<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>ϕ</mi></math> ∗ cos𝜃 ∗ (𝐹1 + 𝐹2 + 𝐹3 + 𝐹4)  
+= sin<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>ϕ</mi></math> ∗ cos𝜃 ∗ (𝐹1 + 𝐹2 + 𝐹3 + 𝐹4)
 𝐹𝑝𝑟𝑜𝑝𝑦
-= sin𝜃 ∗ cos<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>ϕ</mi></math> ∗ (𝐹1 + 𝐹2 + 𝐹3 + 𝐹4)  
+= sin𝜃 ∗ cos<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>ϕ</mi></math> ∗ (𝐹1 + 𝐹2 + 𝐹3 + 𝐹4)
 𝐹𝑝𝑟𝑜𝑝𝑧
 = cos𝜃 ∗ cos<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>ϕ</mi></math> \* (𝐹1 + 𝐹2 + 𝐹3 + 𝐹4)
 
@@ -137,7 +137,7 @@ Normally drone control system consist of two control blocks, position control an
 
 ### Motor and propeller block
 
-Input : Voltage[V] (4x1 - vector)  
+Input : Voltage[V] (4x1 - vector)
 Output : Thrust[F] torque[T] (4x1 - vector)
 
 ![image_8](/virtual-expo/assets/img/envision/piston/DSMS-8.png)
@@ -146,7 +146,7 @@ In this block the voltage supplied to each motor is taken as an input and the th
 
 ### Linear dynamics block
 
-Input : Thrust[F] Attitude[theta] Vecocity[v]  
+Input : Thrust[F] Attitude[theta] Vecocity[v]
 Output: Acceleration[a]
 
 ![image_9](/virtual-expo/assets/img/envision/piston/DSMS-9.png)
@@ -155,7 +155,7 @@ Here theta denotes the roll, pitch and yaw angles. Velcoity is taken as an input
 
 ### Rotational dynamics block
 
-Input: Thrust[F] Torque[T]  
+Input: Thrust[F] Torque[T]
 Output: Angular acceleration[alpha]
 
 ![image_10](/virtual-expo/assets/img/envision/piston/DSMS-10.png)
@@ -166,9 +166,9 @@ With the help of rigid body equations and calculated values of moment of inertia
 
 <!-- ![image_11](zzzzzzzzFullSimulink.png) -->
 
-The simulink model consist of four PID controllers  
-1-> For attaining the desired altitude.  
-2-> For attainging the desired pitch rate.  
+The simulink model consist of four PID controllers
+1-> For attaining the desired altitude.
+2-> For attainging the desired pitch rate.
 3-> For attaining the desired roll rate.
 4-> For attaining the desired yaw rate.
 
@@ -179,7 +179,6 @@ The simulink model consist of four PID controllers
 ![image_13](/virtual-expo/assets/img/envision/piston/DSMS-13.png)
 
 - First plot shows the altitude as a function of time. In this simulation the attitudes are assumed to be constants.
-
 - Second plot shows the angulare velocities as a function of time, here throttle input is assumed to be constant.
 
 ## Conclusion

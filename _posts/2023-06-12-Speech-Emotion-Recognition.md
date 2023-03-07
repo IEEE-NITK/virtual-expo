@@ -14,23 +14,16 @@ year: 2022
 ### Mentors
 
 - Anirudh Singh Solanki
-
 - Raghuram Kannan
-
 - Apurva S
 
 ### Members
 
 - Abhishek Satpathy
-
 - Guddati Sri Sai Akhil
-
 - Calvin Dominic Fernandes
-
 - Harish Dendukuri
-
 - Adithya Srihari Rao
-
 - Yanvitha Totakura
 
 ## Acknowledgements
@@ -188,8 +181,6 @@ Through this project, we learnt and showed how we can extract audio features usi
 
 ## References
 
-1. https://www.youtube.com/watch?v=iCwMQJnKk2c&list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0
-
-2. https://www.youtube.com/watch?v=gZmobeGL0Yg&list=PLZbbT5o_s2xq7LwI2y8_QtvuXZedL6tQU
-
-3. https://www.youtube.com/watch?v=tDaGT4N4aCA&list=PLZbbT5o_s2xrwRnXk_yCPtnqqo4_u2YGL
+1. [https://www.youtube.com/watch?v=iCwMQJnKk2c&list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0](https://www.youtube.com/watch?v=iCwMQJnKk2c&list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0)
+2. [https://www.youtube.com/watch?v=gZmobeGL0Yg&list=PLZbbT5o_s2xq7LwI2y8_QtvuXZedL6tQU](https://www.youtube.com/watch?v=gZmobeGL0Yg&list=PLZbbT5o_s2xq7LwI2y8_QtvuXZedL6tQU)
+3. [https://www.youtube.com/watch?v=tDaGT4N4aCA&list=PLZbbT5o_s2xrwRnXk_yCPtnqqo4_u2YGL](https://www.youtube.com/watch?v=tDaGT4N4aCA&list=PLZbbT5o_s2xrwRnXk_yCPtnqqo4_u2YGL)

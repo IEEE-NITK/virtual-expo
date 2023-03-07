@@ -36,33 +36,12 @@ The project aims at integration of Robotics and Machine Learning. The Convolutio
 
 **PyBullet** was used in the project as the physics engine which comes along with the graphics renderer for visualization. PyBullet is an easy to use Python module for physics simulation for robotics, games, visual effects and machine learning. PyBullet provides forward dynamics simulation, inverse dynamics computation, forward and inverse kinematics, collision detection and ray intersection queries. We have used the Robotic Arm URDF that comes with the PyBullet package in this project.
 
-## Heading 1
-
-## Heading 2
-
-### Subheading 2.1
-
-<!-- ![image_2](/virtual-expo/assets/img/SIG/img2.jpg)
-
-![image_3](/virtual-expo/assets/img/SIG/img3.jpg) -->
-
-### Subheading 2.2
-
-#### Subsubheading 2.2.1
-
-## Heading 3
-
-## Conclusion
-
-- Conclusion1
-- Conclusion2
-
 ## References
 
-[Intro to Machine Learning by Andrew Ng](https://shorturl.at/nLT56)
-[Neural Networks by 3Blue1Brown](https://shorturl.at/ovzBG)
-[Deep Learning by New York University(NYU)](https://lnkd.in/eZFGQuGZ)
-[Convolutional Neural Networks](https://shorturl.at/deqwP)
-[Pybullet](https://www.youtube.com/watch?v=KaiznOkKkdA)
-[Get Camera Image in PyBullet](https://towardsdatascience.com/simulate-images-for-ml-in-pybullet-the-quick-easy-way-859035b2c9dd)
-[Bounding Box Prediction](https://towardsdatascience.com/bounding-box-prediction-from-scratch-using-pytorch-a8525da51ddc)
+- [Intro to Machine Learning by Andrew Ng](https://shorturl.at/nLT56)
+- [Neural Networks by 3Blue1Brown](https://shorturl.at/ovzBG)
+- [Deep Learning by New York University(NYU)](https://lnkd.in/eZFGQuGZ)
+- [Convolutional Neural Networks](https://shorturl.at/deqwP)
+- [Pybullet](https://www.youtube.com/watch?v=KaiznOkKkdA)
+- [Get Camera Image in PyBullet](https://towardsdatascience.com/simulate-images-for-ml-in-pybullet-the-quick-easy-way-859035b2c9dd)
+- [Bounding Box Prediction](https://towardsdatascience.com/bounding-box-prediction-from-scratch-using-pytorch-a8525da51ddc)
