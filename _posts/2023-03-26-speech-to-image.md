@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Speech to image"
-description: "Converting speech to image by integrating two deep learning models that are speech to text using ASR and StackGAN based text to image model."
-categories: Diode
+description: "Converting speech to image by integrating two deep learning models that are speech to text using ASR and StackGAN based text to image model. "
+categories: diode
 thumbnail: "2023_speech_to_image.png"
 year: 2023
 ---
@@ -21,47 +21,45 @@ year: 2023
 
 ## Speech-to-Image
 
-<details>
-  <summary>Table of Contents</summary>
-    <ol>
-        <li>
-            <a href="#Introduction">Introduction</a>
-        </li>
-        <li>
-          <a href="#Step-1 Speech to Text">Speech to Text</a>
-   <ul>
-                <li><a href="##Transformer Model Architecture">Transformer Architecture</a></li>
+<summary>Table of Contents</summary>
+  <ol>
+      <li>
+          <a href="#Introduction">Introduction</a>
+      </li>
+      <li>
+        <a href="#Step-1 Speech to Text">Speech to Text</a>
+        <ul>
+                <li><a href="#Transformer Model Architecture">Transformer Architecture</a></li>
+        </ul>
+      </li>
+      <li>
+          <a href="#Step-2 Text to Image">Text to Image</a>
+          <ul>
+              <li><a href="#About Dataset">Dataset</a></li>
+              <li><a href="#Text Embedding Model">Text Embedding Model</a></li>
+              <li><a href="#Architecture">Architecture</a></li>
           </ul>
-        </li>
-        <li>
-            <a href="#Step-2 Text to Image">Text to Image</a>
-            <ul>
-                <li><a href="#About Dataset">Dataset</a></li>
-                <li><a href="#Text Embedding Model">Text Embedding Model</a></li>
-  <li><a href="## Architecture">Architecture</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#### References">References</a>
-        </li>
-    </ol>
-</details>
+      </li>
+      <li>
+          <a href="#References">References</a>
+      </li>
+  </ol>
 
 ## Aim
 
 To develop deep learning models to generate images for given audio input using speech to text and then text to image .
 
-## Introduction
+## Introduction <a name = "Introduction"></a>
 
 In this project we attempt to translate the speech signals into image signals in two steps. The speech signal is converted into text with the help of Automatic speech recognition (ASR) and then high-quality images are generated from the text descriptions by using StackGAN.
 
-## Step-1 Speech to Text
+## Step-1 Speech to Text <a name = "Step-1 Speech to Text"></a>
 
 Automatic speech recognition (ASR) consists of transcribing audio speech segments into text. ASR can be treated as a sequence-to-sequence problem, where the audio can be represented as a sequence of feature vectors and the text as a sequence of characters, words, or subword tokens.
 
 The Dataset we are using is the [<b>LJSpeech dataset</b>](https://keithito.com/LJ-Speech-Dataset/) from the LibriVox project. It consists of short audio clips of a single speaker reading passages from 7 non-fiction books. Our model is similar to the original Transformer (both encoder and decoder) as proposed in the paper,[<b> "Attention is All You Need"</b>](https://papers.nips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf).
 
-## Transformer Model Architecture
+## Transformer Model Architecture <a name = "Transformer Model Architecture"></a>
 
 Transformer model architecture follows seq-to-seq model using encoder-decoder structure along with multi head attention.
 It takes input and gives output t in a parallel manner. Hence increasing the efficiency compared to conventional RNN model. This model was introduced in "Attention is all you need" paper in 2017 and since then this architecture has been the first choice for modelling speech recognition.
@@ -73,7 +71,7 @@ It takes input and gives output t in a parallel manner. Hence increasing the eff
 Following word error rate(wer) was achieved after training speech to text model.
 ![WER](/virtual-expo/assets/img/diode/Speech_to_image/WER.png)
 
-## Step-2 Text to Image
+## Step-2 Text to Image <a name = "Step-2 Text to Image"></a>
 
 ### Create 3 folders (test, weights,results_stage2) in your current working directory
 
@@ -81,13 +79,13 @@ Following word error rate(wer) was achieved after training speech to text model.
 2. <b>test </b> (generated images from our stage I GAN)
 3. <b>results_stage2 </b> (generated images from stage II fo GAN)
 
-## About Dataset
+## About Dataset <a name = "About Dataset"></a>
 
 ### Dataset Name: CUB_200_2011
 
 Download from : <https://data.caltech.edu/records/65de6-vp158>
 
-#### Text Embedding Model
+#### Text Embedding Model <a name = "Text Embedding Model"></a>
 
 Download char-CNN-RNN text embeddings for birds from : <https://github.com/hanzhanggit/StackGAN>
 
@@ -95,9 +93,9 @@ Download char-CNN-RNN text embeddings for birds from : <https://github.com/hanzh
 2. filenames.pickle — Dataframe containing the filenames of the images.
 3. class_info.pickle — Dataframe containing the info of classes for each image.
 
-## Architecture
+## Architecture <a name = "Architecture"></a>
 
-![Text to Image Architecture ](/virtual-expo/assets/img/diode/Speech_to_image/text_to_image_architecture.png)
+![Text to Image Architecture ](/virtual-expo/assets/img/diode/Speech_to_image/text_to_image_architecture.jpg)
 
 - Stage 1
 Generator :
@@ -132,7 +130,7 @@ Since image generation takes place in 2 stages, the model generates high resolut
 
 - Speech to text model was trained to achieve considerable word error rate for given size of dataset. Text to Image model also has been able to achieve desirable results.
 
-### References
+### References <a name = "References"> </a>
 
 1. <b>Attention is All You Need</b> [[Arxiv Link](https://arxiv.org/abs/1706.03762)]
 2. <b>Very Deep Self-Attention Networks for End-to-End Speech Recognition</b> [[Arxiv Link](https://arxiv.org/pdf/1904.13377.pdf)]
