@@ -3,7 +3,6 @@ layout: post
 title: "Three-level Boost converter with MPPT for Photovoltaic Application"
 description: "design and implementation of a three-level boost converter with maximum power tracking(MPPT) applications in Photo-Voltaic(PV) Cells."
 categories: diode
-thumbnail:
 year: 2023
 ---
 
