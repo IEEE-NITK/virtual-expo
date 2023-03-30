@@ -3,7 +3,7 @@ layout: post
 title: "Three-level Boost converter with MPPT for Photovoltaic Application"
 description: "design and implementation of a three-level boost converter with maximum power tracking(MPPT) applications in Photo-Voltaic(PV) Cells."
 categories: diode
-thumbnail: "2023\_TLBC.png"
+thumbnail:
 year: 2023
 ---
 
@@ -126,5 +126,5 @@ In conclusion, the three-level boost converter with MPPT applications is a bette
 
 ## References
 
-1. Design and Implementation of Three-Level DC-DC Converter with Golden Section Search Based MPPT for the Photovoltaic Applications, [Hindawi]([Design and Implementation of Three-Level DC-DC Converter with Golden Section Search Based MPPT for the Photovoltaic Applications (hindawi.com)](https://www.hindawi.com/journals/ape/2015/587197/))
+1. Design and Implementation of Three-Level DC-DC Converter with Golden Section Search Based MPPT for the Photovoltaic Applications, [Hindawi](https://www.hindawi.com/journals/ape/2015/587197/)
 2. Reducing Cost and Size in Photovoltaic Systems Using Three-Level Boost Converter Based on Fuzzy Logic Controller, [Research Gate](https://www.researchgate.net/publication/327943273_Reducing_Cost_and_Size_in_Photovoltaic_Systems_Using_Three-Level_Boost_Converter_Based_on_Fuzzy_Logic_Controller)
