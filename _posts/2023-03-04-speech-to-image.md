@@ -1,17 +1,17 @@
+---
 layout: post
 
 title: "Speech to image"
 
-description: "Converting speech to image by integrating two deep learning models that are speech to text using ASR and StackGAN based text to image model. "
+description: "Converting speech to image by integrating two deep learning models that are speech to text using ASR and StackGAN based text to image model."
 
-categories: Diode
+categories: diode
 
 thumbnail: "2023_speech_to_image.png"
 
 year: 2023
 
 gmeet: ""
-
 ---
 
 ### Mentors
@@ -28,7 +28,7 @@ gmeet: ""
 
 # Speech-to-Image
 
-<details>
+<!-- <details>
   <summary>Table of Contents</summary>
     <ol>
         <li>
@@ -46,13 +46,13 @@ gmeet: ""
                 <li><a href="#About Dataset">Dataset</a></li>
                 <li><a href="#Text Embedding Model">Text Embedding Model</a></li>
 		<li><a href="## Architecture">Architecture</a></li>
-            </ul>	
+            </ul>
         </li>
         <li>
-            <a href="#### References">References</a> 
-        </li> 
+            <a href="#### References">References</a>
+        </li>
     </ol>
-</details>
+</details> -->
 
 # Aim
 
