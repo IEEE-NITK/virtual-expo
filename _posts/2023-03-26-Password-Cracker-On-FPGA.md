@@ -3,6 +3,7 @@ layout: post
 title: "Password-Cracker-On-FPGA"
 description: "The project targets FPGA platforms and is designed to crack passwords in a fast and efficient manner."
 categories: diode
+thumbnail: "no-image.png"
 year: 2023
 gmeet: "https://meet.google.com/wjc-tqkh-qva"
 ---

@@ -19,31 +19,30 @@ year: 2023
 - Abhiraj
 - Kaushik Srivastava
 
-## Speech-to-Image
+## Table of Contents
 
-<summary>Table of Contents</summary>
-  <ol>
-      <li>
-          <a href="#Introduction">Introduction</a>
-      </li>
-      <li>
-        <a href="#Step-1 Speech to Text">Speech to Text</a>
+<ol>
+    <li>
+        <a href="#Introduction">Introduction</a>
+    </li>
+    <li>
+      <a href="#Step-1 Speech to Text">Speech to Text</a>
+      <ul>
+              <li><a href="#Transformer Model Architecture">Transformer Architecture</a></li>
+      </ul>
+    </li>
+    <li>
+        <a href="#Step-2 Text to Image">Text to Image</a>
         <ul>
-                <li><a href="#Transformer Model Architecture">Transformer Architecture</a></li>
+            <li><a href="#About Dataset">Dataset</a></li>
+            <li><a href="#Text Embedding Model">Text Embedding Model</a></li>
+            <li><a href="#Architecture">Architecture</a></li>
         </ul>
-      </li>
-      <li>
-          <a href="#Step-2 Text to Image">Text to Image</a>
-          <ul>
-              <li><a href="#About Dataset">Dataset</a></li>
-              <li><a href="#Text Embedding Model">Text Embedding Model</a></li>
-              <li><a href="#Architecture">Architecture</a></li>
-          </ul>
-      </li>
-      <li>
-          <a href="#References">References</a>
-      </li>
-  </ol>
+    </li>
+    <li>
+        <a href="#References">References</a>
+    </li>
+</ol>
 
 ## Aim
 
