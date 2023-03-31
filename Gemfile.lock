@@ -68,15 +68,14 @@ GEM
     public_suffix (5.0.1)
     racc (1.6.2)
     rainbow (3.1.1)
+    rake (13.0.6)
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rexml (3.2.5)
     rouge (4.1.0)
     safe_yaml (1.0.5)
-    sass-embedded (1.58.3-x64-mingw-ucrt)
-      google-protobuf (~> 3.21)
-    sass-embedded (1.58.3-x86_64-linux-gnu)
+    sass-embedded (1.58.3)
       google-protobuf (~> 3.21)
       rake (>= 10.0.0)
     sass-embedded (1.58.3-x64-mingw32)
@@ -89,11 +88,8 @@ GEM
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2023.3)
       tzinfo (>= 1.0.0)
-    tzinfo (2.0.6)
-      concurrent-ruby (~> 1.0)
-    tzinfo-data (1.2023.3)
-      tzinfo (>= 1.0.0)
     unicode-display_width (2.4.2)
+    wdm (0.1.1)
     webrick (1.8.1)
     yell (2.2.2)
 
@@ -106,7 +102,8 @@ DEPENDENCIES
   jekyll
   jekyll-paginate
   tzinfo-data
+  wdm (>= 0.1.0)
   webrick
 
 BUNDLED WITH
-   2.3.22
+   2.4.10
