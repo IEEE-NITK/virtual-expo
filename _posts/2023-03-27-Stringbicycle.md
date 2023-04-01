@@ -3,7 +3,7 @@ layout: post
 title: "String Bicycle"
 description: "String bicycle is pioneering in inventing a revolutionary way of getting bikes into motion, completely doing away with conventional chains, gear shift mechanisms and related parts."
 categories: piston
-thumbnail: "2023_stringbicycle.png"
+thumbnail: "2023_string_bicycle.png"
 year: 2023
 ---
 
