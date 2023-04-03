@@ -2,7 +2,7 @@
 layout: post
 title: "Anti-Anti-Masker"
 description: "A mid-pandemic attempt to innovate a drone that can pick out the unmasked among a crowd of people."
-categories: piston
+categories: intersig
 thumbnail: "anti-anti-masker.jpeg"
 year: 2022
 gmeet: https://meet.google.com/rgr-smga-wvk

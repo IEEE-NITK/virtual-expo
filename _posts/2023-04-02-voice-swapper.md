@@ -2,7 +2,7 @@
 layout: post
 title: "Voice Swapper"
 description: "Real-time voice conversion using GANs implemented on a WebApp"
-categories: "diode"
+categories: intersig
 thumbnail: "2023_voice-swapper.png"
 year: "2023"
 ---
