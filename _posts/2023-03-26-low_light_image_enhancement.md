@@ -1,10 +1,7 @@
 ﻿---
 layout: post
-
 title: "LOW LIGHT IMAGE ENHANCEMENT USING MIRNET"
-
-description: This project implements a deep learning model based on MIRNet architecture to recover high quality, well-defined images from their degraded version on an embedded device, namely the Arduino Nano 33 BLE Sense.
-
+description: "This project implements a deep learning model based on MIRNet architecture to recover high quality, well-defined images from their degraded version on an embedded device, namely the Arduino Nano 33 BLE Sense."
 categories: diode
 thumbnail: "2023_llie.jpg"
 year: 2023
@@ -13,15 +10,15 @@ gmeet: ""
 ---
 
 ### Mentors
-Pranav Koundinya
-Ashrith D R
+- Pranav Koundinya
+- Ashrith D R
 
 ### Members
-K V Srinanda
-Dev Goti
-Shubham Swadi
-Sushree Shivani Sethi
-D Jagannadha Reddy
+- K V Srinanda
+- Dev Goti
+- Shubham Swadi
+- Sushree Shivani Sethi
+- D Jagannadha Reddy
 
 ## Aim
 The project entails two main objectives: to understand the entire architecture of the underlying neural network, and to implement a deep learning based image processing algorithm on an embedded device, namely the Arduino Nano 33 BLE Sense.

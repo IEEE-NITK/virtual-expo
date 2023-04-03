@@ -3,7 +3,7 @@ layout: post
 title: "8-bit Computer"
 description: "Hardware implementation of 8-bit Computer"
 categories: diode
-thumbnail: "thumbnail.png"
+thumbnail: "placeholder-image.jpg"
 year: 2023
 gmeet: ""
 ---
@@ -13,15 +13,17 @@ The project aims to design an 8 bit computer using hardware components. It also 
 The computer encompasses various modules like ALU, Clock, Registers, RAM, Program Counter, Control unit etc. Based on SAP-1 architecture, this computer will execute different types of simple instructions namely Load, store, add, subtract, jump, halt etc.
 
 ## Objective
-* Understanding basics of computer architecture and organization
-* Understanding various types of architectures used to build a computer
-* Hands-on experience in building a computer
-* Get an experience to design a PCB on EasyEDA
+- Understanding basics of computer architecture and organization
+- Understanding various types of architectures used to build a computer
+- Hands-on experience in building a computer
+- Get an experience to design a PCB on EasyEDA
+
 ## Introduction
 The Simple-As-Possible (SAP)-1 computer is a very basic model of a microprocessor containing the fundamental modules
 required to build a successful microprocessor. The SAP-1 design contains the basic necessities for a functional microprocessor. Its primary purpose is to develop a basic understanding of how a microprocessor works, interacts with memory and other parts of the system like input and output. The instruction set also is very limited and is simple.
 
 This 8 bit Computer is based on (SAP)-1 architecture. It consists of the Clock Module, ALU, Instruction Register, Program Counter, Register A, Register B, Output Register and Control Unit. The Computer is capable of executing various instructions such as Load, Add, Subtract, Jump, Halt, etc. The instructions are kept track of with the program counter and every time it increments the next instruction starts getting executed. The instruction order is manually set by the user into consecutive memory address locations from address 0 after which the computer will execute them sequentially on its own.
+
 ## Methodology
 The Clock Module of the Computer synchronises all the operations. Initially the program counter is at 0000 and the
 first instruction is being executed. Every instruction is executed in at most 5 steps. The first two steps of every instruction is the same, that is, to fetch the instruction from memory to the instruction register and to increment the program counter. The four Most Significant Bits of the instruction in the instruction register is sent to the EEPROM which decodes the instruction and the next 3 steps get executed accordingly. After the program cycle is over the next instruction is fetched and the cycle repeats. 

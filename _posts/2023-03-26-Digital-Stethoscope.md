@@ -1,57 +1,45 @@
 ---
 layout: post
-
 title: Digital Stethoscope
-
-description: An electronic stethoscope that will collect lung and heart sounds, which will then be transmitted wirelessly to a laptop, which will identify and categorize diseases based on deep learning models.
-
+description: "An electronic stethoscope that will collect lung and heart sounds, which will then be transmitted wirelessly to a laptop, which will identify and categorize diseases based on deep learning models."
 categories: diode
-
-thumbnail: "thumbnail.png"
-
+thumbnail: "placeholder-image.jpg"
 year: 2023
-
-gmeet: “”
+gmeet: ""
 ---
 
 # Digital-Stethescope
 
-<br>
-<details>
-  <summary>Table of Contents</summary>
-    <ol>
-        <li>
-            <a href="#introduction">Introduction</a>
-            <ul>
-                <li><a href="#technologies-used">Technologies Used</a></li>
-            </ul>
-        </li>
-        <li>
-          <a href="#Objectives">Getting Started</a>
-        </li>
-        <li>
-            <a href="#literature-survey">Literature Survey</a>
-            <ul>
-                <li><a href="#ESP32">MicroController</a></li>
-                <li><a href="#Hardware">Hardware</a></li>
-                <li><a href="#Deep-Learning-Model">Detection Model</a></li>
-            </ul>
-        </li>
-        <li>
-              <a href="#ml-model">ML Model</a>
-        </li>  
-        <li>
-          <a href="#Deep Learning">Deep learning</a>
-        </li>
-        <li>
-            <a href="#references">References</a> 
-        </li>
-        <li>
-            <a href="#project-mentors">Project Mentors</a></li>
-        <li>
-            <a href="#project-members">Project Members</a></li>
-    </ol>
-</details>
+### Table of Contents
+<ol>
+    <li>
+        <a href="#introduction">Introduction</a>
+        <ul>
+            <li><a href="#technologies-used">Technologies Used</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#objectives">Getting Started</a>
+    </li>
+    <li>
+        Literature Survey
+        <ul>
+            <li><a href="#esp32">MicroController</a></li>
+            <li><a href="#hardware">Hardware</a></li>
+            <li><a href="#model">Detection Model</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#ml-model">ML Model</a>
+    </li>  
+    <li>
+        <a href="#deep-learning">Deep learning</a>
+    </li>
+    <li>
+        <a href="#project-mentors">Project Mentors</a></li>
+    <li>
+        <a href="#project-members">Project Members</a></li>
+</ol>
 
 <hr>
 
@@ -79,7 +67,7 @@ We have used the following technologies and software for our project
         height ="50"></a>
     </li>
     <li style="display:inline;">
-        <a href="https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html" target ="_blank"><img src="https://github.com/gagan20003/Digital-Stethoscope/blob/main/resources/ltspice%20logo.jpeg" alt="LTSpice"
+        <a href="https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html" target ="_blank"><img src="https://raw.githubusercontent.com/gagan20003/Digital-Stethoscope/main/resources/ltspice%20logo.jpeg" alt="LTSpice"
         width = "50"
         height = "50"></a>
     </li>
@@ -89,13 +77,14 @@ We have used the following technologies and software for our project
         height = "50"></a>
     </li>
     <li style="display:inline;">
-        <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html" target ="_blank"><img src="https://github.com/gagan20003/Digital-Stethoscope/blob/main/resources/esp%20logo.jpeg" alt="ESP32"
+        <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html" target ="_blank"><img src="https://raw.githubusercontent.com/gagan20003/Digital-Stethoscope/main/resources/esp%20logo.jpeg" alt="ESP32"
         width = "50"
         height = "50"></a>
     </li>
 </ul>
 
-## Objectives 
+## Objectives
+
 The main goals we have set out for this project are 
 - Make a microphone - amplification module that can detect frequencies from 50Hz to 20kHz 
 - Transmit the sound clip to an associated laptop wirelessly 
@@ -103,7 +92,7 @@ The main goals we have set out for this project are
 
 <!--- Microcontroller description starts --->
 
-<h2>ESP32</h2>
+## ESP32
 
 ![image\_1](https://cdn.shopify.com/s/files/1/0609/6011/2892/files/doc-esp32-pinout-reference-wroom-devkit.png?width=1384)
 <p>The microcontroller that we are using in our project is the ESP32.
@@ -211,8 +200,8 @@ Overall, this approach provides a non-invasive, convenient, and low-cost method 
 
 <hr>
 
+## Dataset
 
-<h2>Dataset</h2>
 <a href = "https://www.kaggle.com/datasets/vbookshelf/respiratory-sound-database?resource=download"> Link to the dataset</a>
 
 This dataset is a collection of respiratory sound recordings. The dataset consists of a total of 920 annotated respiratory sound recordings (4.2 GB) in WAV format, collected from 126 patients. The recordings were collected from different clinical environments, including emergency departments, hospital wards, and outpatient clinics. The patients were suffering from various respiratory disorders, including asthma, chronic obstructive pulmonary disease.
