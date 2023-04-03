@@ -2,7 +2,7 @@
 layout: post
 title: "Robot Control using Smartphone Sensor"
 description: "Controlling the motion of a robot car using accelerometer data sent through ROS"
-categories: diode
+categories: intersig
 thumbnail: "Robot-Motion-Control.png"
 year: 2022
 gmeet: ""

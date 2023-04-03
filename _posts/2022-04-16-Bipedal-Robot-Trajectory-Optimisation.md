@@ -2,7 +2,7 @@
 layout: post
 title: "Deep Learning based Trajectory Optimization of Bipedal Robots"
 description: "Developing robust environment for the Reinforcement Learning algorithms and attempt to develop a controller for stability and trajectory manipulation"
-categories: piston
+categories: intersig
 thumbnail: "BipedalRobotTrajectory.jpg"
 year: 2022
 gmeet: "https://meet.google.com/zrh-jrvv-sio"
