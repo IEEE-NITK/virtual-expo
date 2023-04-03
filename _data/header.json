@@ -87,12 +87,12 @@
         "link": "virtual-expo/piston/"
       },
       {
-        "name": "Envision",
-        "link": "virtual-expo/envision/"
-      },
-      {
         "name": "Inter SIG",
         "link": "virtual-expo/intersig"
+      },
+      {
+        "name": "Envision",
+        "link": "virtual-expo/envision/"
       }
     ]
   }
