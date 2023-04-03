@@ -101,7 +101,7 @@ Jumper Cables, 9V Batteries (2 nos.), Breadboard.
 We were able to train the model using MIRNet architecture and desirable results were obtained.
 
 ## References
-1. Syed Waqas Zamir, Aditya Arora, Salman Khan, Munawar Hayat, Fahad Shahbaz Khan, Ming-Hsuan Yang and Ling Shao, [Learning Enriched Features for Real Image Restoration and Enhancement]([https://arxiv.org/pdf/2003.06792.pdf](https://arxiv.org/pdf/2003.06792.pdf))
+1. Syed Waqas Zamir, Aditya Arora, Salman Khan, Munawar Hayat, Fahad Shahbaz Khan, Ming-Hsuan Yang and Ling Shao, [Learning Enriched Features for Real Image Restoration and Enhancement](https://arxiv.org/pdf/2003.06792.pdf)
 2. [https://github.com/swz30/MIRNet](https://github.com/swz30/MIRNet)
 3. [https://github.com/soumik12345/MIRNet](https://github.com/soumik12345/MIRNet)
 4. [https://keras.io/examples/vision/mirnet/](https://keras.io/examples/vision/mirnet/)

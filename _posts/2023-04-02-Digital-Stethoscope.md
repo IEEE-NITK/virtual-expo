@@ -263,7 +263,7 @@ Output gate— the input and the memory of the block is used to decide the outpu
 There were multiple architectures used that are explained in detail in the Heart-Model folder
 </p>
 
-<img width="669" src="https://media.geeksforgeeks.org/wp-content/uploads/newContent1.png">
+<img width="669" src="https://media.geeksforgeeks.org/wp-content/uploads/newContent1.png" alt="image>
 
 ## Model
 
