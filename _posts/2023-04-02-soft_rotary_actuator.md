@@ -3,7 +3,7 @@ layout: post
 title: "SOFT ROTARY ACTUATOR"
 description: “THE PROJECT AIMS AT USING PERISTALTIC MOTION OF ELASTOMERIC MATERIALS TO ACHIEVE A STEPPER MOTOR LIKE BEHAVIOR.”
 categories: piston
-thumbnail: "2023_2023_soft_rotary_actuator.png"
+thumbnail: "2023_soft_rotary_actuator.png"
 year: 2023
 gmeet: "meet.google.com/fsr-tsvx-rjg"
 ---
