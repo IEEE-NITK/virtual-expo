@@ -8,10 +8,6 @@ thumbnail: 2023-05-27-innovative-electronic-door-filename.jpg
 year: 2023
 ---
 
-### Project Guide
-
-- (Add name and designation, if any)
-
 ### Mentors
 
 - Abhiram Chivukula
@@ -68,19 +64,22 @@ Then their difference is taken using a subtractor. The difference between the nu
 
 ### Verilog Implementation: The various features of the door are implemented as separate modules, and are then instantiated in the main module. The various levels of modeling such as gate level, data flow and behavioral modeling are used. The Verilog codes for each are shown below.
  
-  	1. Password Machine: This module is implemented using the gate level modeling making use of XNOR gates along with an AND gate.
+1. Password Machine: This module is implemented using the gate level modeling making use of XNOR gates along with an AND gate.
 	![image1](https://drive.google.com/file/d/1YramfynpAhRKsiOXX6QHWgATGEwxnQKx/view?usp=drive_link)
-	2. Mod 16 Counter: It is a 4 bit counter that counts from 0 to 15 (16 states),  and resets back to 0 after the 16th state is completed.
+
+2. Mod 16 Counter: It is a 4 bit counter that counts from 0 to 15 (16 states),  and resets back to 0 after the 16th state is completed.
 ![image2](https://drive.google.com/file/d/1Ws9fLIcyaQMUw6ig6_ilQmwi1CRUYdYi/view?usp=drive_link)
 
-	3. Magic Counter: Designed using behavioral modeling, the magic counter makes use of the mod_16_counter module to find out the number of times the gate has been opened.
+3. Magic Counter: Designed using behavioral modeling, the magic counter makes use of the mod_16_counter module to find out the number of times the gate has been opened.
 	![image3](https://drive.google.com/file/d/1KHbOnJgrWoxY6LWyGMazyd3NeH5-WUTg/view?usp=drive_link)
 
-	4.Subtractor: This module finds the difference between the two inputs and assigns the value only if the difference is positive.
+4. Subtractor: This module finds the difference between the two inputs and assigns the value only if the difference is positive.
 ![image4](https://drive.google.com/file/d/1II-TztgNocoxO6xxGMM_pQkR06mGfm7U/view?usp=drive_link)
-5.Crowd Factor Calculator: This module calculates the crowd in the room and glows one of the three lights accordingly.The crowd is calculated by finding the difference between the number of people entering the room and the  number of people leaving.This is implemented by using two instances of the mod_16_counter  module and one instance of the subtractor module.
+
+5. Crowd Factor Calculator: This module calculates the crowd in the room and glows one of the three lights accordingly.The crowd is calculated by finding the difference between the number of people entering the room and the  number of people leaving.This is implemented by using two instances of the mod_16_counter  module and one instance of the subtractor module.
 ![image5](https://drive.google.com/file/d/1nj-hX7r5OSJKjBvyDqxb0YdN7d0MUmq0/view?usp=drive_link)
-	6.Top level module: The main module named “innovative_door” contains all the other sub-modules which are instantiated here to make the design complete.
+	
+6. Top level module: The main module named “innovative_door” contains all the other sub-modules which are instantiated here to make the design complete.
 ![image6](https://drive.google.com/file/d/1sTe7-OeKl91DbjFmny6SQ6xX0Gy524Eo/view?usp=drive_link)
 
 
