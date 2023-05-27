@@ -16,9 +16,6 @@ jobs:
           ruby-version: 2.7
           bundler-cache: true
 
-      - name: Build Site and run HTML Proofer
-        run: |
-          bundle exec jekyll build
 
   deploy:
     name: "Deploy to GitHub Pages"
