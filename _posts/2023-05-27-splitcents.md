@@ -1,4 +1,5 @@
 ---
+gmeet: "https://meet.google.com/iff-haak-krk"
 layout: post
 title: "SPLITCENTS"
 description: "Splitcents: A web app for effortless management of shared expenses among groups, clubs, and teams."

@@ -1,5 +1,5 @@
 ---
-gmeet: "meet.google.com/bjd-goxj-jbe"
+gmeet: "https://meet.google.com/bjd-goxj-jbe"
 layout: post
 title: "CF_Analytics"
 description: "CF_Analytics: Unleash the power of Codeforces API to effortlessly track your performance and gain valuable insights"

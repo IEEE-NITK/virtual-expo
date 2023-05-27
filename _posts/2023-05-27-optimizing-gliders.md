@@ -1,4 +1,5 @@
 ---
+gmeet: "https://meet.google.com/zbx-ggnq-kan"
 layout: post
 title: "Optimizing Gliders"
 description: "The project involves the analysis of e-series airfoils and identifying the one best suited for gliders."

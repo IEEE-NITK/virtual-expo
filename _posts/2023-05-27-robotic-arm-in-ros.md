@@ -1,5 +1,5 @@
 ---
-gmeet: "meet.google.com/cyp-bxpu-tuu"
+gmeet: "https://meet.google.com/cyp-bxpu-tuu"
 layout: post
 title: "Robotic Arm in ROS"
 description: "Simulating a simple robotic arm in ROS using the Gazebo simulator"
