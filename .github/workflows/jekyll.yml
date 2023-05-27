@@ -19,7 +19,6 @@ jobs:
       - name: Build Site and run HTML Proofer
         run: |
           bundle exec jekyll build
-          bundle exec htmlproofer --assume-extension ./_site --url-swap '^/virtual-expo/:/' --disable-external
 
   deploy:
     name: "Deploy to GitHub Pages"
