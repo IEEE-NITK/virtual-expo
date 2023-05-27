@@ -1,6 +1,6 @@
 ﻿---
-gmeet: "meet.google.com/vou-nhva-jgd"
-gmeet: "meet.google.com/vou-nhva-jgd"
+gmeet: "https://meet.google.com/vou-nhva-jgd"
+
 layout: post
 
 

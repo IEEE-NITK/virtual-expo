@@ -1,5 +1,5 @@
 ---
-gmeet: "meet.google.com/jno-svdv-bsd"
+gmeet: "https://meet.google.com/jno-svdv-bsd"
 layout: post
 title: "Weather Web App"
 description: "A React Web App that gives the weather of a location"

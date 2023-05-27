@@ -325,13 +325,20 @@ for folder in os.listdir("Project Expo"):
                                 print("\n\n")
             
             # Open csv file
+            gmeet_link = ""
             with open("meet_links.csv", newline='') as csvfile:
                 reader = csv.DictReader(csvfile)
                 for row in reader:
                     print(row)
-                    if row['Project Code'] == folder:
+                    if row['Project Code'].strip() == folder:
                         # insert gmeet link on the 2nd line
+                        if not row['GMeet Link'].startswith("https://"):
+                            row["GMeet Link"] = "https://" + row["GMeet Link"]
+                            gmeet_link = row["GMeet Link"]
                         lines.insert(1, f"""gmeet: "{row['GMeet Link']}"\n""")
+                if gmeet_link == "":
+                    print(f"GMeet link not found for {folder} project")
+                    print("\n\n")
                     
             # Write the updated lines to the .md file
             with open(f"Project Expo/{folder}/{new_md_title}.md", "w") as f:
