@@ -3,7 +3,7 @@ layout: post
 title: "Optimization of Shell and Tube Heat Exchanger"
 description: "CFD Modeling and Analysis"
 categories: piston
-thumbnail: "placeholder-image.jpg"
+thumbnail: "2023_STHE.png"
 year: 2023
 gmeet: "https://meet.google.com/ojm-fcre-vet"
 ---
