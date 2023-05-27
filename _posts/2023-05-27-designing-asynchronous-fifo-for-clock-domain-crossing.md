@@ -1,5 +1,5 @@
 ---
-gmeet: "meet.google.com/qzk-mqrk-ytg"
+gmeet: "https://meet.google.com/qzk-mqrk-ytg"
 layout: post
 title: "Designing asynchronous FIFO for clock domain crossing"
 description: "Data transfer from one clock domain to another clock domain with FIFO"

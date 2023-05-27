@@ -1,5 +1,5 @@
 ---
-gmeet: "meet.google.com/kiq-pdrv-tci"
+gmeet: "https://meet.google.com/kiq-pdrv-tci"
 layout: post
 title: "Robotic Arm (Simulink)"
 description: "We aim to develop a robotic arm, using Fusion360 & Simulink, with an objective of pick and place mechanism."

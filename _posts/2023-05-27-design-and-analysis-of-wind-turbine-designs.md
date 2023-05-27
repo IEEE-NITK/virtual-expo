@@ -1,5 +1,5 @@
 ---
-gmeet: "meet.google.com/ynb-eojr-jaq"
+gmeet: "https://meet.google.com/ynb-eojr-jaq"
 layout: post
 title: "Design and Analysis of Wind Turbine Designs"
 description: "An integrated approach combining Qblade and Ansys Fluent for designing and analyzing wind turbine blades, from airfoil to CFD and structural analysis"
