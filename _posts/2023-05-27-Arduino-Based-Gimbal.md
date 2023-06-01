@@ -4,7 +4,7 @@ layout: post
 title: "Arduino-Based Gimbal"
 description: "Building a two-axe gimbal using Arduino and a Fusion360 model."
 categories: envision
-thumbnail: "thumbnail.png"
+thumbnail: 
 year: 2023
 ---
 

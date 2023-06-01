@@ -8,7 +8,7 @@ description:  "Creating a user-friendly platform for movie reviews and ratings"
 
 
 categories: envision
-thumbnail: 2023-05-27-moviemaven--a-movie-review-and-rating-frontend-web-app-moviemaven.jpg
+thumbnail:
 
 
 year: 2023

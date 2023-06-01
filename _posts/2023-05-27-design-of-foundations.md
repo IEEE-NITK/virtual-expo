@@ -7,7 +7,7 @@ description: "Drawings of different types of foundations"
  
 categories: envision
  
-thumbnail: 2023-05-27-design-of-foundations-2023_footings.jpeg
+thumbnail: 
  
 year: 2023
  

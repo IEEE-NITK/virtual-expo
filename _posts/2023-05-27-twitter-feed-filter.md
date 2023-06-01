@@ -4,7 +4,7 @@ layout: post
 title: "Twitter Feed Filter"
 description: "Twitter feed filter, a web-based application that allows users to filter irrelevant tweets making their feed clean which in turn improves the user experience while using the application."
 categories: envision
-thumbnail: 2023-05-27-twitter-feed-filter-thumbnail.jpg
+thumbnail: 
 year: 2023
 ---
 

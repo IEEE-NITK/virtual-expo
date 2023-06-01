@@ -9,7 +9,7 @@ description: "ONE LINER DESCRIPTION"
 
 categories: envision
 
-thumbnail: 2023-05-27-music-synthesizer-using-voltage-controlled-oscilllator(vco)-filename.jpg
+thumbnail: 
 
 year: 2023
 

@@ -4,7 +4,7 @@ layout: post
 title: "SPLITCENTS"
 description: "Splitcents: A web app for effortless management of shared expenses among groups, clubs, and teams."
 categories: envision
-thumbnail: 2023-05-27-splitcents-filename.jpg
+thumbnail: 
 year: 2023
 ---
 

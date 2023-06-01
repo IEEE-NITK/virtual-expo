@@ -4,7 +4,7 @@ layout: post
 title: "AspectWise"
 description: "Recommendation system that utilizes Targeted Aspect-Based Sentiment Analysis (TABSA) to extract customer opinions and preferences from product reviews."
 categories: envision
-thumbnail: 2023-05-27-aspectwise-thumbnail.jpg
+thumbnail: 
 year: 2023
 ---
 ### Mentors

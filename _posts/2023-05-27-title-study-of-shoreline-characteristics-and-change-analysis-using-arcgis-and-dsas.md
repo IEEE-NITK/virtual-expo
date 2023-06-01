@@ -13,7 +13,7 @@ description: " This project utilized ArcGIS software and the DSAS extension to s
 categories: envision
 
 
-thumbnail: 2023-05-27-title--study-of-shoreline-characteristics-and-change-analysis-using-arcgis-and-dsas-2023_shoreline.jpeg”
+thumbnail:
 
 
 year: 2023

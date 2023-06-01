@@ -4,7 +4,7 @@ layout: post
 title: "Brain Tumor Detection and Classification"
 description: "Benchmarking different models to detect and classify brain tumors"
 categories: envision
-thumbnail: 2023-05-27-brain-tumor-detection-and-classification-dataset-cover.jpg?t=2021-09-25-22-03-08
+thumbnail: 
 year: 2023
 ---
 

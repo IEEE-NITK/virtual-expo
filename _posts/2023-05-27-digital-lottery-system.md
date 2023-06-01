@@ -4,7 +4,7 @@ layout: post
 title: "Digital Lottery System"
 description: "With the use of hardware description languages like verilog and components of digital electronics we have a implemented a digital lottery system"
 categories: envision
-thumbnail: 2023-05-27-digital-lottery-system-filename.jpg
+thumbnail: 
 year: 2023
 ---
 

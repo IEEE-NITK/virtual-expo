@@ -3,7 +3,7 @@ gmeet: "https://meet.google.com/pnk-qonm-nzo"
 layout: post
 title: "Object-detection using YOLO"
 categories: envision
-thumbnail : thumbnail.png
+thumbnail :
 year: 2023
 ---
 

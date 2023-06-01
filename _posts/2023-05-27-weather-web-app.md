@@ -4,7 +4,7 @@ layout: post
 title: "Weather Web App"
 description: "A React Web App that gives the weather of a location"
 categories: envision
-thumbnail: 2023-05-27-weather-web-app-Weather Web APP.jpg
+thumbnail: 
 year: 2023
 ---
 

@@ -37,9 +37,15 @@ use_sig_js: true
                     {% if modx == 0 %}<div class="card-deck">{% endif %}
                         <div class="card col-md-4">
                             <div class="card-image">
+                                {% if post.thumbnail == null or post.thumbnail == "" %}
+                                <a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}">
+                                    <img src="{{site.baseurl}}/assets/img/thumbnails/placeholder-image.jpg" alt="{{post.title}}">
+                                </a>
+                                {% else %}
                                 <a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}">
                                     <img src="{{site.baseurl}}/assets/img/thumbnails/{{post.thumbnail}}" alt="{{post.title}}">
                                 </a>
+                                {% endif %}
                             </div>
                             <div class="card-title">
                                 <a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}">
@@ -49,11 +55,6 @@ use_sig_js: true
                             <div class="card-title">
                                 <a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}">
                                     {{post.description}}
-                                </a>
-                            </div>
-                            <div class="card-title">
-                                <a href="{{post.gmeet}}" title="{{post.title}}">
-                                    <p style="color: blue;">Gmeet Link</p>
                                 </a>
                             </div>
                             <div class="card-links">

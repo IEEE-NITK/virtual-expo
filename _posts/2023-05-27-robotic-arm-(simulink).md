@@ -4,7 +4,7 @@ layout: post
 title: "Robotic Arm (Simulink)"
 description: "We aim to develop a robotic arm, using Fusion360 & Simulink, with an objective of pick and place mechanism."
 categories: envision
-thumbnail: 2023-05-27-robotic-arm-(simulink)-thumbnail.jpeg
+thumbnail: 
 year: 2023
 ---
 ### Project Guide

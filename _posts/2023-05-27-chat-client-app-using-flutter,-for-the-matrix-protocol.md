@@ -4,7 +4,7 @@ layout: post
 title: "Chat Client app using Flutter, for the Matrix protocol"
 description: "Using Flutter to create an app which acts as a client for the decentralised MAtrix protocol"
 categories: envision
-thumbnail: 2023-05-27-chat-client-app-using-flutter,-for-the-matrix-protocol-filename.jpg
+thumbnail: 
 year: 2023
 ---
 

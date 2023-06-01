@@ -4,7 +4,7 @@ layout: post
 title: "OAK: A Verison Control System"
 description: "OAK, a Python-based version control system, useful for understanding basic git internals. Our aim is to make a simpler version of Git, one that focuses on local files and repositories."
 categories: envision
-thumbnail: 2023-05-27-oak--a-verison-control-system-thumbnail.jpg
+thumbnail: 
 year: 2023
 ---
 
