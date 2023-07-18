@@ -26,7 +26,7 @@ The project aims to to build yolo architecture to detect objects
 
 ## 1. What is YOLO?<br>
 Yolo is a state-of-the-art, object detection algorithm. It was developed by Joseph Redmon. The biggest advantage over other architectures is that speed without much compramising in accuracy. The Yolo model family models are really fast, much faster than R-CNN and others.In this article we will go through the third version of yolo yolov3 its architecture, how it works and its implementation in pytorch.
-<img src = "https://res.cloudinary.com/practicaldev/image/fetch/s--5kVLEyT3--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zdmk2adlckbnm8k9n0p8.png" width = "700" height = "500">
+<img src = "https://res.cloudinary.com/practicaldev/image/fetch/s--5kVLEyT3--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zdmk2adlckbnm8k9n0p8.png" width = "700" height = "500" alt = "yolo">
 
 For network input (416, 416),
 
@@ -47,7 +47,7 @@ For the COCO dataset, which contains 80 classes, each cell predicts 85 values. Y
 
 In YOLOv3, three bounding boxes are predicted for each cell, with each bounding box having 5 + C attributes, including its center coordinates, dimensions, bounding box probability score, and class probability for each bounding box. Therefore, there are (B x (5 + C)) entries in the feature map, where B represents the number of bounding boxes per cell.
 
-<img src="https://blog.paperspace.com/content/images/2018/04/yolo-5.png" width="500px" height="500px">
+<img src="https://blog.paperspace.com/content/images/2018/04/yolo-5.png" width="500px" height="500px" alt="yolo">
 
 # Anchor Boxes
 While it might seem logical to predict the width and height of bounding boxes, this can result in unstable gradients during training. To avoid this, modern object detectors often predict log-space transforms or offsets to pre-defined default bounding boxes, known as anchors.
@@ -95,7 +95,7 @@ For example, consider the case of our dog image. If the prediction for center is
 Without the sigmoid function, the predicted center coordinates could fall outside the range of the cell, which would be contrary to the concept of YOLO. By using the sigmoid function, the center coordinate predictions are forced to lie within the range of the cell.
 
 Similarly, the dimensions of the bounding box are predicted by applying a log space transform to the output and multiplying it by an anchor. The resulting predictions are then normalized by the height and width of the anchors. This ensures that the predicted dimensions are scaled relative to the size of the anchor and can be used to accurately define the size of the bounding box.
-<img src="https://blog.paperspace.com/content/images/2018/04/yolo-regression-1.png" width = "400px" height = "300px">
+<img src="https://blog.paperspace.com/content/images/2018/04/yolo-regression-1.png" width = "400px" height = "300px" alt="yolo">
 
 The resultant predictions, bw and bh, are normalised by the height and width of the image. (Training labels are chosen this way). So, if the predictions bx and by for the box containing the dog are (0.3, 0.8), then the actual width and height on 13 x 13 feature map is (13 x 0.3, 13 x 0.8).
 
@@ -117,9 +117,9 @@ In one pass we can go from an input image to the output tensor which corresponds
 
 Using the COCO dataset, YOLOv3 predicts 80 different classes. YOLO outputs bounding boxes and class prediction as well. If we split an image into a 13 x 13 grid of cells and use 3 anchors box, the total output prediction is 13 x 13 x 3 or 169 x 3. However, YOLOv3 uses 3 different prediction scales which splits an image into (13 x 13), (26 x 26) and (52 x 52) grid of cells and with 3 anchors for each scale. So, the total output prediction will be((52 x 52) + (26 x 26) + 13 x 13)) x 3 = 10647 bounding boxes.
 
-<img src="https://s3-eu-west-1.amazonaws.com/ppreviews-plos-725668748/15596051/preview.jpg" width="1000px" height="500px">
+<img src="https://s3-eu-west-1.amazonaws.com/ppreviews-plos-725668748/15596051/preview.jpg" width="1000px" height="500px" alt="yolo">
 
-<img src = "https://blog.paperspace.com/content/images/2018/04/yolo_Scales-1.png" width = "700px" height = "1000px">
+<img src = "https://blog.paperspace.com/content/images/2018/04/yolo_Scales-1.png" width = "700px" height = "1000px" alt = "yolo">
 
 At each scale, each cell predicts 3 bounding boxes using 3 anchors, making the total number of anchors used 9. (The anchors are different for different scales)
 
@@ -132,20 +132,20 @@ Suppose N is the threshold and we have two lists A and B.Then for each class det
 
 * Select the proposal with highest confidence score, remove it from A and add it to the final proposal list B. (Initially B is empty).
 * Now compare this proposal with all the proposals by calculating the IOU (Intersection over Union) of this proposal with every other proposal. If the IOU is greater than the threshold N, remove that proposal from A.
-<image src = "https://miro.medium.com/v2/resize:fit:640/format:webp/1*r0o3vX-x979Q84_lbJWS_g.jpeg">
+<image src = "https://miro.medium.com/v2/resize:fit:640/format:webp/1*r0o3vX-x979Q84_lbJWS_g.jpeg" alt = "yolo">
   
 * Again take the proposal with the highest confidence from the remaining proposals in A and remove it from A and add it to B.
 * Once again calculate the IOU of this proposal with all the proposals in A and eliminate the boxes which have high IOU than threshold.
 * This process is repeated until there are no more proposals left in A.
 
 
-<img src="https://miro.medium.com/max/1400/1*6d_D0ySg-kOvfrzIRwHIiA.png" width="800px" height="300px">
+<img src="https://miro.medium.com/max/1400/1*6d_D0ySg-kOvfrzIRwHIiA.png" width="800px" height="300px" alt="yolo">
 NMS intends to cure the problem of multiple detections of the same image. For example, all the 3 bounding boxes of the red grid cell may detect a box or the adjacent cells may detect the same object.
 
 ## Our implementation
 YOLO can only detect objects belonging to the classes present in the dataset used to train the network. We will be using the official weight file for our detector. These weights have been obtained by training the network on COCO dataset, and therefore we can detect 80 object categories.
 
-<image src = "https://miro.medium.com/v2/resize:fit:828/format:webp/1*HOE9YPC9U7USEx91EdNP-A.png">
+<image src = "https://miro.medium.com/v2/resize:fit:828/format:webp/1*HOE9YPC9U7USEx91EdNP-A.png" alt = "yolo">
 
 ### References:
 
