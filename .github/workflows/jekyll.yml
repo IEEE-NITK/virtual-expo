@@ -9,18 +9,18 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        
+      - name: Update RubyGems
+        run: gem update --system
+
+      - name: Install Bundler
+        run: gem install bundler
 
       - name: Setup Ruby Environment
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7
           bundler-cache: true
-          
-      - name: Update RubyGems
-        run: gem update --system
-
-      - name: Install Bundler
-        run: gem install bundler
       
       - name: Build Site and run HTML Proofer
         run: |
