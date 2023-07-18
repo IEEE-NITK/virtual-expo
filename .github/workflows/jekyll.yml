@@ -11,9 +11,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup Ruby Environment
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7
+          ruby-version: latest
           bundler-cache: true
       
       - name: Build Site and run HTML Proofer
