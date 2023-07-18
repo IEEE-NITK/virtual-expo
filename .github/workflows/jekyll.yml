@@ -9,6 +9,11 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        
+      - name: Unset Deployment Mode and Update Gemfile.lock
+        run: |
+          bundle config unset deployment
+          bundle install
 
       - name: Setup Ruby Environment
         uses: ruby/setup-ruby@v1
