@@ -3,7 +3,7 @@ layout: post
 title: "Maze Traversal using Fire Bird V"
 description: "A project aimed as an opportunity to delve into Embedded Systems programming and basic robotics using FIRE BIRD V platform"
 categories: envision
-thumbnail: placeholder-image.jpg
+thumbnail: maze_traversal.png
 year: 2023
 ---
 

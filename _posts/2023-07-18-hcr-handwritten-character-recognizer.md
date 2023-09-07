@@ -3,7 +3,7 @@ layout: post
 title: "HCR-Handwritten Character Recognizer"
 description: "An DL-powered system that accurately identifies and transcribes handwritten characters into digital text."
 categories: envision
-thumbnail: placeholder-image.jpg
+thumbnail: handwritten.png
 year: 2023
 ---
 

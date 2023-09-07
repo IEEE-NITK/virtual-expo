@@ -8,8 +8,7 @@ description: "ONE LINER DESCRIPTION"
 
 categories: envision
 
-thumbnail: placeholder-image.jpg
-
+thumbnail: music_synth.webp
 year: 2023
 
 ---

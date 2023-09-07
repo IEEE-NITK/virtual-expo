@@ -2,7 +2,7 @@
 layout: post
 title: "Object-detection using YOLO"
 categories: envision
-thumbnail: placeholder-image.jpg
+thumbnail: yolo_object_detection.png
 year: 2023
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "BrowseNGrab"
 description: "’Browser Bookmarks Aggregator and Auto-Login Script"
 categories: envision
-thumbnail: placeholder-image.jpg
+thumbnail: "browsengrab_2023_envision_thumbnail.png"
 year: 2023
 ---
 ### Mentors

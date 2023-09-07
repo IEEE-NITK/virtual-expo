@@ -1,13 +1,13 @@
 ---
 layout: post
  
-title: “Design of Foundations”
+title: Design of Foundations
  
 description: "Drawings of different types of foundations"
  
 categories: envision
  
-thumbnail: placeholder-image.jpg
+thumbnail: foundation.png
  
 year: 2023
  
