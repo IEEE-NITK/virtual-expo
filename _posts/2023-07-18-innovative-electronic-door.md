@@ -3,7 +3,7 @@ layout: post
 title: "Innovative Electronic Door"
 description: "To design an electronic door using the basic principles of digital electronics, implementing a variety of features."
 categories: envision
-thumbnail: placeholder-image.jpg
+thumbnail: electronic_door.png
 year: 2023
 ---
 

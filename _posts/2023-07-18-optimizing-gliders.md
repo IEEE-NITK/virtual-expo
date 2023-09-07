@@ -3,7 +3,7 @@ layout: post
 title: "Optimizing Gliders"
 description: "The project involves the analysis of e-series airfoils and identifying the one best suited for gliders."
 categories: envision
-thumbnail: placeholder-image.jpg
+thumbnail: glider_optimization.jpg
 year: 2023
 ---
 

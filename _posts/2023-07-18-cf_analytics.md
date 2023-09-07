@@ -3,7 +3,7 @@ layout: post
 title: "CF_Analytics"
 description: "CF_Analytics: Unleash the power of Codeforces API to effortlessly track your performance and gain valuable insights"
 categories: envision
-thumbnail: 2023-07-18-cf_analytics-thumbnail.jpg
+thumbnail: cf_analytics.png
 year: 2023
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "QUANTUM CIRCUIT MAPPING WITH MACHINE LEARNING"
 description: "This project aims to map logical qubits created onto actual processor qubits using machine learning algorithms and also demonstrate other quantum computing algorithms."
 categories: compsoc
-thumbnail: "placeholder-image.jpg"
+thumbnail: "quantum.png"
 year: 2023
 gmeet: ""
 ---
