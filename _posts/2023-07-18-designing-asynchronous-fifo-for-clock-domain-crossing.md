@@ -3,7 +3,7 @@ layout: post
 title: "Designing asynchronous FIFO for clock domain crossing"
 description: "Data transfer from one clock domain to another clock domain with FIFO"
 categories: envision
-thumbnail: placeholder-image.jpg
+thumbnail: afifo.svg
 year: 2023
 ---
 

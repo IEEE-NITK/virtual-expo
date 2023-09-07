@@ -3,7 +3,7 @@ layout: post
 title: "Path Following Robot"
 description: "Simulation of a robot that follows a specified path"
 categories: envision
-thumbnail: "placeholder-image.jpg"
+thumbnail: "path_follow_robot.png"
 year: 2022
 ---
 

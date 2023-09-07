@@ -7,7 +7,7 @@ description:  "Creating a user-friendly platform for movie reviews and ratings"
 
 
 categories: envision
-thumbnail: placeholder-image.jpg
+thumbnail: movieMaven.png
 
 
 year: 2023

@@ -3,7 +3,7 @@ layout: post
 title: "Drone Control System in MATLAB and Simulink"
 description: "Mathematically modelling and building a attitude PID controller for drone "
 categories: envision
-thumbnail: "placeholder-image.jpg"
+thumbnail: "droneCS.png"
 year: 2022
 ---
 

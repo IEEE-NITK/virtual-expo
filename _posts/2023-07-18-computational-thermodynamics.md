@@ -3,7 +3,7 @@ layout: post
 title: "Computational Thermodynamics" 
 description: "Using Thermo-Calc software to generate Phase-Diagrams" 
 categories: envision
-thumbnail: placeholder-image.jpg
+thumbnail: computational_thermo.png
 year: 2023
 --- 
  

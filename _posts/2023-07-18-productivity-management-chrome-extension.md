@@ -3,7 +3,7 @@ layout: post
 title: "PRODUCTIVITY MANAGEMENT CHROME EXTENSION"
 description: "Chrome extension to spend time efficiently"
 categories: envision
-thumbnail: placeholder-image.jpg
+thumbnail: productivity_extension.png
 year: 2023
 ---
 

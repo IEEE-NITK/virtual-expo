@@ -7,7 +7,7 @@ description: "Detection of Asteroid trails in Hubble Space Telescope images"
 
 categories: envision
 
-thumbnail: "placeholder-image.jpg"
+thumbnail: "asteroid_detection.jpg"
 
 year: 2022
 ---
